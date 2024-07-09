@@ -1,0 +1,6 @@
+framework module Pods_NewChatDemo2_Tests {
+  umbrella header "Pods-NewChatDemo2_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
