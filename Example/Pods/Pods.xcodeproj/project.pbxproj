@@ -93,7 +93,6 @@
 		04B157592C3D382400E0D8D3 /* UserChatSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B157042C3D382400E0D8D3 /* UserChatSettingModel.swift */; };
 		04B1575A2C3D382400E0D8D3 /* WebResonseUploadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B157052C3D382400E0D8D3 /* WebResonseUploadFile.swift */; };
 		04B1575C2C3D384100E0D8D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B1575B2C3D384100E0D8D3 /* Assets.xcassets */; };
-		04B1575E2C3D38F800E0D8D3 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B1575D2C3D38F800E0D8D3 /* Chat.storyboard */; };
 		04B1576B2C3D399900E0D8D3 /* MultiFilesCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B1575F2C3D399700E0D8D3 /* MultiFilesCVCell.xib */; };
 		04B1576C2C3D399900E0D8D3 /* ActivityLoaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B157602C3D399800E0D8D3 /* ActivityLoaderCell.xib */; };
 		04B1576D2C3D399900E0D8D3 /* ConversationCellFIleForLoginUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B157612C3D399800E0D8D3 /* ConversationCellFIleForLoginUser.xib */; };
@@ -107,6 +106,7 @@
 		04B157752C3D399900E0D8D3 /* ConversationTableViewCellNoLoginUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B157692C3D399900E0D8D3 /* ConversationTableViewCellNoLoginUser.xib */; };
 		04B157762C3D399900E0D8D3 /* SystemsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B1576A2C3D399900E0D8D3 /* SystemsTVCell.xib */; };
 		04B157B42C3D6C7D00E0D8D3 /* ChatModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B157B32C3D6C7D00E0D8D3 /* ChatModule.swift */; };
+		04B157B82C3E5B1600E0D8D3 /* MainChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B157B72C3E5B1600E0D8D3 /* MainChat.storyboard */; };
 		122141F7A470B783A4999824A30D4EBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		1AA83C570A2C2D9F45CA0190FECC69A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		28AEE144C350A3F0B2CC6C0F125C7C9A /* NewChatDemo2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5F12C0AF8C0646A0F0F7ED42FDFE5C /* NewChatDemo2-dummy.m */; };
@@ -223,7 +223,6 @@
 		04B157042C3D382400E0D8D3 /* UserChatSettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChatSettingModel.swift; sourceTree = "<group>"; };
 		04B157052C3D382400E0D8D3 /* WebResonseUploadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResonseUploadFile.swift; sourceTree = "<group>"; };
 		04B1575B2C3D384100E0D8D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04B1575D2C3D38F800E0D8D3 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		04B1575F2C3D399700E0D8D3 /* MultiFilesCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiFilesCVCell.xib; sourceTree = "<group>"; };
 		04B157602C3D399800E0D8D3 /* ActivityLoaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityLoaderCell.xib; sourceTree = "<group>"; };
 		04B157612C3D399800E0D8D3 /* ConversationCellFIleForLoginUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationCellFIleForLoginUser.xib; sourceTree = "<group>"; };
@@ -237,6 +236,7 @@
 		04B157692C3D399900E0D8D3 /* ConversationTableViewCellNoLoginUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationTableViewCellNoLoginUser.xib; sourceTree = "<group>"; };
 		04B1576A2C3D399900E0D8D3 /* SystemsTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemsTVCell.xib; sourceTree = "<group>"; };
 		04B157B32C3D6C7D00E0D8D3 /* ChatModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModule.swift; sourceTree = "<group>"; };
+		04B157B72C3E5B1600E0D8D3 /* MainChat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainChat.storyboard; sourceTree = "<group>"; };
 		0503C5CF97E5F53A60DD8E8D3AAEB25D /* Pods-NewChatDemo2_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NewChatDemo2_Tests.modulemap"; sourceTree = "<group>"; };
 		1227EEEEC97E2369E8735DE4309B3C4F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		146B88CE4F2FF624DE5B4BE8536CCE25 /* Pods-NewChatDemo2_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewChatDemo2_Example-Info.plist"; sourceTree = "<group>"; };
@@ -406,7 +406,7 @@
 				04B157642C3D399800E0D8D3 /* MultiPDFCVCell.xib */,
 				04B1576A2C3D399900E0D8D3 /* SystemsTVCell.xib */,
 				04B157652C3D399800E0D8D3 /* TopicsCollectionViewCell.xib */,
-				04B1575D2C3D38F800E0D8D3 /* Chat.storyboard */,
+				04B157B72C3E5B1600E0D8D3 /* MainChat.storyboard */,
 				04B1575B2C3D384100E0D8D3 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -681,8 +681,8 @@
 				04B157702C3D399900E0D8D3 /* MultiPDFCVCell.xib in Resources */,
 				04B1576F2C3D399900E0D8D3 /* ConversationCellImageNoLoginUser.xib in Resources */,
 				04B1576B2C3D399900E0D8D3 /* MultiFilesCVCell.xib in Resources */,
-				04B1575E2C3D38F800E0D8D3 /* Chat.storyboard in Resources */,
 				04B157712C3D399900E0D8D3 /* TopicsCollectionViewCell.xib in Resources */,
+				04B157B82C3E5B1600E0D8D3 /* MainChat.storyboard in Resources */,
 				04B1575C2C3D384100E0D8D3 /* Assets.xcassets in Resources */,
 				04B157732C3D399900E0D8D3 /* ConversationCellFileNonLoginUser.xib in Resources */,
 				04B1576E2C3D399900E0D8D3 /* MultiImageCVCell.xib in Resources */,
