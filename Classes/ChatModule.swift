@@ -22,6 +22,7 @@ public struct O2ChatWidget {
     
     public func createDatabase() {
         var dbChatObj = Singleton.sharedInstance.myLocalChatDB
+        print("New Addition")
         dbChatObj.CreateChatDatabase()
     }
 }
