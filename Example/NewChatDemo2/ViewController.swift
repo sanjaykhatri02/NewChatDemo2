@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import NewChatDemo2
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        Validator.sayHello()
+        O2ChatWidget.createChatViewController()
     }
 
     override func didReceiveMemoryWarning() {

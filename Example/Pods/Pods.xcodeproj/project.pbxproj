@@ -106,6 +106,7 @@
 		04B157742C3D399900E0D8D3 /* ConversationLoginUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B157682C3D399900E0D8D3 /* ConversationLoginUserTableViewCell.xib */; };
 		04B157752C3D399900E0D8D3 /* ConversationTableViewCellNoLoginUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B157692C3D399900E0D8D3 /* ConversationTableViewCellNoLoginUser.xib */; };
 		04B157762C3D399900E0D8D3 /* SystemsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B1576A2C3D399900E0D8D3 /* SystemsTVCell.xib */; };
+		04B157B42C3D6C7D00E0D8D3 /* ChatModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B157B32C3D6C7D00E0D8D3 /* ChatModule.swift */; };
 		122141F7A470B783A4999824A30D4EBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		1AA83C570A2C2D9F45CA0190FECC69A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		28AEE144C350A3F0B2CC6C0F125C7C9A /* NewChatDemo2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5F12C0AF8C0646A0F0F7ED42FDFE5C /* NewChatDemo2-dummy.m */; };
@@ -235,6 +236,7 @@
 		04B157682C3D399900E0D8D3 /* ConversationLoginUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationLoginUserTableViewCell.xib; sourceTree = "<group>"; };
 		04B157692C3D399900E0D8D3 /* ConversationTableViewCellNoLoginUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationTableViewCellNoLoginUser.xib; sourceTree = "<group>"; };
 		04B1576A2C3D399900E0D8D3 /* SystemsTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemsTVCell.xib; sourceTree = "<group>"; };
+		04B157B32C3D6C7D00E0D8D3 /* ChatModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModule.swift; sourceTree = "<group>"; };
 		0503C5CF97E5F53A60DD8E8D3AAEB25D /* Pods-NewChatDemo2_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NewChatDemo2_Tests.modulemap"; sourceTree = "<group>"; };
 		1227EEEEC97E2369E8735DE4309B3C4F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		146B88CE4F2FF624DE5B4BE8536CCE25 /* Pods-NewChatDemo2_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewChatDemo2_Example-Info.plist"; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 				04B156EF2C3D382300E0D8D3 /* WebResponseConversationByUUID.swift */,
 				04B156BB2C3D382000E0D8D3 /* WebResponseForOrganization.swift */,
 				04B156BC2C3D382000E0D8D3 /* WebResponseForTopics.swift */,
+				04B157B32C3D6C7D00E0D8D3 /* ChatModule.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -783,6 +786,7 @@
 				04B157522C3D382400E0D8D3 /* CustomClass.swift in Sources */,
 				04B1574E2C3D382400E0D8D3 /* TopicDataModelClass.swift in Sources */,
 				04B157332C3D382400E0D8D3 /* PageControllerVC.swift in Sources */,
+				04B157B42C3D6C7D00E0D8D3 /* ChatModule.swift in Sources */,
 				04B157552C3D382400E0D8D3 /* AuthSessionManager.swift in Sources */,
 				04B1571D2C3D382400E0D8D3 /* UploadFilesData.swift in Sources */,
 				04B157242C3D382400E0D8D3 /* TaxFormConstant.swift in Sources */,
