@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NewChatDemo2'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'A ChatTestDemo App That is Demo. that is enough for now'
 
 # This description is used to generate tags and improve search results.
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
    
    s.frameworks = ['UIKit', 'Foundation', 'QuickLook', 'Photos', 'MobileCoreServices']
      
-     s.dependency 'Alamofire', '~> 5.9.0'
+     s.dependency 'Alamofire'
      s.dependency 'SwiftyJSON'
      s.dependency 'FMDB'
      s.dependency 'SwiftSignalRClient'
@@ -52,6 +52,7 @@ Pod::Spec.new do |s|
      s.dependency 'SVProgressHUD'
      s.dependency 'Cosmos'
   
+  #, '~> 5.9.0'
   # s.resource_bundles = {
   #   'NewChatDemo2' => ['NewChatDemo2/Assets/*.png']
   # }
