@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         Validator.sayHello()
-        O2ChatWidget.createChatViewController()
+        O2ChatWidget.createChatViewController(from: self)
     }
 
     override func didReceiveMemoryWarning() {

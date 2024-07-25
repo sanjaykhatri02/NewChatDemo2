@@ -19,10 +19,11 @@ import QuickLook
 //import SwiftGifOrigin
 import Kingfisher
 //import BSImagePicker
+import PhotosUI
 
 
 var conversationByZeroId : [ConversationsByUUID]!
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+public class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var timer = Timer()
     var timerDatabase : Timer?
@@ -106,7 +107,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     private var channelId = "f26a33d9-5b2e-4227-a456-eab45924a1d3" //"2ff350ae-bd60-4717-90e8-fb21c0b43fd6" //"f26a33d9-5b2e-4227-a456-eab45924a1d3"
     private var fcmtoken = CustomUserDefaultChat.sheard.getFcmToken()//"6901b42a-0776-41d2-ac76-6cb6f3029d53"
 //    private var conversationUuID = "748049b7-5dad-4cb8-8631-844155b73ec6"
-    private var conversationUuID = "A653E144-7D6E-4572-98B5-0440DD6131B1"
+    private var conversationUuID = "B578CFED-5D93-4C44-9198-3FD143D88EA5" //"D31CEC65-4705-4E2A-9D2A-119C2FE2D85D" //""//"A653E144-7D6E-4572-98B5-0440DD6131B1"
 //    private var conversationUuID = "5803d40c-a013-45cc-bd3b-0e547d819441"
     private var groupId : Int64 = 0
 //    private var cusId : Int64 = 154
@@ -150,18 +151,19 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //MARK: TableView Pagination
     var isLoading = false
+    private var imagePickerMulti : ImagePicker?
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         //generate conversationUUid when user open conversation
         if !CustomUserDefaultChat.sheard.getConversationUuID().isEmpty{
             self.conversationUuID = CustomUserDefaultChat.sheard.getConversationUuID();
         }
-        self.customerEmail = CustomUserDefaultChat.sheard.getCustomerEmail();
+        self.customerEmail = "chat.chat@gmail.com" //"test.chat001@gmail.com"//"new@new009.com" //CustomUserDefaultChat.sheard.getCustomerEmail();
         self.customerMobileNumber = CustomUserDefaultChat.sheard.getCustomerPhoneNumber();
         self.customerCNIC = CustomUserDefaultChat.sheard.getCustomerCnic();
         self.customerName = CustomUserDefaultChat.sheard.getCustomerName();
-        self.cusId = CustomUserDefaultChat.sheard.getCustomerID();
+        self.cusId = 4333 //CustomUserDefaultChat.sheard.getCustomerID();
 
         self.msgTextField.delegate = self
         self.chatTableView.estimatedRowHeight = 44.0
@@ -195,18 +197,25 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         //register collection view
         self.uiCvTopics.dataSource = self
         self.uiCvTopics.delegate = self
-        self.uiCvTopics.register(UINib(nibName: "TopicsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TopicsCollectionViewCell")
+//        let bundle = Bundle(for: ChatViewController.self)
+//        let nib = UINib(nibName: "TopicsCollectionViewCell", bundle: bundle)
+        // Register the NIB
+        let bundle = Bundle(for: ChatViewController.self)
+        let nib = UINib(nibName: "TopicsCollectionViewCell", bundle: bundle)
+        self.uiCvTopics.register(nib, forCellWithReuseIdentifier: "TopicsCollectionViewCell")
+        //self.uiCvTopics.register(UINib(nibName: nib, bundle: nil), forCellWithReuseIdentifier: "TopicsCollectionViewCell")
             
         self.intiEventListner()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.callReceiveMessageInBGMode(_:)), name: NSNotification.Name(rawValue: "callReceiveMessageInBG"), object: nil)
-        
+        imagePickerMulti = ImagePicker(presentationController: self, delegate: self)
+
     
     }
     
     
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         CustomUserDefaultChat.sheard.saveConversationCountFromServer(count: "0")
         //SwiftEventBus.post("refreshChatBadgeCount")
     }
@@ -234,6 +243,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func addNewMessage(recieveMessage: RecieveMessage){
+        print("Sync Message")
         self.uploadFilesData.removeAll()
         self.fileUploadArrayList.removeAll()
         self.filesNames.removeAll()
@@ -252,108 +262,108 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func showMultipleImagePicker(){
-        /*
         self.isFromCamera = false
         filesNames.removeAll()
-        let imagePicker = ImagePickerController()
-        imagePicker.settings.selection.max = 5
-        imagePicker.settings.theme.selectionStyle = .checked
-        imagePicker.settings.fetch.assets.supportedMediaTypes = [.image]
-        imagePicker.settings.selection.unselectOnReachingMax = true
-
-        let start = Date()
-        self.presentImagePicker(imagePicker, select: { (asset) in
-            print("Selected: \(asset)")
-        }, deselect: { (asset) in
-            print("Deselected: \(asset)")
-        }, cancel: { (assets) in
-            print("Canceled with selections: \(assets)")
-        }, finish: { (assets) in
-            
-            for asset in assets {
-                let imageManager = PHImageManager.default()
-                let requestOptions = PHImageRequestOptions()
-                requestOptions.isSynchronous = true
-                
-                imageManager.requestImageData(for: asset, options: requestOptions) { (data, _, _, _) in
-                    if let imageData = data {
-                        let image = UIImage(data: imageData)
-                        var filename = asset.value(forKey: "filename") as? String ?? "UnknownFileName"
-                        var fileExtension = (filename as NSString).pathExtension
-                        var strFileType = UtilsClassChat.sheard.getImageType(exten: fileExtension)
-                        
-                        var mimetype = ""
-                        if (strFileType == "Unknown" || strFileType == ""){
-                            strFileType = "png"
-                            mimetype = "image/png"
-                        }else {
-                            mimetype = "image/\(strFileType)"
-                        }
-                        
-//                        if filename.contains(".HEIC"){
-//                            let newName = filename.components(separatedBy: ".")
-//                            filename = newName[0] + ".\(strFileType)"
-//                            fileExtension = "png"
-//                            
+        imagePickerMulti?.presentImagePicker(conversationUuID: self.conversationUuID)
+        
+//        let imagePicker = ImagePickerController()
+//        imagePicker.settings.selection.max = 5
+//        imagePicker.settings.theme.selectionStyle = .checked
+//        imagePicker.settings.fetch.assets.supportedMediaTypes = [.image]
+//        imagePicker.settings.selection.unselectOnReachingMax = true
+//
+//        let start = Date()
+//        self.presentImagePicker(imagePicker, select: { (asset) in
+//            print("Selected: \(asset)")
+//        }, deselect: { (asset) in
+//            print("Deselected: \(asset)")
+//        }, cancel: { (assets) in
+//            print("Canceled with selections: \(assets)")
+//        }, finish: { (assets) in
+//            
+//            for asset in assets {
+//                let imageManager = PHImageManager.default()
+//                let requestOptions = PHImageRequestOptions()
+//                requestOptions.isSynchronous = true
+//                
+//                imageManager.requestImageData(for: asset, options: requestOptions) { (data, _, _, _) in
+//                    if let imageData = data {
+//                        let image = UIImage(data: imageData)
+//                        var filename = asset.value(forKey: "filename") as? String ?? "UnknownFileName"
+//                        var fileExtension = (filename as NSString).pathExtension
+//                        var strFileType = UtilsClassChat.sheard.getImageType(exten: fileExtension)
+//                        
+//                        var mimetype = ""
+//                        if (strFileType == "Unknown" || strFileType == ""){
+//                            strFileType = "png"
+//                            mimetype = "image/png"
+//                        }else {
+//                            mimetype = "image/\(strFileType)"
 //                        }
-                        if !filename.contains(".") {
-                            strFileType = "\(filename).\(strFileType)"
-                        }else{
-                            strFileType = filename
-                        }
-                        
-                        var base64String : String?
-                        var uploadFilesDataModel : UploadFilesDataModel = UploadFilesDataModel()
-                        // Convert image to Base64
-                        if let imageData = image?.jpegData(compressionQuality: 0.5) {
-                            base64String = imageData.base64EncodedString()
-                            print("Filename: \(filename), Extension: \(fileExtension)")
-                        }
-                        
-                        var tempChatID =  self.generateUuID()
-                    
-                        //creating data model for files array list and send into upload api
-                        uploadFilesDataModel.file = base64String
-                        uploadFilesDataModel.fileName = strFileType //filename
-                        uploadFilesDataModel.contentType = mimetype //"image/png" //mimetype
-                        uploadFilesDataModel.tempChatID = tempChatID
-                        uploadFilesDataModel.conversationUId = self.conversationUuID
-                        uploadFilesDataModel.caption = ""
-                        self.fileUploadArrayList.append(uploadFilesDataModel)
-                        
-                        
-                        var fileDataClass = FileDataClass()
-                        fileDataClass.fileName = filename
-                        fileDataClass.fileSizes = ""
-                        fileDataClass.url = base64String
-                        fileDataClass.tempChatId = tempChatID
-                        fileDataClass.mimeType = mimetype
-                        fileDataClass.fileLocalUri = base64String
-                        self.filesNames.append(fileDataClass)
-                        
-                        
-                    }
-                    
-                }
-            }
-            
-            print("Finished with selections: \(assets)")
-            self.dismiss(animated: true, completion: {
-                //To call or execute function after some time(After 5 sec)
-                DispatchQueue.main.asyncAfter(deadline: .now()) {
-                    let selectedFilePreview = self.storyboard?.instantiateViewController(withIdentifier: "SelectedFilePreview") as! SelectedFilePreview
-                    selectedFilePreview.modalPresentationStyle = .popover
-                    selectedFilePreview.filesNames = self.filesNames
-                    selectedFilePreview.isFromImageSelection = true
-                    selectedFilePreview.delegate = self
-                    self.present(selectedFilePreview, animated: true, completion: nil)
-                }
-            })
-        }, completion: {
-            let finish = Date()
-            print(finish.timeIntervalSince(start))
-        })
-        */
+//                        
+////                        if filename.contains(".HEIC"){
+////                            let newName = filename.components(separatedBy: ".")
+////                            filename = newName[0] + ".\(strFileType)"
+////                            fileExtension = "png"
+////
+////                        }
+//                        if !filename.contains(".") {
+//                            strFileType = "\(filename).\(strFileType)"
+//                        }else{
+//                            strFileType = filename
+//                        }
+//                        
+//                        var base64String : String?
+//                        var uploadFilesDataModel : UploadFilesDataModel = UploadFilesDataModel()
+//                        // Convert image to Base64
+//                        if let imageData = image?.jpegData(compressionQuality: 0.5) {
+//                            base64String = imageData.base64EncodedString()
+//                            print("Filename: \(filename), Extension: \(fileExtension)")
+//                        }
+//                        
+//                        var tempChatID =  self.generateUuID()
+//                    
+//                        //creating data model for files array list and send into upload api
+//                        uploadFilesDataModel.file = base64String
+//                        uploadFilesDataModel.fileName = strFileType //filename
+//                        uploadFilesDataModel.contentType = mimetype //"image/png" //mimetype
+//                        uploadFilesDataModel.tempChatID = tempChatID
+//                        uploadFilesDataModel.conversationUId = self.conversationUuID
+//                        uploadFilesDataModel.caption = ""
+//                        self.fileUploadArrayList.append(uploadFilesDataModel)
+//                        
+//                        
+//                        var fileDataClass = FileDataClass()
+//                        fileDataClass.fileName = filename
+//                        fileDataClass.fileSizes = ""
+//                        fileDataClass.url = base64String
+//                        fileDataClass.tempChatId = tempChatID
+//                        fileDataClass.mimeType = mimetype
+//                        fileDataClass.fileLocalUri = base64String
+//                        self.filesNames.append(fileDataClass)
+//                        
+//                        
+//                    }
+//                    
+//                }
+//            }
+//            
+//            print("Finished with selections: \(assets)")
+//            self.dismiss(animated: true, completion: {
+//                //To call or execute function after some time(After 5 sec)
+//                DispatchQueue.main.asyncAfter(deadline: .now()) {
+//                    let selectedFilePreview = self.storyboard?.instantiateViewController(withIdentifier: "SelectedFilePreview") as! SelectedFilePreview
+//                    selectedFilePreview.modalPresentationStyle = .popover
+//                    selectedFilePreview.filesNames = self.filesNames
+//                    selectedFilePreview.isFromImageSelection = true
+//                    selectedFilePreview.delegate = self
+//                    self.present(selectedFilePreview, animated: true, completion: nil)
+//                }
+//            })
+//        }, completion: {
+//            let finish = Date()
+//            print(finish.timeIntervalSince(start))
+//        })
     }
     
     func updateReconnection(){
@@ -367,16 +377,49 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func registerTableViewCells(){
-        self.chatTableView.register(UINib(nibName: "ConversationTableViewCellNoLoginUser", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
-        self.chatTableView.register(UINib(nibName: "ConversationLoginUserTableViewCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifierLoginUser)
         
-        self.chatTableView.register(UINib(nibName: "ConversationCellImageNoLoginUser", bundle: nil), forCellReuseIdentifier: cellReuseIdentifierForImageNonLogin)
-        self.chatTableView.register(UINib(nibName: "ConversationCellImageLoginUser", bundle: nil), forCellReuseIdentifier: cellReuseIdentifierCellImageLoginUser)
-        self.chatTableView.register(UINib(nibName: "ConversationCellFIleForLoginUser", bundle: nil), forCellReuseIdentifier: cellReuseIdentifierCellFIleForLoginUser)
-        self.chatTableView.register(UINib(nibName: "ConversationCellFileNonLoginUser", bundle: nil), forCellReuseIdentifier: cellReuseIdentifierCellFIleForNonLoginUser)
+        // Assuming you want to register the nib for a table view cell
+//        let nib = UINib(nibName: "ConversationLoginUserTableViewCell", bundle: Bundle.module)
+//        tableView.register(nib, forCellReuseIdentifier: "ConversationLoginUserTableViewCell")
+            
+        let bundle = Bundle(for: ChatViewController.self)
         
-        self.chatTableView.register(UINib(nibName: "ActivityLoaderCell", bundle: nil), forCellReuseIdentifier: ActivityLoaderCell)
-        self.chatTableView.register(UINib(nibName: "SystemsTVCell", bundle: nil), forCellReuseIdentifier: SystemsTVCell)
+        let nib = UINib(nibName: "ConversationTableViewCellNoLoginUser", bundle: bundle)
+        self.chatTableView.register(nib, forCellReuseIdentifier: cellReuseIdentifier)
+        
+        let nib1 = UINib(nibName: "ConversationLoginUserTableViewCell", bundle: bundle)
+        self.chatTableView.register(nib1, forCellReuseIdentifier: cellReuseIdentifierLoginUser)
+        
+        let nib2 = UINib(nibName: "ConversationCellImageNoLoginUser", bundle: bundle)
+        self.chatTableView.register(nib2, forCellReuseIdentifier: cellReuseIdentifierForImageNonLogin)
+        
+        let nib3 = UINib(nibName: "ConversationCellImageLoginUser", bundle: bundle)
+        self.chatTableView.register(nib3, forCellReuseIdentifier: cellReuseIdentifierCellImageLoginUser)
+        
+        let nib4 = UINib(nibName: "ConversationCellFIleForLoginUser", bundle: bundle)
+        self.chatTableView.register(nib4, forCellReuseIdentifier: cellReuseIdentifierCellFIleForLoginUser)
+        
+        let nib5 = UINib(nibName: "ConversationCellFileNonLoginUser", bundle: bundle)
+        self.chatTableView.register(nib5, forCellReuseIdentifier: cellReuseIdentifierCellFIleForNonLoginUser)
+        
+        let nib6 = UINib(nibName: "ActivityLoaderCell", bundle: bundle)
+        self.chatTableView.register(nib6, forCellReuseIdentifier: ActivityLoaderCell)
+        
+        let nib7 = UINib(nibName: "SystemsTVCell", bundle: bundle)
+        self.chatTableView.register(nib7, forCellReuseIdentifier: SystemsTVCell)
+        
+        
+        //self.chatTableView.register(UINib(nibName: "ConversationTableViewCellNoLoginUser", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
+        //self.chatTableView.register(UINib(nibName: "ConversationLoginUserTableViewCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifierLoginUser)
+        
+        //self.chatTableView.register(UINib(nibName: "ConversationCellImageNoLoginUser", bundle: nil), forCellReuseIdentifier: cellReuseIdentifierForImageNonLogin)
+        //self.chatTableView.register(UINib(nibName: "ConversationCellImageLoginUser", bundle: nil), forCellReuseIdentifier: cellReuseIdentifierCellImageLoginUser)
+        //self.chatTableView.register(UINib(nibName: "ConversationCellFIleForLoginUser", bundle: nil), forCellReuseIdentifier: cellReuseIdentifierCellFIleForLoginUser)
+        //self.chatTableView.register(UINib(nibName: "ConversationCellFileNonLoginUser", bundle: nil), forCellReuseIdentifier: cellReuseIdentifierCellFIleForNonLoginUser)
+        
+//        self.chatTableView.register(UINib(nibName: "ActivityLoaderCell", bundle: nil), forCellReuseIdentifier: ActivityLoaderCell)
+//        self.chatTableView.register(UINib(nibName: "SystemsTVCell", bundle: nil), forCellReuseIdentifier: SystemsTVCell)
+        
     }
 
 
@@ -403,13 +446,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         
 //        self.showFeedBackDialogue()
     
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    public override func viewDidDisappear(_ animated: Bool) {
         self.timerDatabase?.invalidate()
         self.timerDatabase = nil
     }
@@ -425,11 +468,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBOutlet weak var btnEmoji: UIButton!
-    override func viewWillDisappear(_ animated: Bool) {
+    public override func viewWillDisappear(_ animated: Bool) {
        
     }
     
-    override func didReceiveMemoryWarning() {
+    public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
@@ -577,12 +620,12 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
  
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        print("")
         return self.conversationArrayList.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
             if !self.conversationArrayList.isEmpty{
                 if self.conversationArrayList[indexPath.row].type == "system" {
@@ -636,8 +679,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     
                                     let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForLoginUser,for: indexPath) as! ConversationCellFIleForLoginUser
                                     aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                    
-                                    aCell.ivImageFIleIcon.image = UIImage(named: "zip")
+                                    aCell.ivImageFIleIcon.image = loadImageFromPodBundle(named: "zip")
+                                    //aCell.ivImageFIleIcon.image = UIImage(named: "zip")
                                     aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                     aCell.lblTIme.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                     if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -673,18 +716,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     if self.conversationArrayList[indexPath.row].isNotNewChat == true{
                                         if self.conversationArrayList[indexPath.row].isUpdateStatus == true{
                                             if self.conversationArrayList[indexPath.row].isSeen! {
-                                                aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                                                //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
                                             }else{
-                                                aCell.ivFileStatus.image = UIImage(named: "tick")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
+                                                //aCell.ivFileStatus.image = UIImage(named: "tick")
                                             }
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "send_messagetime")
+                                            //aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
                                         }
                                     }else{
                                         if self.conversationArrayList[indexPath.row].isSeen! {
-                                            aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                                            //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                         }
                                         
                                     }
@@ -695,8 +743,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     
                                     let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForLoginUser,for: indexPath) as! ConversationCellFIleForLoginUser
                                     aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                    
-                                    aCell.ivImageFIleIcon.image = UIImage(named: "rar")
+                                    aCell.ivImageFIleIcon.image = loadImageFromPodBundle(named: "rar")
+                                    //aCell.ivImageFIleIcon.image = UIImage(named: "rar")
                                     aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                     aCell.lblTIme.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                     if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -730,19 +778,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     if self.conversationArrayList[indexPath.row].isNotNewChat == true{
                                         if self.conversationArrayList[indexPath.row].isUpdateStatus == true{
                                             if self.conversationArrayList[indexPath.row].isSeen! {
-                                                aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
                                             }else{
-                                                aCell.ivFileStatus.image = UIImage(named: "tick")
-                                                
+                                                //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                             }
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            //aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "send_messagetime")
                                         }
                                     }else{
                                         if self.conversationArrayList[indexPath.row].isSeen! {
-                                            aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                         }
                                         
                                     }
@@ -755,8 +807,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     
                                     let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForLoginUser,for: indexPath) as! ConversationCellFIleForLoginUser
                                     aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                    
-                                    aCell.ivImageFIleIcon.image = UIImage(named: "sevenz")
+                                    aCell.ivImageFIleIcon.image = loadImageFromPodBundle(named: "sevenz")
+                                    //aCell.ivImageFIleIcon.image = UIImage(named: "sevenz")
                                     aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                     aCell.lblTIme.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                     if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -790,19 +842,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     if self.conversationArrayList[indexPath.row].isNotNewChat == true{
                                         if self.conversationArrayList[indexPath.row].isUpdateStatus == true{
                                             if self.conversationArrayList[indexPath.row].isSeen! {
-                                                aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                                                //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
                                             }else{
-                                                aCell.ivFileStatus.image = UIImage(named: "tick")
-                                                
+                                                //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                             }
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            //aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "send_messagetime")
                                         }
                                     }else{
                                         if self.conversationArrayList[indexPath.row].isSeen! {
-                                            aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                                            //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
+                                            //aCell.ivFileStatus.image = UIImage(named: "tick")
                                         }
                                     }
                                     self.showDownloadIconFileLoginUser(uitableVc: aCell, position: indexPath.row)
@@ -814,8 +870,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     
                                     let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForLoginUser,for: indexPath) as! ConversationCellFIleForLoginUser
                                     aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                    
-                                    aCell.ivImageFIleIcon.image = UIImage(named: "txt")
+                                    aCell.ivImageFIleIcon.image = loadImageFromPodBundle(named: "txt")
+                                    //aCell.ivImageFIleIcon.image = UIImage(named: "txt")
                                     aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                     aCell.lblTIme.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                     if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -850,19 +906,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     if self.conversationArrayList[indexPath.row].isNotNewChat == true{
                                         if self.conversationArrayList[indexPath.row].isUpdateStatus == true{
                                             if self.conversationArrayList[indexPath.row].isSeen! {
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
                                                 aCell.ivFileStatus.image = UIImage(named: "read_reciept")
                                             }else{
-                                                aCell.ivFileStatus.image = UIImage(named: "tick")
-                                                
+                                                //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                             }
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            //aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "send_messagetime")
                                         }
                                     }else{
                                         if self.conversationArrayList[indexPath.row].isSeen! {
-                                            aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                         }
                                     }
                                     self.showDownloadIconFileLoginUser(uitableVc: aCell, position: indexPath.row)
@@ -873,8 +933,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     
                                     let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForLoginUser,for: indexPath) as! ConversationCellFIleForLoginUser
                                     aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                    
-                                    aCell.ivImageFIleIcon.image = UIImage(named: "pdf")
+                                    aCell.ivImageFIleIcon.image = loadImageFromPodBundle(named: "pdf")
+                                    //aCell.ivImageFIleIcon.image = UIImage(named: "pdf")
                                     aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                     aCell.lblTIme.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                     if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -910,19 +970,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     if self.conversationArrayList[indexPath.row].isNotNewChat == true{
                                         if self.conversationArrayList[indexPath.row].isUpdateStatus == true{
                                             if self.conversationArrayList[indexPath.row].isSeen! {
-                                                aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                                                //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
                                             }else{
-                                                aCell.ivFileStatus.image = UIImage(named: "tick")
-                                                
+                                                //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                             }
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            //aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "send_messagetime")
                                         }
                                     }else{
                                         if self.conversationArrayList[indexPath.row].isSeen! {
-                                            aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                                            //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                         }
                                     }
                                     self.showDownloadIconFileLoginUser(uitableVc: aCell, position: indexPath.row)
@@ -932,8 +996,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     
                                     let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForLoginUser,for: indexPath) as! ConversationCellFIleForLoginUser
                                     aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                    
-                                    aCell.ivImageFIleIcon.image = UIImage(named: "msword_ic")
+                                    aCell.ivImageFIleIcon.image = loadImageFromPodBundle(named: "msword_ic")
+                                    //aCell.ivImageFIleIcon.image = UIImage(named: "msword_ic")
                                     aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                     aCell.lblTIme.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                     if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -967,19 +1031,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     if self.conversationArrayList[indexPath.row].isNotNewChat == true{
                                         if self.conversationArrayList[indexPath.row].isUpdateStatus == true{
                                             if self.conversationArrayList[indexPath.row].isSeen! {
-                                                aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                                               //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
                                             }else{
-                                                aCell.ivFileStatus.image = UIImage(named: "tick")
-                                                
+                                                //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                             }
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            //aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "send_messagetime")
                                         }
                                     }else{
                                         if self.conversationArrayList[indexPath.row].isSeen! {
-                                            aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                                            //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                         }
                                     }
                                     self.showDownloadIconFileLoginUser(uitableVc: aCell, position: indexPath.row)
@@ -989,8 +1057,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     
                                     let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForLoginUser,for: indexPath) as! ConversationCellFIleForLoginUser
                                     aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                    
-                                    aCell.ivImageFIleIcon.image = UIImage(named: "docx_ic")
+                                    aCell.ivImageFIleIcon.image = loadImageFromPodBundle(named: "docx_ic")
+                                    //aCell.ivImageFIleIcon.image = UIImage(named: "docx_ic")
                                     aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                     aCell.lblTIme.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                     if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1024,19 +1092,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     if self.conversationArrayList[indexPath.row].isNotNewChat == true{
                                         if self.conversationArrayList[indexPath.row].isUpdateStatus == true{
                                             if self.conversationArrayList[indexPath.row].isSeen! {
-                                                aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
                                             }else{
-                                                aCell.ivFileStatus.image = UIImage(named: "tick")
-                                                
+                                                //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                             }
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            //aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "send_messagetime")
                                         }
                                     }else{
                                         if self.conversationArrayList[indexPath.row].isSeen! {
-                                            aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                                            //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                         }
                                     }
                                     self.showDownloadIconFileLoginUser(uitableVc: aCell, position: indexPath.row)
@@ -1044,8 +1116,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 } else if self.conversationArrayList[indexPath.row].files?[0].type == "doc" || self.conversationArrayList[indexPath.row].files?[0].type == "application/doc" || self.conversationArrayList[indexPath.row].files?[0].type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document" {
                                     let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForLoginUser,for: indexPath) as! ConversationCellFIleForLoginUser
                                     aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                    
-                                    aCell.ivImageFIleIcon.image = UIImage(named: "doc")
+                                    aCell.ivImageFIleIcon.image = loadImageFromPodBundle(named: "doc")
+                                    //aCell.ivImageFIleIcon.image = UIImage(named: "doc")
                                     aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                     aCell.lblTIme.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                     if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1079,20 +1151,24 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     if self.conversationArrayList[indexPath.row].isNotNewChat == true{
                                         if self.conversationArrayList[indexPath.row].isUpdateStatus == true{
                                             if self.conversationArrayList[indexPath.row].isSeen! {
-                                                aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                                                //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
                                             }else{
-                                                aCell.ivFileStatus.image = UIImage(named: "tick")
-                                                
+                                                //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                             }
                                             
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            //aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "send_messagetime")
                                         }
                                     }else{
                                         if self.conversationArrayList[indexPath.row].isSeen! {
-                                            aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                         }
                                     }
                                     self.showDownloadIconFileLoginUser(uitableVc: aCell, position: indexPath.row)
@@ -1102,8 +1178,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     
                                     let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForLoginUser,for: indexPath) as! ConversationCellFIleForLoginUser
                                     aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                    
-                                    aCell.ivImageFIleIcon.image = UIImage(named: "xls")
+                                    aCell.ivImageFIleIcon.image = loadImageFromPodBundle(named: "xls")
+                                    //aCell.ivImageFIleIcon.image = UIImage(named: "xls")
                                     aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                     aCell.lblTIme.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                     if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1137,19 +1213,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     if self.conversationArrayList[indexPath.row].isNotNewChat == true{
                                         if self.conversationArrayList[indexPath.row].isUpdateStatus == true{
                                             if self.conversationArrayList[indexPath.row].isSeen! {
-                                                aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
                                             }else{
-                                                aCell.ivFileStatus.image = UIImage(named: "tick")
-                                                
+                                                //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                             }
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            //aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "send_messagetime")
                                         }
                                     }else{
                                         if self.conversationArrayList[indexPath.row].isSeen! {
-                                            aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                                            //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "tick")
+                                           // aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                         }
                                     }
                                     self.showDownloadIconFileLoginUser(uitableVc: aCell, position: indexPath.row)
@@ -1158,8 +1238,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 else if self.conversationArrayList[indexPath.row].files?[0].type == "xlsx" || self.conversationArrayList[indexPath.row].files?[0].type == "application/xlsx"{
                                     let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForLoginUser,for: indexPath) as! ConversationCellFIleForLoginUser
                                     aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                    
-                                    aCell.ivImageFIleIcon.image = UIImage(named: "xlsx")
+                                    aCell.ivImageFIleIcon.image = loadImageFromPodBundle(named: "xlsx")
+                                    //aCell.ivImageFIleIcon.image = UIImage(named: "xlsx")
                                     aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                     aCell.lblTIme.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                     
@@ -1196,18 +1276,22 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                         if self.conversationArrayList[indexPath.row].isUpdateStatus == true{
                                             if self.conversationArrayList[indexPath.row].isSeen! {
                                                 aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
                                             }else{
-                                                aCell.ivFileStatus.image = UIImage(named: "tick")
-                                                
+                                                //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                             }
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            //aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "send_messagetime")
                                         }
                                     }else{
                                         if self.conversationArrayList[indexPath.row].isSeen! {
-                                            aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                         }
                                     }
                                     self.showDownloadIconFileLoginUser(uitableVc: aCell, position: indexPath.row)
@@ -1216,8 +1300,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 } else if self.conversationArrayList[indexPath.row].files?[0].type == "csv" || self.conversationArrayList[indexPath.row].files?[0].type == "application/csv"{
                                     let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForLoginUser,for: indexPath) as! ConversationCellFIleForLoginUser
                                     aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                    
-                                    aCell.ivImageFIleIcon.image = UIImage(named: "csv")
+                                    aCell.ivImageFIleIcon.image = loadImageFromPodBundle(named: "csv")
+                                    //aCell.ivImageFIleIcon.image = UIImage(named: "csv")
                                     aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                     aCell.lblTIme.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                     if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1251,19 +1335,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     if self.conversationArrayList[indexPath.row].isNotNewChat == true{
                                         if self.conversationArrayList[indexPath.row].isUpdateStatus == true{
                                             if self.conversationArrayList[indexPath.row].isSeen! {
-                                                aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
                                             }else{
-                                                aCell.ivFileStatus.image = UIImage(named: "tick")
-                                                
+                                                //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                                aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                             }
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            //aCell.ivFileStatus.image = UIImage(named: "send_messagetime")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "send_messagetime")
                                         }
                                     }else{
                                         if self.conversationArrayList[indexPath.row].isSeen! {
-                                            aCell.ivFileStatus.image = UIImage(named: "read_reciept")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                                            //aCell.ivFileStatus.image = UIImage(named: "read_reciept")
                                         }else{
-                                            aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            //aCell.ivFileStatus.image = UIImage(named: "tick")
+                                            aCell.ivFileStatus.image = loadImageFromPodBundle(named: "tick")
                                         }
                                     }
                                     self.showDownloadIconFileLoginUser(uitableVc: aCell, position: indexPath.row)
@@ -1291,6 +1379,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 //                                        aCell.ivImage.setImage(with: self.conversationArrayList[indexPath.row].files![0].url ?? "", placeHolder: UIImage(named: "placeholder"))
                                         DispatchQueue.main.async {
                                             //aCell.ivImage.load.request(with: self.conversationArrayList[indexPath.row].files![0].url ?? "")
+                                            let url = URL(string: self.conversationArrayList[indexPath.row].files![0].url ?? "")
+                                            aCell.ivImage.kf.setImage(with: url)
                                         }
                                     }
                                     aCell.lblTime.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
@@ -1326,19 +1416,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     if self.conversationArrayList[indexPath.row].isNotNewChat == true{
                                         if self.conversationArrayList[indexPath.row].isUpdateStatus == true{
                                             if self.conversationArrayList[indexPath.row].isSeen! {
-                                                aCell.imgageStatus.image = UIImage(named: "read_reciept")
+                                                aCell.imgageStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                                                //aCell.imgageStatus.image = UIImage(named: "read_reciept")
                                             }else{
-                                                aCell.imgageStatus.image = UIImage(named: "tick")
-                                                
+                                                //aCell.imgageStatus.image = UIImage(named: "tick")
+                                                aCell.imgageStatus.image = loadImageFromPodBundle(named: "tick")
                                             }
                                         }else{
-                                            aCell.imgageStatus.image = UIImage(named: "send_messagetime")
+                                            //aCell.imgageStatus.image = UIImage(named: "send_messagetime")
+                                            aCell.imgageStatus.image = loadImageFromPodBundle(named: "send_messagetime")
                                         }
                                     }else{
                                         if self.conversationArrayList[indexPath.row].isSeen! {
-                                            aCell.imgageStatus.image = UIImage(named: "read_reciept")
+                                           // aCell.imgageStatus.image = UIImage(named: "read_reciept")
+                                            aCell.imgageStatus.image = loadImageFromPodBundle(named: "read_reciept")
                                         }else{
-                                            aCell.imgageStatus.image = UIImage(named: "tick")
+                                            //aCell.imgageStatus.image = UIImage(named: "tick")
+                                            aCell.imgageStatus.image = loadImageFromPodBundle(named: "tick")
                                         }
                                     }
                                     self.showDownloadIconImageLoginUser(uitableVc: aCell, position: indexPath.row)
@@ -1358,8 +1452,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 
                                 let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForNonLoginUser,for: indexPath) as! ConversationCellFileNonLoginUser
                                 aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                
-                                aCell.ivImageIcon.image = UIImage(named: "zip")
+                                aCell.ivImageIcon.image = loadImageFromPodBundle(named: "zip")
+                                //aCell.ivImageIcon.image = UIImage(named: "zip")
                                 aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                 aCell.lblTime.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                 if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1377,8 +1471,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 
                                 let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForNonLoginUser,for: indexPath) as! ConversationCellFileNonLoginUser
                                 aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                
-                                aCell.ivImageIcon.image = UIImage(named: "rar")
+                                aCell.ivImageIcon.image = loadImageFromPodBundle(named: "rar")
+                                //aCell.ivImageIcon.image = UIImage(named: "rar")
                                 aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                 aCell.lblTime.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                 if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1398,8 +1492,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 
                                 let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForNonLoginUser,for: indexPath) as! ConversationCellFileNonLoginUser
                                 aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                
-                                aCell.ivImageIcon.image = UIImage(named: "sevenz")
+                                aCell.ivImageIcon.image = loadImageFromPodBundle(named: "sevenz")
+                                //aCell.ivImageIcon.image = UIImage(named: "sevenz")
                                 aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                 aCell.lblTime.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                 if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1420,7 +1514,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForNonLoginUser,for: indexPath) as! ConversationCellFileNonLoginUser
                                 aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
                                 
-                                aCell.ivImageIcon.image = UIImage(named: "txt_ic")
+                                aCell.ivImageIcon.image = loadImageFromPodBundle(named: "txt_ic")
+                                //aCell.ivImageIcon.image = UIImage(named: "txt_ic")
                                 aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                 aCell.lblTime.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                 if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1440,8 +1535,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 
                                 let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForNonLoginUser,for: indexPath) as! ConversationCellFileNonLoginUser
                                 aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                
-                                aCell.ivImageIcon.image = UIImage(named: "pdf")
+                                aCell.ivImageIcon.image = loadImageFromPodBundle(named: "pdf")
+                                //aCell.ivImageIcon.image = UIImage(named: "pdf")
                                 aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                 aCell.lblTime.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                 if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1459,8 +1554,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                             else if self.conversationArrayList[indexPath.row].files?[0].type == "msword" || self.conversationArrayList[indexPath.row].files?[0].type == "application/msword"{
                                 let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForNonLoginUser,for: indexPath) as! ConversationCellFileNonLoginUser
                                 aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                
-                                aCell.ivImageIcon.image = UIImage(named: "msword_ic")
+                                aCell.ivImageIcon.image = loadImageFromPodBundle(named: "msword_ic")
+                                //aCell.ivImageIcon.image = UIImage(named: "msword_ic")
                                 aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                 aCell.lblTime.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                 if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1478,8 +1573,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 
                                 let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForNonLoginUser,for: indexPath) as! ConversationCellFileNonLoginUser
                                 aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                
-                                aCell.ivImageIcon.image = UIImage(named: "docx_ic")
+                                aCell.ivImageIcon.image = loadImageFromPodBundle(named: "docx_ic")
+                                //aCell.ivImageIcon.image = UIImage(named: "docx_ic")
                                 aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                 aCell.lblTime.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                 if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1497,8 +1592,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                         self.conversationArrayList[indexPath.row].files?[0].type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document" {
                                 let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForNonLoginUser,for: indexPath) as! ConversationCellFileNonLoginUser
                                 aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                
-                                aCell.ivImageIcon.image = UIImage(named: "doc")
+                                aCell.ivImageIcon.image = loadImageFromPodBundle(named: "doc")
+                                //aCell.ivImageIcon.image = UIImage(named: "doc")
                                 aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                 aCell.lblTime.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                 if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1516,8 +1611,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 
                                 let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForNonLoginUser,for: indexPath) as! ConversationCellFileNonLoginUser
                                 aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                
-                                aCell.ivImageIcon.image = UIImage(named: "xls")
+                                aCell.ivImageIcon.image = loadImageFromPodBundle(named: "xls")
+                                //aCell.ivImageIcon.image = UIImage(named: "xls")
                                 aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                 aCell.lblTime.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                 if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1534,8 +1629,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                             else if self.conversationArrayList[indexPath.row].files?[0].type == "xlsx" || self.conversationArrayList[indexPath.row].files?[0].type == "application/xlsx"{
                                 let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForNonLoginUser,for: indexPath) as! ConversationCellFileNonLoginUser
                                 aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                
-                                aCell.ivImageIcon.image = UIImage(named: "xlsx")
+                                aCell.ivImageIcon.image = loadImageFromPodBundle(named: "xlsx")
+                                //aCell.ivImageIcon.image = UIImage(named: "xlsx")
                                 aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                 aCell.lblTime.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                 if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1553,8 +1648,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 
                                 let aCell = self.chatTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifierCellFIleForNonLoginUser,for: indexPath) as! ConversationCellFileNonLoginUser
                                 aCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-                                
-                                aCell.ivImageIcon.image = UIImage(named: "csv")
+                                aCell.ivImageIcon.image = loadImageFromPodBundle(named: "csv")
+                                //aCell.ivImageIcon.image = UIImage(named: "csv")
                                 aCell.lblFileName.text = self.conversationArrayList[indexPath.row].content!
                                 aCell.lblTime.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
                                 if self.conversationArrayList[indexPath.row].caption != "" && self.conversationArrayList[indexPath.row].caption != nil{
@@ -1584,6 +1679,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 // Load image asynchronously
                                 DispatchQueue.main.async {
                                     //aCell.ivImageView.load.request(with: self.conversationArrayList[indexPath.row].files![0].url ?? "")
+                                    let url = URL(string: self.conversationArrayList[indexPath.row].files![0].url ?? "")
+                                    aCell.ivImageView.kf.setImage(with: url)
                                 }
                                 
                                 aCell.lbl_time.text = self.utcToLocal(dateStr: self.conversationArrayList[indexPath.row].timestamp ?? "")
@@ -1616,19 +1713,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                     if self.conversationArrayList[indexPath.row].isNotNewChat == true{
                         if self.conversationArrayList[indexPath.row].isUpdateStatus == true{
                             if self.conversationArrayList[indexPath.row].isSeen! {
-                                aCell.ivStatus.image = UIImage(named: "read_reciept")
+                                //aCell.ivStatus.image = UIImage(named: "read_reciept")
+                                aCell.ivStatus.image = loadImageFromPodBundle(named: "read_reciept")
                             }else{
-                                aCell.ivStatus.image = UIImage(named: "tick")
-                                
+                                //aCell.ivStatus.image = UIImage(named: "tick")
+                                aCell.ivStatus.image = loadImageFromPodBundle(named: "tick")
                             }
                         }else{
-                            aCell.ivStatus.image = UIImage(named: "send_messagetime")
+                            //aCell.ivStatus.image = UIImage(named: "send_messagetime")
+                            aCell.ivStatus.image = loadImageFromPodBundle(named: "send_messagetime")
                         }
                     }else{
                         if self.conversationArrayList[indexPath.row].isSeen! {
-                            aCell.ivStatus.image = UIImage(named: "read_reciept")
+                            aCell.ivStatus.image = loadImageFromPodBundle(named: "read_reciept")
+                            //aCell.ivStatus.image = UIImage(named: "read_reciept")
                         }else{
-                            aCell.ivStatus.image = UIImage(named: "tick")
+                            //aCell.ivStatus.image = UIImage(named: "tick")
+                            aCell.ivStatus.image = loadImageFromPodBundle(named: "tick")
                         }
                         
                     }
@@ -1673,12 +1774,12 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         return UITableViewCell() //return aCell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        if(Reachability.isConnectedToNetwork()){
         if !self.conversationArrayList.isEmpty{
             if self.conversationArrayList[indexPath.row].isFailed == false{
@@ -1706,7 +1807,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        }
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
        
         if indexPath.row == self.conversationArrayList.count - 1 && !isLoading{
             if (self.pageNumber<=self.totalpages){
@@ -1793,6 +1894,21 @@ class ChatHubConnectionDelegate: HubConnectionDelegate {
 
 
 extension ChatViewController {
+    
+    // Function to load an image from the pod's bundle
+    func loadImageFromPodBundle(named imageName: String, ofType type: String) -> UIImage? {
+        let bundle = Bundle(for: ChatViewController.self)
+        if let imagePath = bundle.path(forResource: imageName, ofType: type) {
+            return UIImage(contentsOfFile: imagePath)
+        }
+        return nil
+    }
+
+    // Alternative function using UIImage(named:in:compatibleWith:) initializer
+    func loadImageFromPodBundle(named imageName: String) -> UIImage? {
+        let bundle = Bundle(for: ChatViewController.self)
+        return UIImage(named: imageName, in: bundle, compatibleWith: nil)
+    }
 
     func hideAndShowReconnectionLayout(isHide: Bool){
         if isHide == true {
@@ -1804,7 +1920,9 @@ extension ChatViewController {
         }else{
             self.uiViewReconnection.isHidden = false //false
             self.lblReconnecting.text = "Reconnecting.."
-            self.ivReconnectingImage.image = UIImage.gif(name: "connecting")
+            //temp lib
+            //self.ivReconnectingImage.image = UIImage.gif(name: "connecting")
+            //self.ivReconnectingImage.loadGIF(named: "connecting")
         }
     }
     
@@ -1867,7 +1985,9 @@ extension ChatViewController {
         if self.conversationArrayList[position].isDownloading == true{
             uitableVc.downloaduiView.isHidden = false
             uitableVc.ivDownload.isHidden = false
-            uitableVc.ivDownload.image = UIImage.gif(name: "cloudnew")
+            //temp lib
+            //uitableVc.ivDownload.image = UIImage.gif(name: "cloudnew")
+            //uitableVc.ivDownload.loadGIF(named: "cloudnew")
         }else{
             uitableVc.downloaduiView.isHidden = true
             uitableVc.ivDownload.isHidden = true
@@ -1878,7 +1998,9 @@ extension ChatViewController {
         if self.conversationArrayList[position].isDownloading == true{
             uitableVc.downloaduiView.isHidden = false
             uitableVc.ivDownload.isHidden = false
-            uitableVc.ivDownload.image = UIImage.gif(name: "cloudnew")
+            //temp lib
+            //uitableVc.ivDownload.image = UIImage.gif(name: "cloudnew")
+            //uitableVc.ivDownload.loadGIF(named: "cloudnew")
         }else{
             uitableVc.downloaduiView.isHidden = true
             uitableVc.ivDownload.isHidden = true
@@ -1889,7 +2011,9 @@ extension ChatViewController {
         if self.conversationArrayList[position].isDownloading == true{
             uitableVc.downloaduiView.isHidden = false
             uitableVc.ivDownload.isHidden = false
-            uitableVc.ivDownload.image = UIImage.gif(name: "cloudnew")
+            //temp lib
+            //uitableVc.ivDownload.image = UIImage.gif(name: "cloudnew")
+            //uitableVc.ivDownload.loadGIF(named: "cloudnew")
         }else{
             uitableVc.downloaduiView.isHidden = true
             uitableVc.ivDownload.isHidden = true
@@ -1900,84 +2024,160 @@ extension ChatViewController {
         if self.conversationArrayList[position].isDownloading == true{
             uitableVc.downloaduiView.isHidden = false
             uitableVc.ivDownload.isHidden = false
-            uitableVc.ivDownload.image = UIImage.gif(name: "cloudnew")
+            //temp lib
+//            uitableVc.ivDownload.image = UIImage.gif(name: "cloudnew")
+            //uitableVc.ivDownload.loadGIF(named: "cloudnew")
         }else{
             uitableVc.downloaduiView.isHidden = true
             uitableVc.ivDownload.isHidden = true
         }
     }
     
+    // Handle the event
+    @objc func handleUnSelectedPreviewEvent(_ notification: Notification) {
+        if !self.fileUploadArrayList.isEmpty{
+            self.fileUploadArrayList.removeAll()
+        }
+        if !self.filesNames.isEmpty{
+            self.filesNames.removeAll()
+        }
+    }
+    
+    // Handle the event
+    @objc func handleSelectedPreviewEvent(_ notification: Notification) {
+        if !self.fileUploadArrayList.isEmpty{
+            for i in 0 ..< self.filesNames.count{
+                self.indexCurrent = i
+                var messageStr = UserDefaults.standard.value(forKey: "messageStr") as? String ?? ""
+                var sendMessageModel : NewChatMessage = NewChatMessage();
+                sendMessageModel.agentId = self.agentId;
+                sendMessageModel.tempChatId = self.filesNames[i].tempChatId!
+                sendMessageModel.conversationUId = self.conversationUuID
+                sendMessageModel.connectionId = CustomUserDefaultChat.sheard.getsaveConnectionId()
+                sendMessageModel.customerId = self.cusId ;
+                sendMessageModel.contactNo = self.customerMobileNumber;
+                sendMessageModel.name = self.customerName ;
+                sendMessageModel.cnic = self.customerCNIC;
+                sendMessageModel.emailaddress = self.customerEmail;
+                sendMessageModel.message = self.filesNames[i].fileName ?? ""
+                sendMessageModel.documentOrignalname = self.filesNames[i].fileName ?? ""
+                sendMessageModel.documentName = self.filesNames[i].fileName ?? ""
+                sendMessageModel.documentType = self.filesNames[i].mimeType
+                sendMessageModel.fileUri = self.filesNames[i].url ?? ""
+                sendMessageModel.source = "Mobile_IOS" ;
+                sendMessageModel.isFromWidget = true ;
+                sendMessageModel.type = "file";
+                sendMessageModel.channelid = self.channelId;
+                sendMessageModel.notifyMessage = "";
+                sendMessageModel.mobileToken = self.fcmtoken;
+                sendMessageModel.caption = self.filesNames[i].message ?? ""
+                self.fileUploadArrayList[i].caption = self.filesNames[i].message ?? ""
+                
+                //                sendMessageModel.createdOn = self.getCurrentDateAndTime()
+                sendMessageModel.callerAppType = Int64(UtilsClassChat.sheard.callerAppType)
+                self.addTempItemToList(sendMessageModel: sendMessageModel, isAddedToDB: true)
+            }
+            if(Reachability.isConnectedToNetwork()){
+                self.swapCaptionData()
+                //self.sendAopData(aopRequest: aopdata)
+                //self.uploadFilesToServer(conversationUUId: self.conversationUuID, multipartList: self.fileUploadArrayList,tempChatIdStr: self.filesNames[0].tempChatId!)
+            }else{
+                for i in 0 ..< self.filesNames.count{
+                    if let position = self.conversationArrayList.firstIndex(where: {$0.tempChatId == self.filesNames[i].tempChatId ?? ""}){
+                        print(position)
+                        self.conversationArrayList[position].isReceived = false
+                        self.conversationArrayList[position].isFailed = true
+                        self.conversationArrayList[position].isShowLocalFiles = true
+                        self.dbChatObj.updateFailedStatus(tempChatId: self.conversationArrayList[position].tempChatId ?? "", isFailed: self.conversationArrayList[position].isFailed ?? false)
+                        //self.dbChatObj.saveChatIntoData(isUpdateById: false, pageNumber: self.pageNumber, conversation: self.conversationArrayList[position])
+                        self.chatTableView.reloadRows(at: [IndexPath(row: position, section: 0)], with: .automatic)
+                    }
+                }
+                self.fileUploadArrayList.removeAll()
+                self.filesNames.removeAll()
+            }
+            
+            
+            
+        }
+        
+    }
     
     func intiEventListner(){
         
-//        SwiftEventBus.onMainThread(self, name: "CalledAfterSelectedPreviewSend") { notification in
-//            if !self.fileUploadArrayList.isEmpty{
-//                for i in 0 ..< self.filesNames.count{
-//                    self.indexCurrent = i
-//                    var messageStr = UserDefaults.standard.value(forKey: "messageStr") as? String ?? ""
-//                    var sendMessageModel : NewChatMessage = NewChatMessage();
-//                    sendMessageModel.agentId = self.agentId;
-//                    sendMessageModel.tempChatId = self.filesNames[i].tempChatId!
-//                    sendMessageModel.conversationUId = self.conversationUuID
-//                    sendMessageModel.connectionId = CustomUserDefaultChat.sheard.getsaveConnectionId()
-//                    sendMessageModel.customerId = self.cusId ;
-//                    sendMessageModel.contactNo = self.customerMobileNumber;
-//                    sendMessageModel.name = self.customerName ;
-//                    sendMessageModel.cnic = self.customerCNIC;
-//                    sendMessageModel.emailaddress = self.customerEmail;
-//                    sendMessageModel.message = self.filesNames[i].fileName ?? ""
-//                    sendMessageModel.documentOrignalname = self.filesNames[i].fileName ?? ""
-//                    sendMessageModel.documentName = self.filesNames[i].fileName ?? ""
-//                    sendMessageModel.documentType = self.filesNames[i].mimeType
-//                    sendMessageModel.fileUri = self.filesNames[i].url ?? ""
-//                    sendMessageModel.source = "Mobile_IOS" ;
-//                    sendMessageModel.isFromWidget = true ;
-//                    sendMessageModel.type = "file";
-//                    sendMessageModel.channelid = self.channelId;
-//                    sendMessageModel.notifyMessage = "";
-//                    sendMessageModel.mobileToken = self.fcmtoken;
-//                    sendMessageModel.caption = self.filesNames[i].message ?? ""
-//                    self.fileUploadArrayList[i].caption = self.filesNames[i].message ?? ""
-//                    
-//                    //                sendMessageModel.createdOn = self.getCurrentDateAndTime()
-//                    sendMessageModel.callerAppType = Int64(UtilsClassChat.sheard.callerAppType)
-//                    self.addTempItemToList(sendMessageModel: sendMessageModel, isAddedToDB: true)
-//                }
-//                if(Reachability.isConnectedToNetwork()){
-//                    self.swapCaptionData()
-//                        //self.sendAopData(aopRequest: aopdata)
-//                    //self.uploadFilesToServer(conversationUUId: self.conversationUuID, multipartList: self.fileUploadArrayList,tempChatIdStr: self.filesNames[0].tempChatId!)
-//                }else{
-//                    for i in 0 ..< self.filesNames.count{
-//                        if let position = self.conversationArrayList.firstIndex(where: {$0.tempChatId == self.filesNames[i].tempChatId ?? ""}){
-//                            print(position)
-//                            self.conversationArrayList[position].isReceived = false
-//                            self.conversationArrayList[position].isFailed = true
-//                            self.conversationArrayList[position].isShowLocalFiles = true
-//                            self.dbChatObj.updateFailedStatus(tempChatId: self.conversationArrayList[position].tempChatId ?? "", isFailed: self.conversationArrayList[position].isFailed ?? false)
-//                            //self.dbChatObj.saveChatIntoData(isUpdateById: false, pageNumber: self.pageNumber, conversation: self.conversationArrayList[position])
-//                            self.chatTableView.reloadRows(at: [IndexPath(row: position, section: 0)], with: .automatic)
-//                        }
-//                    }
-//                    self.fileUploadArrayList.removeAll()
-//                    self.filesNames.removeAll()
-//                }
-//                
-//        
-//                            
-//            }
-//            
-//
-//        }
+        SwiftEventBus.shared.addObserver(self, selector: #selector(handleSelectedPreviewEvent(_:)), eventName: "CalledAfterSelectedPreviewSend")
+        SwiftEventBus.shared.addObserver(self, selector: #selector(handleUnSelectedPreviewEvent(_:)), eventName: "CalledAfterSelectedPreviewUnSend")
+
         
-//        SwiftEventBus.onMainThread(self, name: "CalledAfterSelectedPreviewUnSend") { notification in
-//            if !self.fileUploadArrayList.isEmpty{
-//                self.fileUploadArrayList.removeAll()
-//            }
-//            if !self.filesNames.isEmpty{
-//                self.filesNames.removeAll()
-//            }
-//        }
+        /*
+        SwiftEventBus.onMainThread(self, name: "CalledAfterSelectedPreviewSend") { notification in
+            if !self.fileUploadArrayList.isEmpty{
+                for i in 0 ..< self.filesNames.count{
+                    self.indexCurrent = i
+                    var messageStr = UserDefaults.standard.value(forKey: "messageStr") as? String ?? ""
+                    var sendMessageModel : NewChatMessage = NewChatMessage();
+                    sendMessageModel.agentId = self.agentId;
+                    sendMessageModel.tempChatId = self.filesNames[i].tempChatId!
+                    sendMessageModel.conversationUId = self.conversationUuID
+                    sendMessageModel.connectionId = CustomUserDefaultChat.sheard.getsaveConnectionId()
+                    sendMessageModel.customerId = self.cusId ;
+                    sendMessageModel.contactNo = self.customerMobileNumber;
+                    sendMessageModel.name = self.customerName ;
+                    sendMessageModel.cnic = self.customerCNIC;
+                    sendMessageModel.emailaddress = self.customerEmail;
+                    sendMessageModel.message = self.filesNames[i].fileName ?? ""
+                    sendMessageModel.documentOrignalname = self.filesNames[i].fileName ?? ""
+                    sendMessageModel.documentName = self.filesNames[i].fileName ?? ""
+                    sendMessageModel.documentType = self.filesNames[i].mimeType
+                    sendMessageModel.fileUri = self.filesNames[i].url ?? ""
+                    sendMessageModel.source = "Mobile_IOS" ;
+                    sendMessageModel.isFromWidget = true ;
+                    sendMessageModel.type = "file";
+                    sendMessageModel.channelid = self.channelId;
+                    sendMessageModel.notifyMessage = "";
+                    sendMessageModel.mobileToken = self.fcmtoken;
+                    sendMessageModel.caption = self.filesNames[i].message ?? ""
+                    self.fileUploadArrayList[i].caption = self.filesNames[i].message ?? ""
+                    
+                    //                sendMessageModel.createdOn = self.getCurrentDateAndTime()
+                    sendMessageModel.callerAppType = Int64(UtilsClassChat.sheard.callerAppType)
+                    self.addTempItemToList(sendMessageModel: sendMessageModel, isAddedToDB: true)
+                }
+                if(Reachability.isConnectedToNetwork()){
+                    self.swapCaptionData()
+                        //self.sendAopData(aopRequest: aopdata)
+                    //self.uploadFilesToServer(conversationUUId: self.conversationUuID, multipartList: self.fileUploadArrayList,tempChatIdStr: self.filesNames[0].tempChatId!)
+                }else{
+                    for i in 0 ..< self.filesNames.count{
+                        if let position = self.conversationArrayList.firstIndex(where: {$0.tempChatId == self.filesNames[i].tempChatId ?? ""}){
+                            print(position)
+                            self.conversationArrayList[position].isReceived = false
+                            self.conversationArrayList[position].isFailed = true
+                            self.conversationArrayList[position].isShowLocalFiles = true
+                            self.dbChatObj.updateFailedStatus(tempChatId: self.conversationArrayList[position].tempChatId ?? "", isFailed: self.conversationArrayList[position].isFailed ?? false)
+                            //self.dbChatObj.saveChatIntoData(isUpdateById: false, pageNumber: self.pageNumber, conversation: self.conversationArrayList[position])
+                            self.chatTableView.reloadRows(at: [IndexPath(row: position, section: 0)], with: .automatic)
+                        }
+                    }
+                    self.fileUploadArrayList.removeAll()
+                    self.filesNames.removeAll()
+                }
+                
+        
+                            
+            }
+
+        }
+        
+        SwiftEventBus.onMainThread(self, name: "CalledAfterSelectedPreviewUnSend") { notification in
+            if !self.fileUploadArrayList.isEmpty{
+                self.fileUploadArrayList.removeAll()
+            }
+            if !self.filesNames.isEmpty{
+                self.filesNames.removeAll()
+            }
+        }
+        */
     }
     
     func connectSignalR(resultToken : String ){
@@ -2008,7 +2208,7 @@ extension ChatViewController {
             self?.chatHubConnection!.start()
         }
     }
-    
+    //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDaGFubmVsaWQiOiJmMjZhMzNkOS01YjJlLTQyMjctYTQ1Ni1lYWI0NTkyNGExZDMiLCJqdGkiOiIxNTQwODBhMy0wMGIyLTQ1YzUtYmRjNy00ODA1NGRjMGFkNDYiLCJuYmYiOjE3MjE4MDY1MjgsImV4cCI6MTcyMzEwMjUyOCwiaWF0IjoxNzIxODA2NTI4LCJpc3MiOiJlbWxhYWtmaW5hbmNpYWxzLmNvbSIsImF1ZCI6ImVtbGFha2ZpbmFuY2lhbHMuY29tIn0.MKthPjFkybnqXmmKyoey6cZNpXfQDWDVsHQjEMQRogU
     func getAccessToken(isCalledFromReconnect: Bool,channelId:String,serverUrl: String){
         ApiClient.sheard.getAccessTokenByChannelId(channelId:channelId, onSuccess: { [self]
             (sucess) in
@@ -2703,7 +2903,7 @@ extension ChatViewController {
                 sendMessageModel.pageName = ""
                 sendMessageModel.timezone = UtilsClassChat.sheard.getCurrentLocalTimeZone()
                 sendMessageModel.timestamp = conversation.timestamp //self.timeStamp //getCurretDateTime()
-                sendMessageModel.caption = conversation.caption 
+                sendMessageModel.caption = conversation.caption
                     //send message
                 self.chatHubConnection?.send(method: "SendPrivateMessage",sendMessageModel, true)
                 
@@ -3122,6 +3322,7 @@ extension ChatViewController {
         conversationByUID.isSeen = false
         conversationByUID.caption = recieveMessage.caption ?? ""
         conversationByUID.isFailed = false
+        conversationByUID.createdOn = recieveMessage.createdOn
 //        conversationByUID.createdOn = convertTimeStampToDate(recieveMessage.timestamp ?? "")
         
         return conversationByUID
@@ -3297,41 +3498,11 @@ extension ChatViewController {
 
 extension ChatViewController : UITextViewDelegate {
     
-    func textViewDidChange(_ textView: UITextView) {
+    public func textViewDidChange(_ textView: UITextView) {
         self.typingIndicatorRequest()
     }
     
 }
-
-//extension ChatViewController : EmojiViewDelegate {
-//
-//
-//    // callback when tap a emoji on keyboard
-//    func emojiViewDidSelectEmoji(_ emoji: String, emojiView: EmojiView) {
-//        self.msgTextField.insertText(emoji)
-//
-//    }
-//
-//    // callback when tap change keyboard button on keyboard
-//    func emojiViewDidPressChangeKeyboardButton(_ emojiView: EmojiView) {
-//        self.msgTextField.inputView = nil
-//        self.msgTextField.keyboardType = .default
-//        self.msgTextField.reloadInputViews()
-//    }
-//
-//    // callback when tap delete button on keyboard
-//    func emojiViewDidPressDeleteBackwardButton(_ emojiView: EmojiView) {
-//        self.msgTextField.deleteBackward()
-//    }
-//
-//    // callback when tap dismiss button on keyboard
-//    func emojiViewDidPressDismissKeyboardButton(_ emojiView: EmojiView) {
-//        self.msgTextField.resignFirstResponder()
-//    }
-//
-//}
-
-
 
 
 extension ChatViewController :  UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIDocumentPickerDelegate{
@@ -3356,7 +3527,7 @@ extension ChatViewController :  UIImagePickerControllerDelegate, UINavigationCon
     }
     
 
-    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         if urls.count <= 5{
             var fileExtension = ""
             var fileNameWithoutExtension = ""
@@ -3632,7 +3803,7 @@ extension ChatViewController :  UIImagePickerControllerDelegate, UINavigationCon
     }
     
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         
         let img:UIImage = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage)!
@@ -3705,7 +3876,7 @@ extension ChatViewController :  UIImagePickerControllerDelegate, UINavigationCon
     }
      
     
-    func imagePickerControllerDidCancel(_ picker:
+    public func imagePickerControllerDidCancel(_ picker:
                                             UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
@@ -3827,11 +3998,11 @@ extension ChatViewController : QLPreviewControllerDataSource{
   }
         
 }
-func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
+    public func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
      return 1
  }
  
- func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
+    public func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
      return self.previewItem as QLPreviewItem
  }
     
@@ -3839,7 +4010,7 @@ func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
 
 
 extension ChatViewController : UICollectionViewDelegate,UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var count = 0
         if collectionView == self.uiCvTopics{
             count = self.topicsArrayList.count
@@ -3847,7 +4018,7 @@ extension ChatViewController : UICollectionViewDelegate,UICollectionViewDataSour
         return count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
         if collectionView == uiCvTopics{
             let cell = self.uiCvTopics.dequeueReusableCell(withReuseIdentifier: "TopicsCollectionViewCell", for: indexPath) as! TopicsCollectionViewCell
@@ -3860,7 +4031,7 @@ extension ChatViewController : UICollectionViewDelegate,UICollectionViewDataSour
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
         if collectionView == self.uiCvTopics{
@@ -3906,7 +4077,7 @@ extension ChatViewController : UICollectionViewDelegate,UICollectionViewDataSour
 
 
 extension ChatViewController : UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var width : CGFloat = 0
         var height : CGFloat = 0
         if collectionView == self.uiCvTopics{
@@ -3945,17 +4116,31 @@ extension ChatViewController{
     
     func convertReceiveIntoConversationsByUUID(recieveMessage : RecieveMessage) -> ConversationsByUUID{
         
-        var conversation : ConversationsByUUID = ConversationsByUUID(id: recieveMessage.id ?? 0, customerId: recieveMessage.customerId, customerConnectionId: "", customerEmail: "", toUserId: recieveMessage.toUserId, agentId: recieveMessage.agentId, status: "", tempChatId: recieveMessage.tempChatId, fromUserId: recieveMessage.fromUserId, groupId: recieveMessage.groupId, conversationId: 0, content: recieveMessage.content, timestamp: recieveMessage.timestamp, sender: recieveMessage.sender, receiver: recieveMessage.receiver, type: recieveMessage.type, source: "", groupName: recieveMessage.groupName, forwardedTo: recieveMessage.forwardedTo, tiggerevent: recieveMessage.tiggerevent, customerName: recieveMessage.customerName, conversationUid: recieveMessage.conversationUid, isAgentReplied: false, isResolved: false, isFromWidget: recieveMessage.isFromWidget, isPrivate: recieveMessage.isPrivate, childConversationCount: 0, conversationType: "", pageId: recieveMessage.pageId, pageName: recieveMessage.pageName, base64Image: "", fileLocalUri: "", isRecordUpdated: false, isNewMessageReceive: false, isDownloading: false, isSeen: recieveMessage.isSeen, isUpdateStatus: false, isShowLocalFiles: false, isNotNewChat: false, isWelcomeMessage: false, caption: recieveMessage.caption, isFailed: false, isReceived: true, files: recieveMessage.files)
+        var conversation : ConversationsByUUID = ConversationsByUUID(id: recieveMessage.id ?? 0, customerId: recieveMessage.customerId, customerConnectionId: "", customerEmail: "", toUserId: recieveMessage.toUserId, agentId: recieveMessage.agentId, status: 0, tempChatId: recieveMessage.tempChatId, fromUserId: recieveMessage.fromUserId, groupId: recieveMessage.groupId, conversationId: 0, content: recieveMessage.content, timestamp: recieveMessage.timestamp, sender: recieveMessage.sender, receiver: recieveMessage.receiver, type: recieveMessage.type, source: "", groupName: recieveMessage.groupName, forwardedTo: recieveMessage.forwardedTo, tiggerevent: recieveMessage.tiggerevent, customerName: recieveMessage.customerName, conversationUid: recieveMessage.conversationUid, isAgentReplied: false, isResolved: false, isFromWidget: recieveMessage.isFromWidget, isPrivate: recieveMessage.isPrivate, childConversationCount: 0, conversationType: "", pageId: recieveMessage.pageId, pageName: recieveMessage.pageName, base64Image: "", fileLocalUri: "", isRecordUpdated: false, isNewMessageReceive: false, isDownloading: false, isSeen: recieveMessage.isSeen, isUpdateStatus: false, isShowLocalFiles: false, isNotNewChat: false, isWelcomeMessage: false, caption: recieveMessage.caption, isFailed: false, isReceived: true, files: recieveMessage.files)
         
         return conversation
     }
     
     func convertConversationsIntoConversationsByUUID(recieveMessage : Conversations) -> ConversationsByUUID{
         
-        var conversation : ConversationsByUUID = ConversationsByUUID(id: 0, customerId: recieveMessage.customerId, customerConnectionId: recieveMessage.customerConnectionId, customerEmail: recieveMessage.customerEmail, toUserId: recieveMessage.toUserId, agentId: recieveMessage.agentId, status: recieveMessage.status, tempChatId: recieveMessage.tempChatId, fromUserId: recieveMessage.fromUserId, groupId: recieveMessage.groupId, conversationId: recieveMessage.conversationId, content: recieveMessage.content, timestamp: recieveMessage.timestamp, sender: recieveMessage.sender, receiver: recieveMessage.receiver, type: recieveMessage.type, source: recieveMessage.source, groupName: recieveMessage.groupName, forwardedTo: recieveMessage.forwardedTo, tiggerevent: 0, customerName: recieveMessage.customerName, conversationUid: recieveMessage.conversationUid, isAgentReplied: false, isResolved: false, isFromWidget: recieveMessage.isFromWidget, isPrivate: false, childConversationCount: 0, conversationType: recieveMessage.conversationType, pageId: "", pageName: "", base64Image: "", fileLocalUri: "", isRecordUpdated: false, isNewMessageReceive: false, isDownloading: false, isSeen: false, isUpdateStatus: false, isShowLocalFiles: false, isNotNewChat: false, isWelcomeMessage: false, caption: recieveMessage.caption, files: recieveMessage.files)
+        var conversation : ConversationsByUUID = ConversationsByUUID(id: 0, customerId: recieveMessage.customerId, customerConnectionId: recieveMessage.customerConnectionId, customerEmail: recieveMessage.customerEmail, toUserId: recieveMessage.toUserId, agentId: recieveMessage.agentId, status: Int64(recieveMessage.status ?? 0), tempChatId: recieveMessage.tempChatId, fromUserId: recieveMessage.fromUserId, groupId: recieveMessage.groupId, conversationId: recieveMessage.conversationId, content: recieveMessage.content, timestamp: recieveMessage.timestamp, sender: recieveMessage.sender, receiver: recieveMessage.receiver, type: recieveMessage.type, source: recieveMessage.source, groupName: recieveMessage.groupName, forwardedTo: recieveMessage.forwardedTo, tiggerevent: 0, customerName: recieveMessage.customerName, conversationUid: recieveMessage.conversationUid, isAgentReplied: false, isResolved: false, isFromWidget: recieveMessage.isFromWidget, isPrivate: false, childConversationCount: 0, conversationType: recieveMessage.conversationType, pageId: "", pageName: "", base64Image: "", fileLocalUri: "", isRecordUpdated: false, isNewMessageReceive: false, isDownloading: false, isSeen: false, isUpdateStatus: false, isShowLocalFiles: false, isNotNewChat: false, isWelcomeMessage: false, caption: recieveMessage.caption, files: recieveMessage.files)
         
         return conversation
     }
+    
+//    func convertReceiveIntoConversationsByUUID(recieveMessage : RecieveMessage) -> ConversationsByUUID{
+//        
+//        var conversation : ConversationsByUUID = ConversationsByUUID(id: recieveMessage.id ?? 0, customerId: recieveMessage.customerId, customerConnectionId: "", customerEmail: "", toUserId: recieveMessage.toUserId, agentId: recieveMessage.agentId, status: 0, tempChatId: recieveMessage.tempChatId, fromUserId: recieveMessage.fromUserId, groupId: recieveMessage.groupId, conversationId: 0, content: recieveMessage.content, timestamp: recieveMessage.timestamp, sender: recieveMessage.sender, receiver: recieveMessage.receiver, type: recieveMessage.type, source: "", groupName: recieveMessage.groupName, forwardedTo: recieveMessage.forwardedTo, tiggerevent: recieveMessage.tiggerevent, customerName: recieveMessage.customerName, conversationUid: recieveMessage.conversationUid, isAgentReplied: false, isResolved: false, isFromWidget: recieveMessage.isFromWidget, isPrivate: recieveMessage.isPrivate, childConversationCount: 0, conversationType: "", pageId: recieveMessage.pageId, pageName: recieveMessage.pageName, base64Image: "", fileLocalUri: "", isRecordUpdated: false, isNewMessageReceive: false, isDownloading: false, isSeen: recieveMessage.isSeen, isUpdateStatus: false, isShowLocalFiles: false, isNotNewChat: false, isWelcomeMessage: false, caption: recieveMessage.caption, isFailed: false, isReceived: true, files: recieveMessage.files)
+//        
+//        return conversation
+//    }
+//    
+//    func convertConversationsIntoConversationsByUUID(recieveMessage : Conversations) -> ConversationsByUUID{
+//        
+//        var conversation : ConversationsByUUID = ConversationsByUUID(id: 0, customerId: recieveMessage.customerId, customerConnectionId: recieveMessage.customerConnectionId, customerEmail: recieveMessage.customerEmail, toUserId: recieveMessage.toUserId, agentId: recieveMessage.agentId, status: recieveMessage.status, tempChatId: recieveMessage.tempChatId, fromUserId: recieveMessage.fromUserId, groupId: recieveMessage.groupId, conversationId: recieveMessage.conversationId, content: recieveMessage.content, timestamp: recieveMessage.timestamp, sender: recieveMessage.sender, receiver: recieveMessage.receiver, type: recieveMessage.type, source: recieveMessage.source, groupName: recieveMessage.groupName, forwardedTo: recieveMessage.forwardedTo, tiggerevent: 0, customerName: recieveMessage.customerName, conversationUid: recieveMessage.conversationUid, isAgentReplied: false, isResolved: false, isFromWidget: recieveMessage.isFromWidget, isPrivate: false, childConversationCount: 0, conversationType: recieveMessage.conversationType, pageId: "", pageName: "", base64Image: "", fileLocalUri: "", isRecordUpdated: false, isNewMessageReceive: false, isDownloading: false, isSeen: false, isUpdateStatus: false, isShowLocalFiles: false, isNotNewChat: false, isWelcomeMessage: false, caption: recieveMessage.caption, files: recieveMessage.files)
+//        
+//        return conversation
+//    }
     
     func scheduledTimerForNewChat(){
         //self.timerDatabase.invalidate()
@@ -4053,7 +4238,22 @@ extension ChatViewController{
         
     
 }
-extension ChatViewController : SendUpdateSelectedFiles{
+extension ChatViewController : SendUpdateSelectedFiles,ImagePickerDelegate{
+    func didSelectImages(_ images: [UIImage], withFileData fileData: [FileDataClass], fileUploadArrayList: [UploadFilesDataModel]) {
+        self.filesNames = fileData
+        self.fileUploadArrayList = fileUploadArrayList
+        
+        DispatchQueue.main.async {
+            let selectedFilePreview = self.storyboard?.instantiateViewController(withIdentifier: "SelectedFilePreview") as! SelectedFilePreview
+            selectedFilePreview.modalPresentationStyle = .popover
+            selectedFilePreview.filesNames = self.filesNames
+            selectedFilePreview.isFromImageSelection = true
+            selectedFilePreview.delegate = self
+            self.present(selectedFilePreview, animated: true, completion: nil)
+        }
+        
+    }
+    
     func setUpdatedSelectedFiles(filesNames: [FileDataClass]) {
         self.filesNames = filesNames
     }

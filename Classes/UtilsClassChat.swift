@@ -75,10 +75,10 @@ class UtilsClassChat {
     
     //MARK: Chat Base Url
     //MARK: Live
-//    var baseUrlChat = "https://secure.o2chat.io/"
+    //var baseUrlChat = "https://secure.o2chat.io/"
     
     //MARK: QA
-    var baseUrlChat = "http://175.107.196.226:5005/" //http://175.107.196.226:5003/
+    var baseUrlChat = "http://175.107.196.226:5003/" //"http://175.107.196.226:5005/" //http://175.107.196.226:5003/
  
     func convertImageToBase64String(img: UIImage) -> String {
         return img.jpegData(compressionQuality: 0.1)?.base64EncodedString() ?? ""

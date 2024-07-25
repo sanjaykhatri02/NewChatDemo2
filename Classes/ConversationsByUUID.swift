@@ -14,7 +14,7 @@ struct ConversationsByUUID : Codable {
     var customerEmail : String?
     var toUserId : Int64?
     var agentId : Int64?
-    var status : String?
+    var status : Int64? //String?
     var tempChatId : String?
     var fromUserId : Int64?
     var groupId : Int64?

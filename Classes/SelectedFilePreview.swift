@@ -30,6 +30,8 @@ class SelectedFilePreview : UIViewController, UITextViewDelegate{
         dismiss(animated: true, completion: {
             DispatchQueue.main.asyncAfter(deadline: .now()) {
                 //SwiftEventBus.post("CalledAfterSelectedPreviewUnSend")
+                SwiftEventBus.shared.post(eventName: "CalledAfterSelectedPreviewUnSend", userInfo: nil)
+
             }
         })
     }
@@ -41,7 +43,7 @@ class SelectedFilePreview : UIViewController, UITextViewDelegate{
                 self.delegate.setUpdatedSelectedFiles(filesNames: self.filesNames)
                 UserDefaults.standard.set(self.tvMessage.text!, forKey: "messageStr")
                 //SwiftEventBus.post("CalledAfterSelectedPreviewSend")
-                
+                SwiftEventBus.shared.post(eventName: "CalledAfterSelectedPreviewSend", userInfo: nil)
                 
             }
         })
@@ -83,7 +85,8 @@ class SelectedFilePreview : UIViewController, UITextViewDelegate{
             if fileType == "application/pdf" || fileType == "application/PDF" {
                 imageViewPreview.isHidden = true
                 uiViewFileMain.isHidden = true
-                ivFileIcon.image = UIImage(named: "pdf")
+                //ivFileIcon.image = UIImage(named: "pdf")
+                ivFileIcon.image = loadImageFromPodBundle(named: "pdf")
                 lblFileName.text = fileName
                 lblFileSize.text = fileSize
                 self.multiImageCV.isHidden = false
@@ -92,7 +95,8 @@ class SelectedFilePreview : UIViewController, UITextViewDelegate{
                 self.multiImageCV.isHidden = false
                 imageViewPreview.isHidden = true
                 uiViewFileMain.isHidden = true
-                ivFileIcon.image = UIImage(named: "doc")
+                //ivFileIcon.image = UIImage(named: "doc")
+                ivFileIcon.image = loadImageFromPodBundle(named: "doc")
                 lblFileName.text = fileName
                 lblFileSize.text = fileSize
                 
@@ -102,7 +106,8 @@ class SelectedFilePreview : UIViewController, UITextViewDelegate{
                 self.multiImageCV.isHidden = false
                 imageViewPreview.isHidden = true
                 uiViewFileMain.isHidden = true
-                ivFileIcon.image = UIImage(named: "txt_ic")
+                //ivFileIcon.image = UIImage(named: "txt_ic")
+                ivFileIcon.image = loadImageFromPodBundle(named: "txt_ic")
                 lblFileName.text = fileName
                 lblFileSize.text = fileSize
                 
@@ -111,7 +116,8 @@ class SelectedFilePreview : UIViewController, UITextViewDelegate{
                 self.multiImageCV.isHidden = false
                 imageViewPreview.isHidden = true
                 uiViewFileMain.isHidden = true
-                ivFileIcon.image = UIImage(named: "xls")
+                //ivFileIcon.image = UIImage(named: "xls")
+                ivFileIcon.image = loadImageFromPodBundle(named: "xls")
                 lblFileName.text = fileName
                 lblFileSize.text = fileSize
                 
@@ -121,7 +127,8 @@ class SelectedFilePreview : UIViewController, UITextViewDelegate{
                 self.multiImageCV.isHidden = false
                 imageViewPreview.isHidden = true
                 uiViewFileMain.isHidden = true
-                ivFileIcon.image = UIImage(named: "sevenz")
+                //ivFileIcon.image = UIImage(named: "sevenz")
+                ivFileIcon.image = loadImageFromPodBundle(named: "sevenz")
                 lblFileName.text = fileName
                 lblFileSize.text = fileSize
                 
@@ -131,7 +138,8 @@ class SelectedFilePreview : UIViewController, UITextViewDelegate{
                 self.multiImageCV.isHidden = false
                 imageViewPreview.isHidden = true
                 uiViewFileMain.isHidden = true
-                ivFileIcon.image = UIImage(named: "zip")
+                //ivFileIcon.image = UIImage(named: "zip")
+                ivFileIcon.image = loadImageFromPodBundle(named: "zip")
                 lblFileName.text = fileName
                 lblFileSize.text = fileSize
                 
@@ -141,7 +149,8 @@ class SelectedFilePreview : UIViewController, UITextViewDelegate{
                 self.multiImageCV.isHidden = false
                 imageViewPreview.isHidden = true
                 uiViewFileMain.isHidden = true
-                ivFileIcon.image = UIImage(named: "rar")
+                //ivFileIcon.image = UIImage(named: "rar")
+                ivFileIcon.image = loadImageFromPodBundle(named: "rar")
                 lblFileName.text = fileName
                 lblFileSize.text = fileSize
                 
@@ -152,7 +161,8 @@ class SelectedFilePreview : UIViewController, UITextViewDelegate{
                 self.multiImageCV.isHidden = false
                 imageViewPreview.isHidden = true
                 uiViewFileMain.isHidden = true
-                ivFileIcon.image = UIImage(named: "xlsx")
+                //ivFileIcon.image = UIImage(named: "xlsx")
+                ivFileIcon.image = loadImageFromPodBundle(named: "xlsx")
                 lblFileName.text = fileName
                 lblFileSize.text = fileSize
                 
@@ -195,11 +205,22 @@ extension SelectedFilePreview{
     
     func registerCV(){
         
-            self.multiImageCV.register(UINib(nibName: "MultiImageCVCell", bundle: nil), forCellWithReuseIdentifier: "MultiImageCVCell")
+        // Register the NIB
+        let bundle = Bundle(for: ChatViewController.self)
+        let nib = UINib(nibName: "MultiImageCVCell", bundle: bundle)
+        self.multiImageCV.register(nib, forCellWithReuseIdentifier: "MultiImageCVCell")
         
-            self.multiImageCV.register(UINib(nibName: "MultiPDFCVCell", bundle: nil), forCellWithReuseIdentifier: "MultiPDFCVCell")
+        let nib1 = UINib(nibName: "MultiPDFCVCell", bundle: bundle)
+        self.multiImageCV.register(nib1, forCellWithReuseIdentifier: "MultiPDFCVCell")
         
-            self.multiImageCV.register(UINib(nibName: "MultiFilesCVCell", bundle: nil), forCellWithReuseIdentifier: "MultiFilesCVCell")
+        let nib2 = UINib(nibName: "MultiFilesCVCell", bundle: bundle)
+        self.multiImageCV.register(nib2, forCellWithReuseIdentifier: "MultiFilesCVCell")
+        
+        //self.multiImageCV.register(UINib(nibName: "MultiImageCVCell", bundle: nil), forCellWithReuseIdentifier: "MultiImageCVCell")
+        
+//        self.multiImageCV.register(UINib(nibName: "MultiPDFCVCell", bundle: nil), forCellWithReuseIdentifier: "MultiPDFCVCell")
+//        
+//        self.multiImageCV.register(UINib(nibName: "MultiFilesCVCell", bundle: nil), forCellWithReuseIdentifier: "MultiFilesCVCell")
         
     }
     
@@ -360,6 +381,21 @@ extension SelectedFilePreview : UICollectionViewDelegateFlowLayout{
     }
 }
 extension SelectedFilePreview{
+    
+    // Function to load an image from the pod's bundle
+    func loadImageFromPodBundle(named imageName: String, ofType type: String) -> UIImage? {
+        let bundle = Bundle(for: ChatViewController.self)
+        if let imagePath = bundle.path(forResource: imageName, ofType: type) {
+            return UIImage(contentsOfFile: imagePath)
+        }
+        return nil
+    }
+
+    // Alternative function using UIImage(named:in:compatibleWith:) initializer
+    func loadImageFromPodBundle(named imageName: String) -> UIImage? {
+        let bundle = Bundle(for: ChatViewController.self)
+        return UIImage(named: imageName, in: bundle, compatibleWith: nil)
+    }
     
     func textViewDidEndEditing(_ textView: UITextView) {
         print()

@@ -14,8 +14,12 @@ public struct O2ChatWidget {
     public static func createChatViewController(from viewController: UIViewController) {
         // Load the storyboard and instantiate the ChatViewController
         let bundle = Bundle(for: ChatViewController.self)
-        let storyboard = UIStoryboard(name: "Chat", bundle: bundle)
+        let storyboard = UIStoryboard(name: "MainChat", bundle: bundle)
         if let chatViewController = storyboard.instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController {
+            var dbChatObj = Singleton.sharedInstance.myLocalChatDB
+            print("New Addition")
+            dbChatObj.CreateChatDatabase()
+            chatViewController.modalPresentationStyle = .fullScreen
             viewController.present(chatViewController, animated: true, completion: nil)
         }
     }

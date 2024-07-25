@@ -14,7 +14,7 @@ struct Conversations: Decodable {
     var customerEmail : String?
     var toUserId : Int64?
     var agentId : Int64?
-    var status : String?
+    var status : Int64? //String?
     var tempChatId : String?
     var fromUserId : Int64?
     var groupId : Int64?
@@ -91,7 +91,7 @@ struct Conversations: Decodable {
         customerEmail = try values.decodeIfPresent(String.self, forKey: .customerEmail)
         toUserId = try values.decodeIfPresent(Int64.self, forKey: .toUserId)
         agentId = try values.decodeIfPresent(Int64.self, forKey: .agentId)
-        status = try values.decodeIfPresent(String.self, forKey: .status)
+        status = try values.decodeIfPresent(Int64.self, forKey: .status)
         tempChatId = try values.decodeIfPresent(String.self, forKey: .tempChatId)
         type = try values.decodeIfPresent(String.self, forKey: .type)
         fromUserId = try values.decodeIfPresent(Int64.self, forKey: .fromUserId)

@@ -341,7 +341,7 @@ class DatabaseChat
                     let customerEmail = (resultConversation.string(forColumn: "customerEmail"))
                     let toUserId = (resultConversation.int(forColumn: "toUserId"))
                     let agentId = (resultConversation.int(forColumn: "agentId"))
-                    let status = (resultConversation.string(forColumn: "status"))
+                    let status = (resultConversation.string(forColumn: "status")) ?? "0"
                     let tempChatId = String(resultConversation.string(forColumn: "tempChatId") ?? "")
                     let fromUserId = (resultConversation.int(forColumn: "fromUserId"))
                     let groupId = (resultConversation.int(forColumn: "groupId"))
@@ -405,7 +405,7 @@ class DatabaseChat
                         }
                     }
                     
-                    let conversation = ConversationsByUUID(id: Int64(id), customerId: Int64(customerId), customerConnectionId: customerConnectionId, customerEmail: customerEmail, toUserId: Int64(toUserId), agentId: Int64(agentId), status: status, tempChatId: tempChatId, fromUserId: Int64(fromUserId), groupId: Int64(groupId), conversationId: Int64(conversationId), content: content, timestamp: timestamp, sender: sender, receiver: receiver, type: type, source: source, groupName: groupName, forwardedTo: Int64(forwardedTo), tiggerevent: Int64(tiggerevent), customerName: customerName, conversationUid: conversationUid, isAgentReplied: isAgentReplied, isResolved: isResolved, isFromWidget: isFromWidget, isPrivate: isPrivate, childConversationCount: Int64(childConversationCount), conversationType: conversationType, pageId: pageId, pageName: pageName, base64Image: base64Image, fileLocalUri: fileLocalUri, isRecordUpdated: isRecordUpdated, isNewMessageReceive: isNewMessageReceive, isDownloading: isDownloading, isSeen: isSeen, isUpdateStatus: isUpdateStatus, isShowLocalFiles: isShowLocalFiles, isNotNewChat: isNotNewChat, isWelcomeMessage: isWelcomeMessage, caption: caption, isFailed: isFailed, rating: Int(rating), feedback: feedback, files: files)
+                    let conversation = ConversationsByUUID(id: Int64(id), customerId: Int64(customerId), customerConnectionId: customerConnectionId, customerEmail: customerEmail, toUserId: Int64(toUserId), agentId: Int64(agentId), status: Int64(status), tempChatId: tempChatId, fromUserId: Int64(fromUserId), groupId: Int64(groupId), conversationId: Int64(conversationId), content: content, timestamp: timestamp, sender: sender, receiver: receiver, type: type, source: source, groupName: groupName, forwardedTo: Int64(forwardedTo), tiggerevent: Int64(tiggerevent), customerName: customerName, conversationUid: conversationUid, isAgentReplied: isAgentReplied, isResolved: isResolved, isFromWidget: isFromWidget, isPrivate: isPrivate, childConversationCount: Int64(childConversationCount), conversationType: conversationType, pageId: pageId, pageName: pageName, base64Image: base64Image, fileLocalUri: fileLocalUri, isRecordUpdated: isRecordUpdated, isNewMessageReceive: isNewMessageReceive, isDownloading: isDownloading, isSeen: isSeen, isUpdateStatus: isUpdateStatus, isShowLocalFiles: isShowLocalFiles, isNotNewChat: isNotNewChat, isWelcomeMessage: isWelcomeMessage, caption: caption, isFailed: isFailed, rating: Int(rating), feedback: feedback, files: files)
 //                    if conversation.id == 0 && conversation.isFailed == true{
 //                        conversationByZeroId.append(conversation)
 //                    }else{
@@ -446,7 +446,7 @@ class DatabaseChat
                     let customerEmail = (resultConversation.string(forColumn: "customerEmail"))
                     let toUserId = (resultConversation.int(forColumn: "toUserId"))
                     let agentId = (resultConversation.int(forColumn: "agentId"))
-                    let status = (resultConversation.string(forColumn: "status"))
+                    let status = (resultConversation.string(forColumn: "status")) ?? "0"
                     let tempChatId = String(resultConversation.string(forColumn: "tempChatId") ?? "")
                     let fromUserId = (resultConversation.int(forColumn: "fromUserId"))
                     let groupId = (resultConversation.int(forColumn: "groupId"))
@@ -509,7 +509,7 @@ class DatabaseChat
                         }
                     }
                     
-                    let conversation = ConversationsByUUID(id: Int64(id), customerId: Int64(customerId), customerConnectionId: customerConnectionId, customerEmail: customerEmail, toUserId: Int64(toUserId), agentId: Int64(agentId), status: status, tempChatId: tempChatId, fromUserId: Int64(fromUserId), groupId: Int64(groupId), conversationId: Int64(conversationId), content: content, timestamp: timestamp, sender: sender, receiver: receiver, type: type, source: source, groupName: groupName, forwardedTo: Int64(forwardedTo), tiggerevent: Int64(tiggerevent), customerName: customerName, conversationUid: conversationUid, isAgentReplied: isAgentReplied, isResolved: isResolved, isFromWidget: isFromWidget, isPrivate: isPrivate, childConversationCount: Int64(childConversationCount), conversationType: conversationType, pageId: pageId, pageName: pageName, base64Image: base64Image, fileLocalUri: fileLocalUri, isRecordUpdated: isRecordUpdated, isNewMessageReceive: isNewMessageReceive, isDownloading: isDownloading, isSeen: isSeen, isUpdateStatus: isUpdateStatus, isShowLocalFiles: isShowLocalFiles, isNotNewChat: isNotNewChat, isWelcomeMessage: isWelcomeMessage, caption: caption, isFailed: isFailed, createdOn: createdOn, files: files)
+                    let conversation = ConversationsByUUID(id: Int64(id), customerId: Int64(customerId), customerConnectionId: customerConnectionId, customerEmail: customerEmail, toUserId: Int64(toUserId), agentId: Int64(agentId), status: Int64(status), tempChatId: tempChatId, fromUserId: Int64(fromUserId), groupId: Int64(groupId), conversationId: Int64(conversationId), content: content, timestamp: timestamp, sender: sender, receiver: receiver, type: type, source: source, groupName: groupName, forwardedTo: Int64(forwardedTo), tiggerevent: Int64(tiggerevent), customerName: customerName, conversationUid: conversationUid, isAgentReplied: isAgentReplied, isResolved: isResolved, isFromWidget: isFromWidget, isPrivate: isPrivate, childConversationCount: Int64(childConversationCount), conversationType: conversationType, pageId: pageId, pageName: pageName, base64Image: base64Image, fileLocalUri: fileLocalUri, isRecordUpdated: isRecordUpdated, isNewMessageReceive: isNewMessageReceive, isDownloading: isDownloading, isSeen: isSeen, isUpdateStatus: isUpdateStatus, isShowLocalFiles: isShowLocalFiles, isNotNewChat: isNotNewChat, isWelcomeMessage: isWelcomeMessage, caption: caption, isFailed: isFailed, createdOn: createdOn, files: files)
                     if conversation.id == 0 && conversation.isFailed == true{
                         conversationByZeroId.append(conversation)
                     }else{
