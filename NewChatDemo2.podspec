@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
    
    s.frameworks = ['UIKit', 'Foundation', 'QuickLook', 'Photos', 'MobileCoreServices']
      
-     s.dependency 'Alamofire'
+     s.dependency 'Alamofire', '>= 5.8.1', '< 6.0'
      s.dependency 'SwiftyJSON'
      s.dependency 'FMDB'
      s.dependency 'SwiftSignalRClient'
