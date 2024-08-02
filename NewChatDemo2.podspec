@@ -40,7 +40,7 @@ s.source_files = 'Classes/**/*.{swift,h,m}'
 s.resources = 'Resources/**/*.{storyboard,xib,xcassets,png,jpeg,jpg,gif}'
 
 # Exclude the Classes and Resources directories from being visible to the end-users
-s.exclude_files = ['Classes/*', 'Resources/*']
+
 
 s.frameworks = ['UIKit', 'Foundation', 'QuickLook', 'Photos', 'MobileCoreServices']
 
