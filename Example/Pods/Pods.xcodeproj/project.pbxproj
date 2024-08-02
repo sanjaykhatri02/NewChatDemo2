@@ -107,7 +107,6 @@
 		04DC37492C522B68003B0EE4 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC36F02C522B68003B0EE4 /* DatePicker.swift */; };
 		04DC374A2C522B68003B0EE4 /* SwiftEEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC36F12C522B68003B0EE4 /* SwiftEEventBus.swift */; };
 		04DC374B2C522B68003B0EE4 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC36F22C522B68003B0EE4 /* NotificationManager.swift */; };
-		04DC374C2C522B68003B0EE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC36F32C522B68003B0EE4 /* SceneDelegate.swift */; };
 		04DC374D2C522B68003B0EE4 /* FileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC36F42C522B68003B0EE4 /* FileDataModel.swift */; };
 		04DC374E2C522B68003B0EE4 /* TypingIndicatorListenerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC36F52C522B68003B0EE4 /* TypingIndicatorListenerModel.swift */; };
 		122141F7A470B783A4999824A30D4EBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -240,7 +239,6 @@
 		04DC36F02C522B68003B0EE4 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		04DC36F12C522B68003B0EE4 /* SwiftEEventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftEEventBus.swift; sourceTree = "<group>"; };
 		04DC36F22C522B68003B0EE4 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		04DC36F32C522B68003B0EE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04DC36F42C522B68003B0EE4 /* FileDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDataModel.swift; sourceTree = "<group>"; };
 		04DC36F52C522B68003B0EE4 /* TypingIndicatorListenerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypingIndicatorListenerModel.swift; sourceTree = "<group>"; };
 		0503C5CF97E5F53A60DD8E8D3AAEB25D /* Pods-NewChatDemo2_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NewChatDemo2_Tests.modulemap"; sourceTree = "<group>"; };
@@ -363,7 +361,6 @@
 				04DC36A22C522B65003B0EE4 /* RefreshTokenResponse.swift */,
 				04DC36EE2C522B68003B0EE4 /* ResolveFeedBackRequest.swift */,
 				04DC36C62C522B66003B0EE4 /* SampleNotificationDelegate.swift */,
-				04DC36F32C522B68003B0EE4 /* SceneDelegate.swift */,
 				04DC36CD2C522B67003B0EE4 /* SelectedFilePreview.swift */,
 				04DC36D92C522B67003B0EE4 /* SendMessageModel.swift */,
 				04DC369F2C522B65003B0EE4 /* Singleton.swift */,
@@ -731,7 +728,6 @@
 				04DC36FD2C522B68003B0EE4 /* CustomOutlineTextField.swift in Sources */,
 				04DC372E2C522B68003B0EE4 /* MultiFilesCVCell.swift in Sources */,
 				04DC373C2C522B68003B0EE4 /* FileDataClass.swift in Sources */,
-				04DC374C2C522B68003B0EE4 /* SceneDelegate.swift in Sources */,
 				04DC36FC2C522B68003B0EE4 /* MultiImageCVCell.swift in Sources */,
 				04DC37142C522B68003B0EE4 /* WebResponseBusinessHours.swift in Sources */,
 				04DC37332C522B68003B0EE4 /* RateUsVC.swift in Sources */,
