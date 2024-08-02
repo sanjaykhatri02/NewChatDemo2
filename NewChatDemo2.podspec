@@ -52,7 +52,6 @@ s.dependency 'IQKeyboardManager'
 s.dependency 'Firebase/Core'
 s.dependency 'Firebase/Messaging'
 s.dependency 'Kingfisher'
-s.dependency 'SVProgressHUD'
 s.dependency 'Cosmos'
 
 #, '~> 5.9.0'
