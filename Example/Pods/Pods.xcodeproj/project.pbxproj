@@ -7,95 +7,94 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041CF6962C6349F9008ACFD2 /* TopicDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF63D2C6349F8008ACFD2 /* TopicDataModel.swift */; };
-		041CF6972C6349F9008ACFD2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF63E2C6349F8008ACFD2 /* Constants.swift */; };
-		041CF6982C6349F9008ACFD2 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF63F2C6349F8008ACFD2 /* ImageCache.swift */; };
-		041CF6992C6349F9008ACFD2 /* QueriesChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6402C6349F8008ACFD2 /* QueriesChat.swift */; };
-		041CF69A2C6349F9008ACFD2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6412C6349F8008ACFD2 /* ChatViewController.swift */; };
-		041CF69B2C6349F9008ACFD2 /* UtilsClassChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6422C6349F8008ACFD2 /* UtilsClassChat.swift */; };
-		041CF69C2C6349F9008ACFD2 /* ActivityLoaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6432C6349F8008ACFD2 /* ActivityLoaderCell.swift */; };
-		041CF69D2C6349F9008ACFD2 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6442C6349F8008ACFD2 /* SwitchButton.swift */; };
-		041CF69E2C6349F9008ACFD2 /* ConversationStatusListenerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6452C6349F8008ACFD2 /* ConversationStatusListenerDataModel.swift */; };
-		041CF69F2C6349F9008ACFD2 /* WebResonseUploadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6462C6349F8008ACFD2 /* WebResonseUploadFile.swift */; };
-		041CF6A02C6349F9008ACFD2 /* TopicDataModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6472C6349F8008ACFD2 /* TopicDataModelClass.swift */; };
-		041CF6A12C6349F9008ACFD2 /* UploadFilesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6482C6349F8008ACFD2 /* UploadFilesRequest.swift */; };
-		041CF6A22C6349F9008ACFD2 /* WebResponseBusinessHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6492C6349F8008ACFD2 /* WebResponseBusinessHours.swift */; };
-		041CF6A32C6349F9008ACFD2 /* SelectedFilePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF64A2C6349F8008ACFD2 /* SelectedFilePreview.swift */; };
-		041CF6A42C6349F9008ACFD2 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF64B2C6349F8008ACFD2 /* DatePicker.swift */; };
-		041CF6A52C6349F9008ACFD2 /* FileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF64C2C6349F8008ACFD2 /* FileDataModel.swift */; };
-		041CF6A62C6349F9008ACFD2 /* ChatModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF64D2C6349F8008ACFD2 /* ChatModule.swift */; };
-		041CF6A72C6349F9008ACFD2 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF64E2C6349F8008ACFD2 /* PickerView.swift */; };
-		041CF6A82C6349F9008ACFD2 /* TypingIndicatorListenerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF64F2C6349F8008ACFD2 /* TypingIndicatorListenerModel.swift */; };
-		041CF6A92C6349F9008ACFD2 /* RefreshTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6502C6349F8008ACFD2 /* RefreshTokenResponse.swift */; };
-		041CF6AA2C6349F9008ACFD2 /* UserChatSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6512C6349F8008ACFD2 /* UserChatSettingModel.swift */; };
-		041CF6AB2C6349F9008ACFD2 /* WebResponseConversationByUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6522C6349F8008ACFD2 /* WebResponseConversationByUUID.swift */; };
-		041CF6AC2C6349F9008ACFD2 /* SystemsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6532C6349F8008ACFD2 /* SystemsTVCell.swift */; };
-		041CF6AD2C6349F9008ACFD2 /* MultiPDFCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6542C6349F8008ACFD2 /* MultiPDFCVCell.swift */; };
-		041CF6AE2C6349F9008ACFD2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6552C6349F8008ACFD2 /* Singleton.swift */; };
-		041CF6AF2C6349F9008ACFD2 /* CustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6562C6349F8008ACFD2 /* CustomClass.swift */; };
-		041CF6B02C6349F9008ACFD2 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6572C6349F8008ACFD2 /* ApiClient.swift */; };
-		041CF6B12C6349F9008ACFD2 /* JsonSerializingChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6582C6349F8008ACFD2 /* JsonSerializingChat.swift */; };
-		041CF6B22C6349F9008ACFD2 /* ConversationCellFileNonLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6592C6349F8008ACFD2 /* ConversationCellFileNonLoginUser.swift */; };
-		041CF6B32C6349F9008ACFD2 /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF65A2C6349F8008ACFD2 /* Conversations.swift */; };
-		041CF6B42C6349F9008ACFD2 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF65B2C6349F8008ACFD2 /* Validator.swift */; };
-		041CF6B52C6349F9008ACFD2 /* SwiftEEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF65C2C6349F8008ACFD2 /* SwiftEEventBus.swift */; };
-		041CF6B62C6349F9008ACFD2 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 041CF65D2C6349F8008ACFD2 /* .gitkeep */; };
-		041CF6B72C6349F9008ACFD2 /* WebResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF65E2C6349F8008ACFD2 /* WebResponse.swift */; };
-		041CF6B82C6349F9008ACFD2 /* PageControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF65F2C6349F8008ACFD2 /* PageControllerVC.swift */; };
-		041CF6B92C6349F9008ACFD2 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6602C6349F8008ACFD2 /* NotificationManager.swift */; };
-		041CF6BA2C6349F9008ACFD2 /* MultiImageCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6612C6349F8008ACFD2 /* MultiImageCVCell.swift */; };
-		041CF6BB2C6349F9008ACFD2 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6622C6349F8008ACFD2 /* PageControl.swift */; };
-		041CF6BC2C6349F9008ACFD2 /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6632C6349F8008ACFD2 /* FileDownloader.swift */; };
-		041CF6BD2C6349F9008ACFD2 /* SampleNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6642C6349F8008ACFD2 /* SampleNotificationDelegate.swift */; };
-		041CF6BE2C6349F9008ACFD2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6652C6349F8008ACFD2 /* Network.swift */; };
-		041CF6BF2C6349F9008ACFD2 /* ResolveFeedBackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6662C6349F8008ACFD2 /* ResolveFeedBackRequest.swift */; };
-		041CF6C02C6349F9008ACFD2 /* SwiftGifOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6672C6349F8008ACFD2 /* SwiftGifOrigin.swift */; };
-		041CF6C12C6349F9008ACFD2 /* SendMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6682C6349F8008ACFD2 /* SendMessageModel.swift */; };
-		041CF6C22C6349F9008ACFD2 /* NewChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6692C6349F8008ACFD2 /* NewChatMessage.swift */; };
-		041CF6C32C6349F9008ACFD2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF66A2C6349F8008ACFD2 /* Common.swift */; };
-		041CF6C42C6349F9008ACFD2 /* TaxFormConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF66B2C6349F8008ACFD2 /* TaxFormConstant.swift */; };
-		041CF6C52C6349F9008ACFD2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF66C2C6349F8008ACFD2 /* ImagePicker.swift */; };
-		041CF6C62C6349F9008ACFD2 /* RateUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF66D2C6349F8008ACFD2 /* RateUsVC.swift */; };
-		041CF6C72C6349F9008ACFD2 /* UiViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF66E2C6349F8008ACFD2 /* UiViewExtension.swift */; };
-		041CF6C82C6349F9008ACFD2 /* WebResponseChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF66F2C6349F8008ACFD2 /* WebResponseChat.swift */; };
-		041CF6C92C6349F9008ACFD2 /* ConversationCellFIleForLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6702C6349F9008ACFD2 /* ConversationCellFIleForLoginUser.swift */; };
-		041CF6CA2C6349F9008ACFD2 /* ConversationCellImageNoLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6712C6349F9008ACFD2 /* ConversationCellImageNoLoginUser.swift */; };
-		041CF6CB2C6349F9008ACFD2 /* BusinessHourModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6722C6349F9008ACFD2 /* BusinessHourModel.swift */; };
-		041CF6CC2C6349F9008ACFD2 /* UICollectionViewLeftAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6732C6349F9008ACFD2 /* UICollectionViewLeftAlignedLayout.swift */; };
-		041CF6CD2C6349F9008ACFD2 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6742C6349F9008ACFD2 /* BasicCell.swift */; };
-		041CF6CE2C6349F9008ACFD2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6752C6349F9008ACFD2 /* Reachability.swift */; };
-		041CF6CF2C6349F9008ACFD2 /* ConversationLoginUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6762C6349F9008ACFD2 /* ConversationLoginUserTableViewCell.swift */; };
-		041CF6D02C6349F9008ACFD2 /* ConversationTableViewCellNoLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6772C6349F9008ACFD2 /* ConversationTableViewCellNoLoginUser.swift */; };
-		041CF6D12C6349F9008ACFD2 /* JsonSerializing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6782C6349F9008ACFD2 /* JsonSerializing.swift */; };
-		041CF6D22C6349F9008ACFD2 /* UploadFilesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6792C6349F9008ACFD2 /* UploadFilesDataModel.swift */; };
-		041CF6D32C6349F9008ACFD2 /* UploadFilesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF67A2C6349F9008ACFD2 /* UploadFilesData.swift */; };
-		041CF6D42C6349F9008ACFD2 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF67B2C6349F9008ACFD2 /* Fonts.swift */; };
-		041CF6D52C6349F9008ACFD2 /* UNNotificationAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF67C2C6349F9008ACFD2 /* UNNotificationAttachment.swift */; };
-		041CF6D62C6349F9008ACFD2 /* OrganizationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF67D2C6349F9008ACFD2 /* OrganizationData.swift */; };
-		041CF6D72C6349F9008ACFD2 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF67E2C6349F9008ACFD2 /* BubbleView.swift */; };
-		041CF6D82C6349F9008ACFD2 /* ReadReceiptRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF67F2C6349F9008ACFD2 /* ReadReceiptRequest.swift */; };
-		041CF6D92C6349F9008ACFD2 /* MultiFilesCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6802C6349F9008ACFD2 /* MultiFilesCVCell.swift */; };
-		041CF6DA2C6349F9008ACFD2 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6812C6349F9008ACFD2 /* Notification.swift */; };
-		041CF6DB2C6349F9008ACFD2 /* CustomUserDefaultChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6822C6349F9008ACFD2 /* CustomUserDefaultChat.swift */; };
-		041CF6DC2C6349F9008ACFD2 /* ConversationCellImageLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6832C6349F9008ACFD2 /* ConversationCellImageLoginUser.swift */; };
-		041CF6DD2C6349F9008ACFD2 /* TestChat1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6842C6349F9008ACFD2 /* TestChat1.swift */; };
-		041CF6DE2C6349F9008ACFD2 /* FileDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6852C6349F9008ACFD2 /* FileDataClass.swift */; };
-		041CF6DF2C6349F9008ACFD2 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6862C6349F9008ACFD2 /* UIImage.swift */; };
-		041CF6E02C6349F9008ACFD2 /* MenuTabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6872C6349F9008ACFD2 /* MenuTabViews.swift */; };
-		041CF6E12C6349F9008ACFD2 /* UserChatSettingWebresponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6882C6349F9008ACFD2 /* UserChatSettingWebresponse.swift */; };
-		041CF6E22C6349F9008ACFD2 /* WebResponseForTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6892C6349F9008ACFD2 /* WebResponseForTopics.swift */; };
-		041CF6E32C6349F9008ACFD2 /* AuthSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF68A2C6349F9008ACFD2 /* AuthSessionManager.swift */; };
-		041CF6E42C6349F9008ACFD2 /* FileUploadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF68B2C6349F9008ACFD2 /* FileUploadData.swift */; };
-		041CF6E52C6349F9008ACFD2 /* ConversationsByUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF68C2C6349F9008ACFD2 /* ConversationsByUUID.swift */; };
-		041CF6E62C6349F9008ACFD2 /* DatabaseChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF68D2C6349F9008ACFD2 /* DatabaseChat.swift */; };
-		041CF6E72C6349F9008ACFD2 /* CustomOutlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF68E2C6349F9008ACFD2 /* CustomOutlineTextField.swift */; };
-		041CF6E82C6349F9008ACFD2 /* CommaNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF68F2C6349F9008ACFD2 /* CommaNumber.swift */; };
-		041CF6E92C6349F9008ACFD2 /* WebResponseForOrganization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6902C6349F9008ACFD2 /* WebResponseForOrganization.swift */; };
-		041CF6EA2C6349F9008ACFD2 /* TopicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6912C6349F9008ACFD2 /* TopicsCollectionViewCell.swift */; };
-		041CF6EB2C6349F9008ACFD2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6922C6349F9008ACFD2 /* Color.swift */; };
-		041CF6EC2C6349F9008ACFD2 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6932C6349F9008ACFD2 /* Toast.swift */; };
-		041CF6ED2C6349F9008ACFD2 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6942C6349F9008ACFD2 /* CustomLabel.swift */; };
-		041CF6EE2C6349F9008ACFD2 /* RecieveMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6952C6349F9008ACFD2 /* RecieveMessage.swift */; };
+		041CF7482C634EA5008ACFD2 /* TopicDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F02C634EA4008ACFD2 /* TopicDataModel.swift */; };
+		041CF7492C634EA5008ACFD2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F12C634EA4008ACFD2 /* Constants.swift */; };
+		041CF74A2C634EA5008ACFD2 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F22C634EA4008ACFD2 /* ImageCache.swift */; };
+		041CF74B2C634EA5008ACFD2 /* QueriesChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F32C634EA4008ACFD2 /* QueriesChat.swift */; };
+		041CF74C2C634EA5008ACFD2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F42C634EA4008ACFD2 /* ChatViewController.swift */; };
+		041CF74D2C634EA5008ACFD2 /* UtilsClassChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F52C634EA4008ACFD2 /* UtilsClassChat.swift */; };
+		041CF74E2C634EA5008ACFD2 /* ActivityLoaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F62C634EA4008ACFD2 /* ActivityLoaderCell.swift */; };
+		041CF74F2C634EA5008ACFD2 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F72C634EA4008ACFD2 /* SwitchButton.swift */; };
+		041CF7502C634EA5008ACFD2 /* ConversationStatusListenerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F82C634EA4008ACFD2 /* ConversationStatusListenerDataModel.swift */; };
+		041CF7512C634EA5008ACFD2 /* WebResonseUploadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F92C634EA4008ACFD2 /* WebResonseUploadFile.swift */; };
+		041CF7522C634EA5008ACFD2 /* TopicDataModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6FA2C634EA4008ACFD2 /* TopicDataModelClass.swift */; };
+		041CF7532C634EA5008ACFD2 /* UploadFilesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6FB2C634EA4008ACFD2 /* UploadFilesRequest.swift */; };
+		041CF7542C634EA5008ACFD2 /* WebResponseBusinessHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6FC2C634EA4008ACFD2 /* WebResponseBusinessHours.swift */; };
+		041CF7552C634EA5008ACFD2 /* SelectedFilePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6FD2C634EA4008ACFD2 /* SelectedFilePreview.swift */; };
+		041CF7562C634EA5008ACFD2 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6FE2C634EA4008ACFD2 /* DatePicker.swift */; };
+		041CF7572C634EA5008ACFD2 /* FileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6FF2C634EA4008ACFD2 /* FileDataModel.swift */; };
+		041CF7582C634EA5008ACFD2 /* ChatModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7002C634EA4008ACFD2 /* ChatModule.swift */; };
+		041CF7592C634EA5008ACFD2 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7012C634EA4008ACFD2 /* PickerView.swift */; };
+		041CF75A2C634EA5008ACFD2 /* TypingIndicatorListenerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7022C634EA4008ACFD2 /* TypingIndicatorListenerModel.swift */; };
+		041CF75B2C634EA5008ACFD2 /* RefreshTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7032C634EA4008ACFD2 /* RefreshTokenResponse.swift */; };
+		041CF75C2C634EA5008ACFD2 /* UserChatSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7042C634EA4008ACFD2 /* UserChatSettingModel.swift */; };
+		041CF75D2C634EA5008ACFD2 /* WebResponseConversationByUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7052C634EA4008ACFD2 /* WebResponseConversationByUUID.swift */; };
+		041CF75E2C634EA5008ACFD2 /* SystemsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7062C634EA4008ACFD2 /* SystemsTVCell.swift */; };
+		041CF75F2C634EA5008ACFD2 /* MultiPDFCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7072C634EA4008ACFD2 /* MultiPDFCVCell.swift */; };
+		041CF7602C634EA5008ACFD2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7082C634EA4008ACFD2 /* Singleton.swift */; };
+		041CF7612C634EA5008ACFD2 /* CustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7092C634EA5008ACFD2 /* CustomClass.swift */; };
+		041CF7622C634EA5008ACFD2 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF70A2C634EA5008ACFD2 /* ApiClient.swift */; };
+		041CF7632C634EA5008ACFD2 /* JsonSerializingChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF70B2C634EA5008ACFD2 /* JsonSerializingChat.swift */; };
+		041CF7642C634EA5008ACFD2 /* ConversationCellFileNonLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF70C2C634EA5008ACFD2 /* ConversationCellFileNonLoginUser.swift */; };
+		041CF7652C634EA5008ACFD2 /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF70D2C634EA5008ACFD2 /* Conversations.swift */; };
+		041CF7662C634EA5008ACFD2 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF70E2C634EA5008ACFD2 /* Validator.swift */; };
+		041CF7672C634EA5008ACFD2 /* SwiftEEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF70F2C634EA5008ACFD2 /* SwiftEEventBus.swift */; };
+		041CF7682C634EA5008ACFD2 /* WebResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7102C634EA5008ACFD2 /* WebResponse.swift */; };
+		041CF7692C634EA5008ACFD2 /* PageControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7112C634EA5008ACFD2 /* PageControllerVC.swift */; };
+		041CF76A2C634EA5008ACFD2 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7122C634EA5008ACFD2 /* NotificationManager.swift */; };
+		041CF76B2C634EA5008ACFD2 /* MultiImageCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7132C634EA5008ACFD2 /* MultiImageCVCell.swift */; };
+		041CF76C2C634EA5008ACFD2 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7142C634EA5008ACFD2 /* PageControl.swift */; };
+		041CF76D2C634EA5008ACFD2 /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7152C634EA5008ACFD2 /* FileDownloader.swift */; };
+		041CF76E2C634EA5008ACFD2 /* SampleNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7162C634EA5008ACFD2 /* SampleNotificationDelegate.swift */; };
+		041CF76F2C634EA5008ACFD2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7172C634EA5008ACFD2 /* Network.swift */; };
+		041CF7702C634EA5008ACFD2 /* ResolveFeedBackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7182C634EA5008ACFD2 /* ResolveFeedBackRequest.swift */; };
+		041CF7712C634EA5008ACFD2 /* SwiftGifOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7192C634EA5008ACFD2 /* SwiftGifOrigin.swift */; };
+		041CF7722C634EA5008ACFD2 /* SendMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF71A2C634EA5008ACFD2 /* SendMessageModel.swift */; };
+		041CF7732C634EA5008ACFD2 /* NewChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF71B2C634EA5008ACFD2 /* NewChatMessage.swift */; };
+		041CF7742C634EA5008ACFD2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF71C2C634EA5008ACFD2 /* Common.swift */; };
+		041CF7752C634EA5008ACFD2 /* TaxFormConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF71D2C634EA5008ACFD2 /* TaxFormConstant.swift */; };
+		041CF7762C634EA5008ACFD2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF71E2C634EA5008ACFD2 /* ImagePicker.swift */; };
+		041CF7772C634EA5008ACFD2 /* RateUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF71F2C634EA5008ACFD2 /* RateUsVC.swift */; };
+		041CF7782C634EA5008ACFD2 /* UiViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7202C634EA5008ACFD2 /* UiViewExtension.swift */; };
+		041CF7792C634EA5008ACFD2 /* WebResponseChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7212C634EA5008ACFD2 /* WebResponseChat.swift */; };
+		041CF77A2C634EA5008ACFD2 /* ConversationCellFIleForLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7222C634EA5008ACFD2 /* ConversationCellFIleForLoginUser.swift */; };
+		041CF77B2C634EA5008ACFD2 /* ConversationCellImageNoLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7232C634EA5008ACFD2 /* ConversationCellImageNoLoginUser.swift */; };
+		041CF77C2C634EA5008ACFD2 /* BusinessHourModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7242C634EA5008ACFD2 /* BusinessHourModel.swift */; };
+		041CF77D2C634EA5008ACFD2 /* UICollectionViewLeftAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7252C634EA5008ACFD2 /* UICollectionViewLeftAlignedLayout.swift */; };
+		041CF77E2C634EA5008ACFD2 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7262C634EA5008ACFD2 /* BasicCell.swift */; };
+		041CF77F2C634EA5008ACFD2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7272C634EA5008ACFD2 /* Reachability.swift */; };
+		041CF7802C634EA5008ACFD2 /* ConversationLoginUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7282C634EA5008ACFD2 /* ConversationLoginUserTableViewCell.swift */; };
+		041CF7812C634EA5008ACFD2 /* ConversationTableViewCellNoLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7292C634EA5008ACFD2 /* ConversationTableViewCellNoLoginUser.swift */; };
+		041CF7822C634EA5008ACFD2 /* JsonSerializing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF72A2C634EA5008ACFD2 /* JsonSerializing.swift */; };
+		041CF7832C634EA5008ACFD2 /* UploadFilesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF72B2C634EA5008ACFD2 /* UploadFilesDataModel.swift */; };
+		041CF7842C634EA5008ACFD2 /* UploadFilesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF72C2C634EA5008ACFD2 /* UploadFilesData.swift */; };
+		041CF7852C634EA5008ACFD2 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF72D2C634EA5008ACFD2 /* Fonts.swift */; };
+		041CF7862C634EA5008ACFD2 /* UNNotificationAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF72E2C634EA5008ACFD2 /* UNNotificationAttachment.swift */; };
+		041CF7872C634EA5008ACFD2 /* OrganizationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF72F2C634EA5008ACFD2 /* OrganizationData.swift */; };
+		041CF7882C634EA5008ACFD2 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7302C634EA5008ACFD2 /* BubbleView.swift */; };
+		041CF7892C634EA5008ACFD2 /* ReadReceiptRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7312C634EA5008ACFD2 /* ReadReceiptRequest.swift */; };
+		041CF78A2C634EA5008ACFD2 /* MultiFilesCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7322C634EA5008ACFD2 /* MultiFilesCVCell.swift */; };
+		041CF78B2C634EA5008ACFD2 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7332C634EA5008ACFD2 /* Notification.swift */; };
+		041CF78C2C634EA5008ACFD2 /* CustomUserDefaultChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7342C634EA5008ACFD2 /* CustomUserDefaultChat.swift */; };
+		041CF78D2C634EA5008ACFD2 /* ConversationCellImageLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7352C634EA5008ACFD2 /* ConversationCellImageLoginUser.swift */; };
+		041CF78E2C634EA5008ACFD2 /* TestChat1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7362C634EA5008ACFD2 /* TestChat1.swift */; };
+		041CF78F2C634EA5008ACFD2 /* FileDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7372C634EA5008ACFD2 /* FileDataClass.swift */; };
+		041CF7902C634EA5008ACFD2 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7382C634EA5008ACFD2 /* UIImage.swift */; };
+		041CF7912C634EA5008ACFD2 /* MenuTabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7392C634EA5008ACFD2 /* MenuTabViews.swift */; };
+		041CF7922C634EA5008ACFD2 /* UserChatSettingWebresponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF73A2C634EA5008ACFD2 /* UserChatSettingWebresponse.swift */; };
+		041CF7932C634EA5008ACFD2 /* WebResponseForTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF73B2C634EA5008ACFD2 /* WebResponseForTopics.swift */; };
+		041CF7942C634EA5008ACFD2 /* AuthSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF73C2C634EA5008ACFD2 /* AuthSessionManager.swift */; };
+		041CF7952C634EA5008ACFD2 /* FileUploadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF73D2C634EA5008ACFD2 /* FileUploadData.swift */; };
+		041CF7962C634EA5008ACFD2 /* ConversationsByUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF73E2C634EA5008ACFD2 /* ConversationsByUUID.swift */; };
+		041CF7972C634EA5008ACFD2 /* DatabaseChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF73F2C634EA5008ACFD2 /* DatabaseChat.swift */; };
+		041CF7982C634EA5008ACFD2 /* CustomOutlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7402C634EA5008ACFD2 /* CustomOutlineTextField.swift */; };
+		041CF7992C634EA5008ACFD2 /* CommaNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7412C634EA5008ACFD2 /* CommaNumber.swift */; };
+		041CF79A2C634EA5008ACFD2 /* WebResponseForOrganization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7422C634EA5008ACFD2 /* WebResponseForOrganization.swift */; };
+		041CF79B2C634EA5008ACFD2 /* TopicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7432C634EA5008ACFD2 /* TopicsCollectionViewCell.swift */; };
+		041CF79C2C634EA5008ACFD2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7442C634EA5008ACFD2 /* Color.swift */; };
+		041CF79D2C634EA5008ACFD2 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7452C634EA5008ACFD2 /* Toast.swift */; };
+		041CF79E2C634EA5008ACFD2 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7462C634EA5008ACFD2 /* CustomLabel.swift */; };
+		041CF79F2C634EA5008ACFD2 /* RecieveMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7472C634EA5008ACFD2 /* RecieveMessage.swift */; };
 		04DC368F2C522B36003B0EE4 /* MultiPDFCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36812C522B35003B0EE4 /* MultiPDFCVCell.xib */; };
 		04DC36902C522B36003B0EE4 /* ConversationCellFIleForLoginUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36822C522B35003B0EE4 /* ConversationCellFIleForLoginUser.xib */; };
 		04DC36912C522B36003B0EE4 /* ConversationTableViewCellNoLoginUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36832C522B35003B0EE4 /* ConversationTableViewCellNoLoginUser.xib */; };
@@ -140,95 +139,94 @@
 
 /* Begin PBXFileReference section */
 		02EBA778E6A6919B86101C0FDFB9F9B2 /* Pods-NewChatDemo2_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NewChatDemo2_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		041CF63D2C6349F8008ACFD2 /* TopicDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDataModel.swift; sourceTree = "<group>"; };
-		041CF63E2C6349F8008ACFD2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		041CF63F2C6349F8008ACFD2 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		041CF6402C6349F8008ACFD2 /* QueriesChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueriesChat.swift; sourceTree = "<group>"; };
-		041CF6412C6349F8008ACFD2 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		041CF6422C6349F8008ACFD2 /* UtilsClassChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilsClassChat.swift; sourceTree = "<group>"; };
-		041CF6432C6349F8008ACFD2 /* ActivityLoaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityLoaderCell.swift; sourceTree = "<group>"; };
-		041CF6442C6349F8008ACFD2 /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
-		041CF6452C6349F8008ACFD2 /* ConversationStatusListenerDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationStatusListenerDataModel.swift; sourceTree = "<group>"; };
-		041CF6462C6349F8008ACFD2 /* WebResonseUploadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResonseUploadFile.swift; sourceTree = "<group>"; };
-		041CF6472C6349F8008ACFD2 /* TopicDataModelClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDataModelClass.swift; sourceTree = "<group>"; };
-		041CF6482C6349F8008ACFD2 /* UploadFilesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadFilesRequest.swift; sourceTree = "<group>"; };
-		041CF6492C6349F8008ACFD2 /* WebResponseBusinessHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseBusinessHours.swift; sourceTree = "<group>"; };
-		041CF64A2C6349F8008ACFD2 /* SelectedFilePreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedFilePreview.swift; sourceTree = "<group>"; };
-		041CF64B2C6349F8008ACFD2 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
-		041CF64C2C6349F8008ACFD2 /* FileDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDataModel.swift; sourceTree = "<group>"; };
-		041CF64D2C6349F8008ACFD2 /* ChatModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatModule.swift; sourceTree = "<group>"; };
-		041CF64E2C6349F8008ACFD2 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
-		041CF64F2C6349F8008ACFD2 /* TypingIndicatorListenerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypingIndicatorListenerModel.swift; sourceTree = "<group>"; };
-		041CF6502C6349F8008ACFD2 /* RefreshTokenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTokenResponse.swift; sourceTree = "<group>"; };
-		041CF6512C6349F8008ACFD2 /* UserChatSettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChatSettingModel.swift; sourceTree = "<group>"; };
-		041CF6522C6349F8008ACFD2 /* WebResponseConversationByUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseConversationByUUID.swift; sourceTree = "<group>"; };
-		041CF6532C6349F8008ACFD2 /* SystemsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemsTVCell.swift; sourceTree = "<group>"; };
-		041CF6542C6349F8008ACFD2 /* MultiPDFCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPDFCVCell.swift; sourceTree = "<group>"; };
-		041CF6552C6349F8008ACFD2 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
-		041CF6562C6349F8008ACFD2 /* CustomClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomClass.swift; sourceTree = "<group>"; };
-		041CF6572C6349F8008ACFD2 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
-		041CF6582C6349F8008ACFD2 /* JsonSerializingChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonSerializingChat.swift; sourceTree = "<group>"; };
-		041CF6592C6349F8008ACFD2 /* ConversationCellFileNonLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellFileNonLoginUser.swift; sourceTree = "<group>"; };
-		041CF65A2C6349F8008ACFD2 /* Conversations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversations.swift; sourceTree = "<group>"; };
-		041CF65B2C6349F8008ACFD2 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		041CF65C2C6349F8008ACFD2 /* SwiftEEventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftEEventBus.swift; sourceTree = "<group>"; };
-		041CF65D2C6349F8008ACFD2 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		041CF65E2C6349F8008ACFD2 /* WebResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponse.swift; sourceTree = "<group>"; };
-		041CF65F2C6349F8008ACFD2 /* PageControllerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControllerVC.swift; sourceTree = "<group>"; };
-		041CF6602C6349F8008ACFD2 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		041CF6612C6349F8008ACFD2 /* MultiImageCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiImageCVCell.swift; sourceTree = "<group>"; };
-		041CF6622C6349F8008ACFD2 /* PageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
-		041CF6632C6349F8008ACFD2 /* FileDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
-		041CF6642C6349F8008ACFD2 /* SampleNotificationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleNotificationDelegate.swift; sourceTree = "<group>"; };
-		041CF6652C6349F8008ACFD2 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		041CF6662C6349F8008ACFD2 /* ResolveFeedBackRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolveFeedBackRequest.swift; sourceTree = "<group>"; };
-		041CF6672C6349F8008ACFD2 /* SwiftGifOrigin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGifOrigin.swift; sourceTree = "<group>"; };
-		041CF6682C6349F8008ACFD2 /* SendMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageModel.swift; sourceTree = "<group>"; };
-		041CF6692C6349F8008ACFD2 /* NewChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatMessage.swift; sourceTree = "<group>"; };
-		041CF66A2C6349F8008ACFD2 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		041CF66B2C6349F8008ACFD2 /* TaxFormConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxFormConstant.swift; sourceTree = "<group>"; };
-		041CF66C2C6349F8008ACFD2 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		041CF66D2C6349F8008ACFD2 /* RateUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateUsVC.swift; sourceTree = "<group>"; };
-		041CF66E2C6349F8008ACFD2 /* UiViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UiViewExtension.swift; sourceTree = "<group>"; };
-		041CF66F2C6349F8008ACFD2 /* WebResponseChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseChat.swift; sourceTree = "<group>"; };
-		041CF6702C6349F9008ACFD2 /* ConversationCellFIleForLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellFIleForLoginUser.swift; sourceTree = "<group>"; };
-		041CF6712C6349F9008ACFD2 /* ConversationCellImageNoLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellImageNoLoginUser.swift; sourceTree = "<group>"; };
-		041CF6722C6349F9008ACFD2 /* BusinessHourModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessHourModel.swift; sourceTree = "<group>"; };
-		041CF6732C6349F9008ACFD2 /* UICollectionViewLeftAlignedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewLeftAlignedLayout.swift; sourceTree = "<group>"; };
-		041CF6742C6349F9008ACFD2 /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
-		041CF6752C6349F9008ACFD2 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		041CF6762C6349F9008ACFD2 /* ConversationLoginUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationLoginUserTableViewCell.swift; sourceTree = "<group>"; };
-		041CF6772C6349F9008ACFD2 /* ConversationTableViewCellNoLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCellNoLoginUser.swift; sourceTree = "<group>"; };
-		041CF6782C6349F9008ACFD2 /* JsonSerializing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonSerializing.swift; sourceTree = "<group>"; };
-		041CF6792C6349F9008ACFD2 /* UploadFilesDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadFilesDataModel.swift; sourceTree = "<group>"; };
-		041CF67A2C6349F9008ACFD2 /* UploadFilesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadFilesData.swift; sourceTree = "<group>"; };
-		041CF67B2C6349F9008ACFD2 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		041CF67C2C6349F9008ACFD2 /* UNNotificationAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNNotificationAttachment.swift; sourceTree = "<group>"; };
-		041CF67D2C6349F9008ACFD2 /* OrganizationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationData.swift; sourceTree = "<group>"; };
-		041CF67E2C6349F9008ACFD2 /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
-		041CF67F2C6349F9008ACFD2 /* ReadReceiptRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadReceiptRequest.swift; sourceTree = "<group>"; };
-		041CF6802C6349F9008ACFD2 /* MultiFilesCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiFilesCVCell.swift; sourceTree = "<group>"; };
-		041CF6812C6349F9008ACFD2 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		041CF6822C6349F9008ACFD2 /* CustomUserDefaultChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUserDefaultChat.swift; sourceTree = "<group>"; };
-		041CF6832C6349F9008ACFD2 /* ConversationCellImageLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellImageLoginUser.swift; sourceTree = "<group>"; };
-		041CF6842C6349F9008ACFD2 /* TestChat1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestChat1.swift; sourceTree = "<group>"; };
-		041CF6852C6349F9008ACFD2 /* FileDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDataClass.swift; sourceTree = "<group>"; };
-		041CF6862C6349F9008ACFD2 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		041CF6872C6349F9008ACFD2 /* MenuTabViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTabViews.swift; sourceTree = "<group>"; };
-		041CF6882C6349F9008ACFD2 /* UserChatSettingWebresponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChatSettingWebresponse.swift; sourceTree = "<group>"; };
-		041CF6892C6349F9008ACFD2 /* WebResponseForTopics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseForTopics.swift; sourceTree = "<group>"; };
-		041CF68A2C6349F9008ACFD2 /* AuthSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthSessionManager.swift; sourceTree = "<group>"; };
-		041CF68B2C6349F9008ACFD2 /* FileUploadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUploadData.swift; sourceTree = "<group>"; };
-		041CF68C2C6349F9008ACFD2 /* ConversationsByUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsByUUID.swift; sourceTree = "<group>"; };
-		041CF68D2C6349F9008ACFD2 /* DatabaseChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseChat.swift; sourceTree = "<group>"; };
-		041CF68E2C6349F9008ACFD2 /* CustomOutlineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOutlineTextField.swift; sourceTree = "<group>"; };
-		041CF68F2C6349F9008ACFD2 /* CommaNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommaNumber.swift; sourceTree = "<group>"; };
-		041CF6902C6349F9008ACFD2 /* WebResponseForOrganization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseForOrganization.swift; sourceTree = "<group>"; };
-		041CF6912C6349F9008ACFD2 /* TopicsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsCollectionViewCell.swift; sourceTree = "<group>"; };
-		041CF6922C6349F9008ACFD2 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		041CF6932C6349F9008ACFD2 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
-		041CF6942C6349F9008ACFD2 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
-		041CF6952C6349F9008ACFD2 /* RecieveMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecieveMessage.swift; sourceTree = "<group>"; };
+		041CF6F02C634EA4008ACFD2 /* TopicDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDataModel.swift; sourceTree = "<group>"; };
+		041CF6F12C634EA4008ACFD2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		041CF6F22C634EA4008ACFD2 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		041CF6F32C634EA4008ACFD2 /* QueriesChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueriesChat.swift; sourceTree = "<group>"; };
+		041CF6F42C634EA4008ACFD2 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		041CF6F52C634EA4008ACFD2 /* UtilsClassChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilsClassChat.swift; sourceTree = "<group>"; };
+		041CF6F62C634EA4008ACFD2 /* ActivityLoaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityLoaderCell.swift; sourceTree = "<group>"; };
+		041CF6F72C634EA4008ACFD2 /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
+		041CF6F82C634EA4008ACFD2 /* ConversationStatusListenerDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationStatusListenerDataModel.swift; sourceTree = "<group>"; };
+		041CF6F92C634EA4008ACFD2 /* WebResonseUploadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResonseUploadFile.swift; sourceTree = "<group>"; };
+		041CF6FA2C634EA4008ACFD2 /* TopicDataModelClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDataModelClass.swift; sourceTree = "<group>"; };
+		041CF6FB2C634EA4008ACFD2 /* UploadFilesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadFilesRequest.swift; sourceTree = "<group>"; };
+		041CF6FC2C634EA4008ACFD2 /* WebResponseBusinessHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseBusinessHours.swift; sourceTree = "<group>"; };
+		041CF6FD2C634EA4008ACFD2 /* SelectedFilePreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedFilePreview.swift; sourceTree = "<group>"; };
+		041CF6FE2C634EA4008ACFD2 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		041CF6FF2C634EA4008ACFD2 /* FileDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDataModel.swift; sourceTree = "<group>"; };
+		041CF7002C634EA4008ACFD2 /* ChatModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatModule.swift; sourceTree = "<group>"; };
+		041CF7012C634EA4008ACFD2 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		041CF7022C634EA4008ACFD2 /* TypingIndicatorListenerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypingIndicatorListenerModel.swift; sourceTree = "<group>"; };
+		041CF7032C634EA4008ACFD2 /* RefreshTokenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTokenResponse.swift; sourceTree = "<group>"; };
+		041CF7042C634EA4008ACFD2 /* UserChatSettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChatSettingModel.swift; sourceTree = "<group>"; };
+		041CF7052C634EA4008ACFD2 /* WebResponseConversationByUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseConversationByUUID.swift; sourceTree = "<group>"; };
+		041CF7062C634EA4008ACFD2 /* SystemsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemsTVCell.swift; sourceTree = "<group>"; };
+		041CF7072C634EA4008ACFD2 /* MultiPDFCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPDFCVCell.swift; sourceTree = "<group>"; };
+		041CF7082C634EA4008ACFD2 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		041CF7092C634EA5008ACFD2 /* CustomClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomClass.swift; sourceTree = "<group>"; };
+		041CF70A2C634EA5008ACFD2 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		041CF70B2C634EA5008ACFD2 /* JsonSerializingChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonSerializingChat.swift; sourceTree = "<group>"; };
+		041CF70C2C634EA5008ACFD2 /* ConversationCellFileNonLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellFileNonLoginUser.swift; sourceTree = "<group>"; };
+		041CF70D2C634EA5008ACFD2 /* Conversations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversations.swift; sourceTree = "<group>"; };
+		041CF70E2C634EA5008ACFD2 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		041CF70F2C634EA5008ACFD2 /* SwiftEEventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftEEventBus.swift; sourceTree = "<group>"; };
+		041CF7102C634EA5008ACFD2 /* WebResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponse.swift; sourceTree = "<group>"; };
+		041CF7112C634EA5008ACFD2 /* PageControllerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControllerVC.swift; sourceTree = "<group>"; };
+		041CF7122C634EA5008ACFD2 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		041CF7132C634EA5008ACFD2 /* MultiImageCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiImageCVCell.swift; sourceTree = "<group>"; };
+		041CF7142C634EA5008ACFD2 /* PageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		041CF7152C634EA5008ACFD2 /* FileDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
+		041CF7162C634EA5008ACFD2 /* SampleNotificationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleNotificationDelegate.swift; sourceTree = "<group>"; };
+		041CF7172C634EA5008ACFD2 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		041CF7182C634EA5008ACFD2 /* ResolveFeedBackRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolveFeedBackRequest.swift; sourceTree = "<group>"; };
+		041CF7192C634EA5008ACFD2 /* SwiftGifOrigin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGifOrigin.swift; sourceTree = "<group>"; };
+		041CF71A2C634EA5008ACFD2 /* SendMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageModel.swift; sourceTree = "<group>"; };
+		041CF71B2C634EA5008ACFD2 /* NewChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatMessage.swift; sourceTree = "<group>"; };
+		041CF71C2C634EA5008ACFD2 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		041CF71D2C634EA5008ACFD2 /* TaxFormConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxFormConstant.swift; sourceTree = "<group>"; };
+		041CF71E2C634EA5008ACFD2 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		041CF71F2C634EA5008ACFD2 /* RateUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateUsVC.swift; sourceTree = "<group>"; };
+		041CF7202C634EA5008ACFD2 /* UiViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UiViewExtension.swift; sourceTree = "<group>"; };
+		041CF7212C634EA5008ACFD2 /* WebResponseChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseChat.swift; sourceTree = "<group>"; };
+		041CF7222C634EA5008ACFD2 /* ConversationCellFIleForLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellFIleForLoginUser.swift; sourceTree = "<group>"; };
+		041CF7232C634EA5008ACFD2 /* ConversationCellImageNoLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellImageNoLoginUser.swift; sourceTree = "<group>"; };
+		041CF7242C634EA5008ACFD2 /* BusinessHourModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessHourModel.swift; sourceTree = "<group>"; };
+		041CF7252C634EA5008ACFD2 /* UICollectionViewLeftAlignedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewLeftAlignedLayout.swift; sourceTree = "<group>"; };
+		041CF7262C634EA5008ACFD2 /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		041CF7272C634EA5008ACFD2 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		041CF7282C634EA5008ACFD2 /* ConversationLoginUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationLoginUserTableViewCell.swift; sourceTree = "<group>"; };
+		041CF7292C634EA5008ACFD2 /* ConversationTableViewCellNoLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCellNoLoginUser.swift; sourceTree = "<group>"; };
+		041CF72A2C634EA5008ACFD2 /* JsonSerializing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonSerializing.swift; sourceTree = "<group>"; };
+		041CF72B2C634EA5008ACFD2 /* UploadFilesDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadFilesDataModel.swift; sourceTree = "<group>"; };
+		041CF72C2C634EA5008ACFD2 /* UploadFilesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadFilesData.swift; sourceTree = "<group>"; };
+		041CF72D2C634EA5008ACFD2 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		041CF72E2C634EA5008ACFD2 /* UNNotificationAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNNotificationAttachment.swift; sourceTree = "<group>"; };
+		041CF72F2C634EA5008ACFD2 /* OrganizationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationData.swift; sourceTree = "<group>"; };
+		041CF7302C634EA5008ACFD2 /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
+		041CF7312C634EA5008ACFD2 /* ReadReceiptRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadReceiptRequest.swift; sourceTree = "<group>"; };
+		041CF7322C634EA5008ACFD2 /* MultiFilesCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiFilesCVCell.swift; sourceTree = "<group>"; };
+		041CF7332C634EA5008ACFD2 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		041CF7342C634EA5008ACFD2 /* CustomUserDefaultChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUserDefaultChat.swift; sourceTree = "<group>"; };
+		041CF7352C634EA5008ACFD2 /* ConversationCellImageLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellImageLoginUser.swift; sourceTree = "<group>"; };
+		041CF7362C634EA5008ACFD2 /* TestChat1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestChat1.swift; sourceTree = "<group>"; };
+		041CF7372C634EA5008ACFD2 /* FileDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDataClass.swift; sourceTree = "<group>"; };
+		041CF7382C634EA5008ACFD2 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		041CF7392C634EA5008ACFD2 /* MenuTabViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTabViews.swift; sourceTree = "<group>"; };
+		041CF73A2C634EA5008ACFD2 /* UserChatSettingWebresponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChatSettingWebresponse.swift; sourceTree = "<group>"; };
+		041CF73B2C634EA5008ACFD2 /* WebResponseForTopics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseForTopics.swift; sourceTree = "<group>"; };
+		041CF73C2C634EA5008ACFD2 /* AuthSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthSessionManager.swift; sourceTree = "<group>"; };
+		041CF73D2C634EA5008ACFD2 /* FileUploadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUploadData.swift; sourceTree = "<group>"; };
+		041CF73E2C634EA5008ACFD2 /* ConversationsByUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsByUUID.swift; sourceTree = "<group>"; };
+		041CF73F2C634EA5008ACFD2 /* DatabaseChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseChat.swift; sourceTree = "<group>"; };
+		041CF7402C634EA5008ACFD2 /* CustomOutlineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOutlineTextField.swift; sourceTree = "<group>"; };
+		041CF7412C634EA5008ACFD2 /* CommaNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommaNumber.swift; sourceTree = "<group>"; };
+		041CF7422C634EA5008ACFD2 /* WebResponseForOrganization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseForOrganization.swift; sourceTree = "<group>"; };
+		041CF7432C634EA5008ACFD2 /* TopicsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsCollectionViewCell.swift; sourceTree = "<group>"; };
+		041CF7442C634EA5008ACFD2 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		041CF7452C634EA5008ACFD2 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		041CF7462C634EA5008ACFD2 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		041CF7472C634EA5008ACFD2 /* RecieveMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecieveMessage.swift; sourceTree = "<group>"; };
 		04DC36812C522B35003B0EE4 /* MultiPDFCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiPDFCVCell.xib; sourceTree = "<group>"; };
 		04DC36822C522B35003B0EE4 /* ConversationCellFIleForLoginUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationCellFIleForLoginUser.xib; sourceTree = "<group>"; };
 		04DC36832C522B35003B0EE4 /* ConversationTableViewCellNoLoginUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationTableViewCellNoLoginUser.xib; sourceTree = "<group>"; };
@@ -304,101 +302,106 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		041CF63C2C6349F8008ACFD2 /* Classes */ = {
+		041CF6EF2C634EA4008ACFD2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				041CF63D2C6349F8008ACFD2 /* TopicDataModel.swift */,
-				041CF63E2C6349F8008ACFD2 /* Constants.swift */,
-				041CF63F2C6349F8008ACFD2 /* ImageCache.swift */,
-				041CF6402C6349F8008ACFD2 /* QueriesChat.swift */,
-				041CF6412C6349F8008ACFD2 /* ChatViewController.swift */,
-				041CF6422C6349F8008ACFD2 /* UtilsClassChat.swift */,
-				041CF6432C6349F8008ACFD2 /* ActivityLoaderCell.swift */,
-				041CF6442C6349F8008ACFD2 /* SwitchButton.swift */,
-				041CF6452C6349F8008ACFD2 /* ConversationStatusListenerDataModel.swift */,
-				041CF6462C6349F8008ACFD2 /* WebResonseUploadFile.swift */,
-				041CF6472C6349F8008ACFD2 /* TopicDataModelClass.swift */,
-				041CF6482C6349F8008ACFD2 /* UploadFilesRequest.swift */,
-				041CF6492C6349F8008ACFD2 /* WebResponseBusinessHours.swift */,
-				041CF64A2C6349F8008ACFD2 /* SelectedFilePreview.swift */,
-				041CF64B2C6349F8008ACFD2 /* DatePicker.swift */,
-				041CF64C2C6349F8008ACFD2 /* FileDataModel.swift */,
-				041CF64D2C6349F8008ACFD2 /* ChatModule.swift */,
-				041CF64E2C6349F8008ACFD2 /* PickerView.swift */,
-				041CF64F2C6349F8008ACFD2 /* TypingIndicatorListenerModel.swift */,
-				041CF6502C6349F8008ACFD2 /* RefreshTokenResponse.swift */,
-				041CF6512C6349F8008ACFD2 /* UserChatSettingModel.swift */,
-				041CF6522C6349F8008ACFD2 /* WebResponseConversationByUUID.swift */,
-				041CF6532C6349F8008ACFD2 /* SystemsTVCell.swift */,
-				041CF6542C6349F8008ACFD2 /* MultiPDFCVCell.swift */,
-				041CF6552C6349F8008ACFD2 /* Singleton.swift */,
-				041CF6562C6349F8008ACFD2 /* CustomClass.swift */,
-				041CF6572C6349F8008ACFD2 /* ApiClient.swift */,
-				041CF6582C6349F8008ACFD2 /* JsonSerializingChat.swift */,
-				041CF6592C6349F8008ACFD2 /* ConversationCellFileNonLoginUser.swift */,
-				041CF65A2C6349F8008ACFD2 /* Conversations.swift */,
-				041CF65B2C6349F8008ACFD2 /* Validator.swift */,
-				041CF65C2C6349F8008ACFD2 /* SwiftEEventBus.swift */,
-				041CF65D2C6349F8008ACFD2 /* .gitkeep */,
-				041CF65E2C6349F8008ACFD2 /* WebResponse.swift */,
-				041CF65F2C6349F8008ACFD2 /* PageControllerVC.swift */,
-				041CF6602C6349F8008ACFD2 /* NotificationManager.swift */,
-				041CF6612C6349F8008ACFD2 /* MultiImageCVCell.swift */,
-				041CF6622C6349F8008ACFD2 /* PageControl.swift */,
-				041CF6632C6349F8008ACFD2 /* FileDownloader.swift */,
-				041CF6642C6349F8008ACFD2 /* SampleNotificationDelegate.swift */,
-				041CF6652C6349F8008ACFD2 /* Network.swift */,
-				041CF6662C6349F8008ACFD2 /* ResolveFeedBackRequest.swift */,
-				041CF6672C6349F8008ACFD2 /* SwiftGifOrigin.swift */,
-				041CF6682C6349F8008ACFD2 /* SendMessageModel.swift */,
-				041CF6692C6349F8008ACFD2 /* NewChatMessage.swift */,
-				041CF66A2C6349F8008ACFD2 /* Common.swift */,
-				041CF66B2C6349F8008ACFD2 /* TaxFormConstant.swift */,
-				041CF66C2C6349F8008ACFD2 /* ImagePicker.swift */,
-				041CF66D2C6349F8008ACFD2 /* RateUsVC.swift */,
-				041CF66E2C6349F8008ACFD2 /* UiViewExtension.swift */,
-				041CF66F2C6349F8008ACFD2 /* WebResponseChat.swift */,
-				041CF6702C6349F9008ACFD2 /* ConversationCellFIleForLoginUser.swift */,
-				041CF6712C6349F9008ACFD2 /* ConversationCellImageNoLoginUser.swift */,
-				041CF6722C6349F9008ACFD2 /* BusinessHourModel.swift */,
-				041CF6732C6349F9008ACFD2 /* UICollectionViewLeftAlignedLayout.swift */,
-				041CF6742C6349F9008ACFD2 /* BasicCell.swift */,
-				041CF6752C6349F9008ACFD2 /* Reachability.swift */,
-				041CF6762C6349F9008ACFD2 /* ConversationLoginUserTableViewCell.swift */,
-				041CF6772C6349F9008ACFD2 /* ConversationTableViewCellNoLoginUser.swift */,
-				041CF6782C6349F9008ACFD2 /* JsonSerializing.swift */,
-				041CF6792C6349F9008ACFD2 /* UploadFilesDataModel.swift */,
-				041CF67A2C6349F9008ACFD2 /* UploadFilesData.swift */,
-				041CF67B2C6349F9008ACFD2 /* Fonts.swift */,
-				041CF67C2C6349F9008ACFD2 /* UNNotificationAttachment.swift */,
-				041CF67D2C6349F9008ACFD2 /* OrganizationData.swift */,
-				041CF67E2C6349F9008ACFD2 /* BubbleView.swift */,
-				041CF67F2C6349F9008ACFD2 /* ReadReceiptRequest.swift */,
-				041CF6802C6349F9008ACFD2 /* MultiFilesCVCell.swift */,
-				041CF6812C6349F9008ACFD2 /* Notification.swift */,
-				041CF6822C6349F9008ACFD2 /* CustomUserDefaultChat.swift */,
-				041CF6832C6349F9008ACFD2 /* ConversationCellImageLoginUser.swift */,
-				041CF6842C6349F9008ACFD2 /* TestChat1.swift */,
-				041CF6852C6349F9008ACFD2 /* FileDataClass.swift */,
-				041CF6862C6349F9008ACFD2 /* UIImage.swift */,
-				041CF6872C6349F9008ACFD2 /* MenuTabViews.swift */,
-				041CF6882C6349F9008ACFD2 /* UserChatSettingWebresponse.swift */,
-				041CF6892C6349F9008ACFD2 /* WebResponseForTopics.swift */,
-				041CF68A2C6349F9008ACFD2 /* AuthSessionManager.swift */,
-				041CF68B2C6349F9008ACFD2 /* FileUploadData.swift */,
-				041CF68C2C6349F9008ACFD2 /* ConversationsByUUID.swift */,
-				041CF68D2C6349F9008ACFD2 /* DatabaseChat.swift */,
-				041CF68E2C6349F9008ACFD2 /* CustomOutlineTextField.swift */,
-				041CF68F2C6349F9008ACFD2 /* CommaNumber.swift */,
-				041CF6902C6349F9008ACFD2 /* WebResponseForOrganization.swift */,
-				041CF6912C6349F9008ACFD2 /* TopicsCollectionViewCell.swift */,
-				041CF6922C6349F9008ACFD2 /* Color.swift */,
-				041CF6932C6349F9008ACFD2 /* Toast.swift */,
-				041CF6942C6349F9008ACFD2 /* CustomLabel.swift */,
-				041CF6952C6349F9008ACFD2 /* RecieveMessage.swift */,
+				041CF6F02C634EA4008ACFD2 /* TopicDataModel.swift */,
+				041CF6F12C634EA4008ACFD2 /* Constants.swift */,
+				041CF6F22C634EA4008ACFD2 /* ImageCache.swift */,
+				041CF6F32C634EA4008ACFD2 /* QueriesChat.swift */,
+				041CF6F42C634EA4008ACFD2 /* ChatViewController.swift */,
+				041CF6F52C634EA4008ACFD2 /* UtilsClassChat.swift */,
+				041CF6F62C634EA4008ACFD2 /* ActivityLoaderCell.swift */,
+				041CF6F72C634EA4008ACFD2 /* SwitchButton.swift */,
+				041CF6F82C634EA4008ACFD2 /* ConversationStatusListenerDataModel.swift */,
+				041CF6F92C634EA4008ACFD2 /* WebResonseUploadFile.swift */,
+				041CF6FA2C634EA4008ACFD2 /* TopicDataModelClass.swift */,
+				041CF6FB2C634EA4008ACFD2 /* UploadFilesRequest.swift */,
+				041CF6FC2C634EA4008ACFD2 /* WebResponseBusinessHours.swift */,
+				041CF6FD2C634EA4008ACFD2 /* SelectedFilePreview.swift */,
+				041CF6FE2C634EA4008ACFD2 /* DatePicker.swift */,
+				041CF6FF2C634EA4008ACFD2 /* FileDataModel.swift */,
+				041CF7012C634EA4008ACFD2 /* PickerView.swift */,
+				041CF7022C634EA4008ACFD2 /* TypingIndicatorListenerModel.swift */,
+				041CF7032C634EA4008ACFD2 /* RefreshTokenResponse.swift */,
+				041CF7042C634EA4008ACFD2 /* UserChatSettingModel.swift */,
+				041CF7052C634EA4008ACFD2 /* WebResponseConversationByUUID.swift */,
+				041CF7062C634EA4008ACFD2 /* SystemsTVCell.swift */,
+				041CF7072C634EA4008ACFD2 /* MultiPDFCVCell.swift */,
+				041CF7082C634EA4008ACFD2 /* Singleton.swift */,
+				041CF7092C634EA5008ACFD2 /* CustomClass.swift */,
+				041CF70A2C634EA5008ACFD2 /* ApiClient.swift */,
+				041CF70B2C634EA5008ACFD2 /* JsonSerializingChat.swift */,
+				041CF70C2C634EA5008ACFD2 /* ConversationCellFileNonLoginUser.swift */,
+				041CF70D2C634EA5008ACFD2 /* Conversations.swift */,
+				041CF70E2C634EA5008ACFD2 /* Validator.swift */,
+				041CF70F2C634EA5008ACFD2 /* SwiftEEventBus.swift */,
+				041CF7102C634EA5008ACFD2 /* WebResponse.swift */,
+				041CF7112C634EA5008ACFD2 /* PageControllerVC.swift */,
+				041CF7122C634EA5008ACFD2 /* NotificationManager.swift */,
+				041CF7132C634EA5008ACFD2 /* MultiImageCVCell.swift */,
+				041CF7142C634EA5008ACFD2 /* PageControl.swift */,
+				041CF7152C634EA5008ACFD2 /* FileDownloader.swift */,
+				041CF7162C634EA5008ACFD2 /* SampleNotificationDelegate.swift */,
+				041CF7172C634EA5008ACFD2 /* Network.swift */,
+				041CF7182C634EA5008ACFD2 /* ResolveFeedBackRequest.swift */,
+				041CF7192C634EA5008ACFD2 /* SwiftGifOrigin.swift */,
+				041CF71A2C634EA5008ACFD2 /* SendMessageModel.swift */,
+				041CF71B2C634EA5008ACFD2 /* NewChatMessage.swift */,
+				041CF71C2C634EA5008ACFD2 /* Common.swift */,
+				041CF71D2C634EA5008ACFD2 /* TaxFormConstant.swift */,
+				041CF71E2C634EA5008ACFD2 /* ImagePicker.swift */,
+				041CF71F2C634EA5008ACFD2 /* RateUsVC.swift */,
+				041CF7202C634EA5008ACFD2 /* UiViewExtension.swift */,
+				041CF7212C634EA5008ACFD2 /* WebResponseChat.swift */,
+				041CF7222C634EA5008ACFD2 /* ConversationCellFIleForLoginUser.swift */,
+				041CF7232C634EA5008ACFD2 /* ConversationCellImageNoLoginUser.swift */,
+				041CF7242C634EA5008ACFD2 /* BusinessHourModel.swift */,
+				041CF7252C634EA5008ACFD2 /* UICollectionViewLeftAlignedLayout.swift */,
+				041CF7262C634EA5008ACFD2 /* BasicCell.swift */,
+				041CF7272C634EA5008ACFD2 /* Reachability.swift */,
+				041CF7282C634EA5008ACFD2 /* ConversationLoginUserTableViewCell.swift */,
+				041CF7292C634EA5008ACFD2 /* ConversationTableViewCellNoLoginUser.swift */,
+				041CF72A2C634EA5008ACFD2 /* JsonSerializing.swift */,
+				041CF72B2C634EA5008ACFD2 /* UploadFilesDataModel.swift */,
+				041CF72C2C634EA5008ACFD2 /* UploadFilesData.swift */,
+				041CF72D2C634EA5008ACFD2 /* Fonts.swift */,
+				041CF72E2C634EA5008ACFD2 /* UNNotificationAttachment.swift */,
+				041CF72F2C634EA5008ACFD2 /* OrganizationData.swift */,
+				041CF7302C634EA5008ACFD2 /* BubbleView.swift */,
+				041CF7312C634EA5008ACFD2 /* ReadReceiptRequest.swift */,
+				041CF7322C634EA5008ACFD2 /* MultiFilesCVCell.swift */,
+				041CF7332C634EA5008ACFD2 /* Notification.swift */,
+				041CF7342C634EA5008ACFD2 /* CustomUserDefaultChat.swift */,
+				041CF7352C634EA5008ACFD2 /* ConversationCellImageLoginUser.swift */,
+				041CF7362C634EA5008ACFD2 /* TestChat1.swift */,
+				041CF7372C634EA5008ACFD2 /* FileDataClass.swift */,
+				041CF7382C634EA5008ACFD2 /* UIImage.swift */,
+				041CF7392C634EA5008ACFD2 /* MenuTabViews.swift */,
+				041CF73A2C634EA5008ACFD2 /* UserChatSettingWebresponse.swift */,
+				041CF73B2C634EA5008ACFD2 /* WebResponseForTopics.swift */,
+				041CF73C2C634EA5008ACFD2 /* AuthSessionManager.swift */,
+				041CF73D2C634EA5008ACFD2 /* FileUploadData.swift */,
+				041CF73E2C634EA5008ACFD2 /* ConversationsByUUID.swift */,
+				041CF73F2C634EA5008ACFD2 /* DatabaseChat.swift */,
+				041CF7402C634EA5008ACFD2 /* CustomOutlineTextField.swift */,
+				041CF7412C634EA5008ACFD2 /* CommaNumber.swift */,
+				041CF7422C634EA5008ACFD2 /* WebResponseForOrganization.swift */,
+				041CF7432C634EA5008ACFD2 /* TopicsCollectionViewCell.swift */,
+				041CF7442C634EA5008ACFD2 /* Color.swift */,
+				041CF7452C634EA5008ACFD2 /* Toast.swift */,
+				041CF7462C634EA5008ACFD2 /* CustomLabel.swift */,
+				041CF7472C634EA5008ACFD2 /* RecieveMessage.swift */,
 			);
-			name = Classes;
-			path = NewChatDemo2/Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		041CF7A22C63728A008ACFD2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				041CF7002C634EA4008ACFD2 /* ChatModule.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		04B156B02C3D2C0300E0D8D3 /* Resources */ = {
@@ -483,7 +486,8 @@
 		8BA6EFA6083A787E1A242DCB9197B6DA /* NewChatDemo2 */ = {
 			isa = PBXGroup;
 			children = (
-				041CF63C2C6349F8008ACFD2 /* Classes */,
+				041CF7A22C63728A008ACFD2 /* Sources */,
+				041CF6EF2C634EA4008ACFD2 /* Classes */,
 				04B156B02C3D2C0300E0D8D3 /* Resources */,
 				6F44B79FB5C1BE4050D577F2B9DAF10A /* Pod */,
 				5CD6CE02F0D35989E275E4D5E7CC4BF2 /* Support Files */,
@@ -697,7 +701,6 @@
 				04DC368F2C522B36003B0EE4 /* MultiPDFCVCell.xib in Resources */,
 				04DC36932C522B36003B0EE4 /* ConversationLoginUserTableViewCell.xib in Resources */,
 				04DC36922C522B36003B0EE4 /* TopicsCollectionViewCell.xib in Resources */,
-				041CF6B62C6349F9008ACFD2 /* .gitkeep in Resources */,
 				04DC369C2C522B36003B0EE4 /* MultiImageCVCell.xib in Resources */,
 				04DC36902C522B36003B0EE4 /* ConversationCellFIleForLoginUser.xib in Resources */,
 			);
@@ -726,95 +729,95 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				041CF6B12C6349F9008ACFD2 /* JsonSerializingChat.swift in Sources */,
-				041CF6A02C6349F9008ACFD2 /* TopicDataModelClass.swift in Sources */,
-				041CF6CE2C6349F9008ACFD2 /* Reachability.swift in Sources */,
+				041CF7632C634EA5008ACFD2 /* JsonSerializingChat.swift in Sources */,
+				041CF7522C634EA5008ACFD2 /* TopicDataModelClass.swift in Sources */,
+				041CF77F2C634EA5008ACFD2 /* Reachability.swift in Sources */,
 				28AEE144C350A3F0B2CC6C0F125C7C9A /* NewChatDemo2-dummy.m in Sources */,
-				041CF6D32C6349F9008ACFD2 /* UploadFilesData.swift in Sources */,
-				041CF6B22C6349F9008ACFD2 /* ConversationCellFileNonLoginUser.swift in Sources */,
-				041CF6EA2C6349F9008ACFD2 /* TopicsCollectionViewCell.swift in Sources */,
-				041CF6AD2C6349F9008ACFD2 /* MultiPDFCVCell.swift in Sources */,
-				041CF6DC2C6349F9008ACFD2 /* ConversationCellImageLoginUser.swift in Sources */,
-				041CF6D42C6349F9008ACFD2 /* Fonts.swift in Sources */,
-				041CF69D2C6349F9008ACFD2 /* SwitchButton.swift in Sources */,
-				041CF6BC2C6349F9008ACFD2 /* FileDownloader.swift in Sources */,
-				041CF6E02C6349F9008ACFD2 /* MenuTabViews.swift in Sources */,
-				041CF6A32C6349F9008ACFD2 /* SelectedFilePreview.swift in Sources */,
-				041CF6D02C6349F9008ACFD2 /* ConversationTableViewCellNoLoginUser.swift in Sources */,
-				041CF6E22C6349F9008ACFD2 /* WebResponseForTopics.swift in Sources */,
-				041CF6EE2C6349F9008ACFD2 /* RecieveMessage.swift in Sources */,
-				041CF6D52C6349F9008ACFD2 /* UNNotificationAttachment.swift in Sources */,
-				041CF6DE2C6349F9008ACFD2 /* FileDataClass.swift in Sources */,
-				041CF6CF2C6349F9008ACFD2 /* ConversationLoginUserTableViewCell.swift in Sources */,
-				041CF6B82C6349F9008ACFD2 /* PageControllerVC.swift in Sources */,
-				041CF6D62C6349F9008ACFD2 /* OrganizationData.swift in Sources */,
-				041CF6AE2C6349F9008ACFD2 /* Singleton.swift in Sources */,
-				041CF6EC2C6349F9008ACFD2 /* Toast.swift in Sources */,
-				041CF6A82C6349F9008ACFD2 /* TypingIndicatorListenerModel.swift in Sources */,
-				041CF6B02C6349F9008ACFD2 /* ApiClient.swift in Sources */,
-				041CF6E72C6349F9008ACFD2 /* CustomOutlineTextField.swift in Sources */,
-				041CF6CD2C6349F9008ACFD2 /* BasicCell.swift in Sources */,
-				041CF6B52C6349F9008ACFD2 /* SwiftEEventBus.swift in Sources */,
-				041CF6EB2C6349F9008ACFD2 /* Color.swift in Sources */,
-				041CF6A12C6349F9008ACFD2 /* UploadFilesRequest.swift in Sources */,
-				041CF6D82C6349F9008ACFD2 /* ReadReceiptRequest.swift in Sources */,
-				041CF6C62C6349F9008ACFD2 /* RateUsVC.swift in Sources */,
-				041CF6A92C6349F9008ACFD2 /* RefreshTokenResponse.swift in Sources */,
-				041CF69E2C6349F9008ACFD2 /* ConversationStatusListenerDataModel.swift in Sources */,
-				041CF6DA2C6349F9008ACFD2 /* Notification.swift in Sources */,
-				041CF6C32C6349F9008ACFD2 /* Common.swift in Sources */,
-				041CF69F2C6349F9008ACFD2 /* WebResonseUploadFile.swift in Sources */,
-				041CF6DF2C6349F9008ACFD2 /* UIImage.swift in Sources */,
-				041CF6A42C6349F9008ACFD2 /* DatePicker.swift in Sources */,
-				041CF6C22C6349F9008ACFD2 /* NewChatMessage.swift in Sources */,
-				041CF6E52C6349F9008ACFD2 /* ConversationsByUUID.swift in Sources */,
-				041CF6AF2C6349F9008ACFD2 /* CustomClass.swift in Sources */,
-				041CF6D72C6349F9008ACFD2 /* BubbleView.swift in Sources */,
-				041CF6BB2C6349F9008ACFD2 /* PageControl.swift in Sources */,
-				041CF6CB2C6349F9008ACFD2 /* BusinessHourModel.swift in Sources */,
-				041CF6B42C6349F9008ACFD2 /* Validator.swift in Sources */,
-				041CF6E82C6349F9008ACFD2 /* CommaNumber.swift in Sources */,
-				041CF6E42C6349F9008ACFD2 /* FileUploadData.swift in Sources */,
-				041CF6962C6349F9008ACFD2 /* TopicDataModel.swift in Sources */,
-				041CF6BD2C6349F9008ACFD2 /* SampleNotificationDelegate.swift in Sources */,
-				041CF69B2C6349F9008ACFD2 /* UtilsClassChat.swift in Sources */,
-				041CF6A52C6349F9008ACFD2 /* FileDataModel.swift in Sources */,
-				041CF6A72C6349F9008ACFD2 /* PickerView.swift in Sources */,
-				041CF6982C6349F9008ACFD2 /* ImageCache.swift in Sources */,
-				041CF6D12C6349F9008ACFD2 /* JsonSerializing.swift in Sources */,
-				041CF6992C6349F9008ACFD2 /* QueriesChat.swift in Sources */,
-				041CF6C02C6349F9008ACFD2 /* SwiftGifOrigin.swift in Sources */,
-				041CF6D92C6349F9008ACFD2 /* MultiFilesCVCell.swift in Sources */,
-				041CF6E12C6349F9008ACFD2 /* UserChatSettingWebresponse.swift in Sources */,
-				041CF6AC2C6349F9008ACFD2 /* SystemsTVCell.swift in Sources */,
-				041CF6DB2C6349F9008ACFD2 /* CustomUserDefaultChat.swift in Sources */,
-				041CF6BE2C6349F9008ACFD2 /* Network.swift in Sources */,
-				041CF6C72C6349F9008ACFD2 /* UiViewExtension.swift in Sources */,
-				041CF6DD2C6349F9008ACFD2 /* TestChat1.swift in Sources */,
-				041CF69A2C6349F9008ACFD2 /* ChatViewController.swift in Sources */,
-				041CF6A22C6349F9008ACFD2 /* WebResponseBusinessHours.swift in Sources */,
-				041CF6972C6349F9008ACFD2 /* Constants.swift in Sources */,
-				041CF6C82C6349F9008ACFD2 /* WebResponseChat.swift in Sources */,
-				041CF69C2C6349F9008ACFD2 /* ActivityLoaderCell.swift in Sources */,
-				041CF6D22C6349F9008ACFD2 /* UploadFilesDataModel.swift in Sources */,
-				041CF6E62C6349F9008ACFD2 /* DatabaseChat.swift in Sources */,
-				041CF6B92C6349F9008ACFD2 /* NotificationManager.swift in Sources */,
-				041CF6CC2C6349F9008ACFD2 /* UICollectionViewLeftAlignedLayout.swift in Sources */,
-				041CF6AB2C6349F9008ACFD2 /* WebResponseConversationByUUID.swift in Sources */,
-				041CF6C12C6349F9008ACFD2 /* SendMessageModel.swift in Sources */,
-				041CF6C92C6349F9008ACFD2 /* ConversationCellFIleForLoginUser.swift in Sources */,
-				041CF6C42C6349F9008ACFD2 /* TaxFormConstant.swift in Sources */,
-				041CF6B32C6349F9008ACFD2 /* Conversations.swift in Sources */,
-				041CF6B72C6349F9008ACFD2 /* WebResponse.swift in Sources */,
-				041CF6ED2C6349F9008ACFD2 /* CustomLabel.swift in Sources */,
-				041CF6E92C6349F9008ACFD2 /* WebResponseForOrganization.swift in Sources */,
-				041CF6A62C6349F9008ACFD2 /* ChatModule.swift in Sources */,
-				041CF6CA2C6349F9008ACFD2 /* ConversationCellImageNoLoginUser.swift in Sources */,
-				041CF6BF2C6349F9008ACFD2 /* ResolveFeedBackRequest.swift in Sources */,
-				041CF6E32C6349F9008ACFD2 /* AuthSessionManager.swift in Sources */,
-				041CF6C52C6349F9008ACFD2 /* ImagePicker.swift in Sources */,
-				041CF6BA2C6349F9008ACFD2 /* MultiImageCVCell.swift in Sources */,
-				041CF6AA2C6349F9008ACFD2 /* UserChatSettingModel.swift in Sources */,
+				041CF7842C634EA5008ACFD2 /* UploadFilesData.swift in Sources */,
+				041CF7642C634EA5008ACFD2 /* ConversationCellFileNonLoginUser.swift in Sources */,
+				041CF79B2C634EA5008ACFD2 /* TopicsCollectionViewCell.swift in Sources */,
+				041CF75F2C634EA5008ACFD2 /* MultiPDFCVCell.swift in Sources */,
+				041CF78D2C634EA5008ACFD2 /* ConversationCellImageLoginUser.swift in Sources */,
+				041CF7852C634EA5008ACFD2 /* Fonts.swift in Sources */,
+				041CF74F2C634EA5008ACFD2 /* SwitchButton.swift in Sources */,
+				041CF76D2C634EA5008ACFD2 /* FileDownloader.swift in Sources */,
+				041CF7912C634EA5008ACFD2 /* MenuTabViews.swift in Sources */,
+				041CF7552C634EA5008ACFD2 /* SelectedFilePreview.swift in Sources */,
+				041CF7812C634EA5008ACFD2 /* ConversationTableViewCellNoLoginUser.swift in Sources */,
+				041CF7932C634EA5008ACFD2 /* WebResponseForTopics.swift in Sources */,
+				041CF79F2C634EA5008ACFD2 /* RecieveMessage.swift in Sources */,
+				041CF7862C634EA5008ACFD2 /* UNNotificationAttachment.swift in Sources */,
+				041CF78F2C634EA5008ACFD2 /* FileDataClass.swift in Sources */,
+				041CF7802C634EA5008ACFD2 /* ConversationLoginUserTableViewCell.swift in Sources */,
+				041CF7692C634EA5008ACFD2 /* PageControllerVC.swift in Sources */,
+				041CF7872C634EA5008ACFD2 /* OrganizationData.swift in Sources */,
+				041CF7602C634EA5008ACFD2 /* Singleton.swift in Sources */,
+				041CF79D2C634EA5008ACFD2 /* Toast.swift in Sources */,
+				041CF75A2C634EA5008ACFD2 /* TypingIndicatorListenerModel.swift in Sources */,
+				041CF7622C634EA5008ACFD2 /* ApiClient.swift in Sources */,
+				041CF7982C634EA5008ACFD2 /* CustomOutlineTextField.swift in Sources */,
+				041CF77E2C634EA5008ACFD2 /* BasicCell.swift in Sources */,
+				041CF7672C634EA5008ACFD2 /* SwiftEEventBus.swift in Sources */,
+				041CF79C2C634EA5008ACFD2 /* Color.swift in Sources */,
+				041CF7532C634EA5008ACFD2 /* UploadFilesRequest.swift in Sources */,
+				041CF7892C634EA5008ACFD2 /* ReadReceiptRequest.swift in Sources */,
+				041CF7772C634EA5008ACFD2 /* RateUsVC.swift in Sources */,
+				041CF75B2C634EA5008ACFD2 /* RefreshTokenResponse.swift in Sources */,
+				041CF7502C634EA5008ACFD2 /* ConversationStatusListenerDataModel.swift in Sources */,
+				041CF78B2C634EA5008ACFD2 /* Notification.swift in Sources */,
+				041CF7742C634EA5008ACFD2 /* Common.swift in Sources */,
+				041CF7512C634EA5008ACFD2 /* WebResonseUploadFile.swift in Sources */,
+				041CF7902C634EA5008ACFD2 /* UIImage.swift in Sources */,
+				041CF7562C634EA5008ACFD2 /* DatePicker.swift in Sources */,
+				041CF7732C634EA5008ACFD2 /* NewChatMessage.swift in Sources */,
+				041CF7962C634EA5008ACFD2 /* ConversationsByUUID.swift in Sources */,
+				041CF7612C634EA5008ACFD2 /* CustomClass.swift in Sources */,
+				041CF7882C634EA5008ACFD2 /* BubbleView.swift in Sources */,
+				041CF76C2C634EA5008ACFD2 /* PageControl.swift in Sources */,
+				041CF77C2C634EA5008ACFD2 /* BusinessHourModel.swift in Sources */,
+				041CF7662C634EA5008ACFD2 /* Validator.swift in Sources */,
+				041CF7992C634EA5008ACFD2 /* CommaNumber.swift in Sources */,
+				041CF7952C634EA5008ACFD2 /* FileUploadData.swift in Sources */,
+				041CF7482C634EA5008ACFD2 /* TopicDataModel.swift in Sources */,
+				041CF76E2C634EA5008ACFD2 /* SampleNotificationDelegate.swift in Sources */,
+				041CF74D2C634EA5008ACFD2 /* UtilsClassChat.swift in Sources */,
+				041CF7572C634EA5008ACFD2 /* FileDataModel.swift in Sources */,
+				041CF7592C634EA5008ACFD2 /* PickerView.swift in Sources */,
+				041CF74A2C634EA5008ACFD2 /* ImageCache.swift in Sources */,
+				041CF7822C634EA5008ACFD2 /* JsonSerializing.swift in Sources */,
+				041CF74B2C634EA5008ACFD2 /* QueriesChat.swift in Sources */,
+				041CF7712C634EA5008ACFD2 /* SwiftGifOrigin.swift in Sources */,
+				041CF78A2C634EA5008ACFD2 /* MultiFilesCVCell.swift in Sources */,
+				041CF7922C634EA5008ACFD2 /* UserChatSettingWebresponse.swift in Sources */,
+				041CF75E2C634EA5008ACFD2 /* SystemsTVCell.swift in Sources */,
+				041CF78C2C634EA5008ACFD2 /* CustomUserDefaultChat.swift in Sources */,
+				041CF76F2C634EA5008ACFD2 /* Network.swift in Sources */,
+				041CF7782C634EA5008ACFD2 /* UiViewExtension.swift in Sources */,
+				041CF78E2C634EA5008ACFD2 /* TestChat1.swift in Sources */,
+				041CF74C2C634EA5008ACFD2 /* ChatViewController.swift in Sources */,
+				041CF7542C634EA5008ACFD2 /* WebResponseBusinessHours.swift in Sources */,
+				041CF7492C634EA5008ACFD2 /* Constants.swift in Sources */,
+				041CF7792C634EA5008ACFD2 /* WebResponseChat.swift in Sources */,
+				041CF74E2C634EA5008ACFD2 /* ActivityLoaderCell.swift in Sources */,
+				041CF7832C634EA5008ACFD2 /* UploadFilesDataModel.swift in Sources */,
+				041CF7972C634EA5008ACFD2 /* DatabaseChat.swift in Sources */,
+				041CF76A2C634EA5008ACFD2 /* NotificationManager.swift in Sources */,
+				041CF77D2C634EA5008ACFD2 /* UICollectionViewLeftAlignedLayout.swift in Sources */,
+				041CF75D2C634EA5008ACFD2 /* WebResponseConversationByUUID.swift in Sources */,
+				041CF7722C634EA5008ACFD2 /* SendMessageModel.swift in Sources */,
+				041CF77A2C634EA5008ACFD2 /* ConversationCellFIleForLoginUser.swift in Sources */,
+				041CF7752C634EA5008ACFD2 /* TaxFormConstant.swift in Sources */,
+				041CF7652C634EA5008ACFD2 /* Conversations.swift in Sources */,
+				041CF7682C634EA5008ACFD2 /* WebResponse.swift in Sources */,
+				041CF79E2C634EA5008ACFD2 /* CustomLabel.swift in Sources */,
+				041CF79A2C634EA5008ACFD2 /* WebResponseForOrganization.swift in Sources */,
+				041CF7582C634EA5008ACFD2 /* ChatModule.swift in Sources */,
+				041CF77B2C634EA5008ACFD2 /* ConversationCellImageNoLoginUser.swift in Sources */,
+				041CF7702C634EA5008ACFD2 /* ResolveFeedBackRequest.swift in Sources */,
+				041CF7942C634EA5008ACFD2 /* AuthSessionManager.swift in Sources */,
+				041CF7762C634EA5008ACFD2 /* ImagePicker.swift in Sources */,
+				041CF76B2C634EA5008ACFD2 /* MultiImageCVCell.swift in Sources */,
+				041CF75C2C634EA5008ACFD2 /* UserChatSettingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

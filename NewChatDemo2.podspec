@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'NewChatDemo2'
-s.version          = '0.2.0'
+s.version          = '0.2.1'
 s.summary          = 'A ChatTestDemo App That is Demo. that is enough for now'
 
 # This description is used to generate tags and improve search results.
@@ -36,11 +36,14 @@ s.ios.deployment_target = '11.0'
 s.swift_version = '5.0'
 
 
-s.source_files = 'Classes/**/*.{swift,h,m}'
-s.resources = 'Resources/**/*.{storyboard,xib,xcassets,png,jpeg,jpg,gif}'
+#s.source_files = 'Classes/**/*.{swift,h,m}'
+#s.resources = 'Resources/**/*.{storyboard,xib,xcassets,png,jpeg,jpg,gif}'
 
-# Exclude the Classes and Resources directories from being visible to the end-users
-  s.exclude_files = ['Classes/*', 'Resources/*']
+# Specify the source files to include
+  s.source_files = 'NewChatDemo2/Sources/**/*.{swift,h,m}'
+
+  # Exclude `Classes` and `Resources` folders
+  s.exclude_files = 'NewChatDemo2/Classes/**', 'NewChatDemo2/Resources/**'
 
 s.frameworks = ['UIKit', 'Foundation', 'QuickLook', 'Photos', 'MobileCoreServices']
 
