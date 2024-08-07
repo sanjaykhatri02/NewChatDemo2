@@ -15,6 +15,7 @@ public struct O2ChatWidget {
         // Load the storyboard and instantiate the ChatViewController
         let bundle = Bundle(for: ChatViewController.self)
         let storyboard = UIStoryboard(name: "MainChat", bundle: bundle)
+        
         if let chatViewController = storyboard.instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController {
             var dbChatObj = Singleton.sharedInstance.myLocalChatDB
             print("New Addition")
