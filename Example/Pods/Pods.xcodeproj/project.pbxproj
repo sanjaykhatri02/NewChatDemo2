@@ -308,6 +308,7 @@
 				041CF6F02C634EA4008ACFD2 /* TopicDataModel.swift */,
 				041CF6F12C634EA4008ACFD2 /* Constants.swift */,
 				041CF6F22C634EA4008ACFD2 /* ImageCache.swift */,
+				041CF7002C634EA4008ACFD2 /* ChatModule.swift */,
 				041CF6F32C634EA4008ACFD2 /* QueriesChat.swift */,
 				041CF6F42C634EA4008ACFD2 /* ChatViewController.swift */,
 				041CF6F52C634EA4008ACFD2 /* UtilsClassChat.swift */,
@@ -396,14 +397,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		041CF7A22C63728A008ACFD2 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				041CF7002C634EA4008ACFD2 /* ChatModule.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
 		04B156B02C3D2C0300E0D8D3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,7 +479,6 @@
 		8BA6EFA6083A787E1A242DCB9197B6DA /* NewChatDemo2 */ = {
 			isa = PBXGroup;
 			children = (
-				041CF7A22C63728A008ACFD2 /* Sources */,
 				041CF6EF2C634EA4008ACFD2 /* Classes */,
 				04B156B02C3D2C0300E0D8D3 /* Resources */,
 				6F44B79FB5C1BE4050D577F2B9DAF10A /* Pod */,
