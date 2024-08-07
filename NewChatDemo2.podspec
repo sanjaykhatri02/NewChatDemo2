@@ -40,10 +40,10 @@ s.swift_version = '5.0'
 #s.resources = 'Resources/**/*.{storyboard,xib,xcassets,png,jpeg,jpg,gif}'
 
 # Specify the source files to include
-  s.source_files = 'NewChatDemo2/Sources/**/*.{swift,h,m}'
+  s.source_files = 'Sources/**/*.{swift,h,m}'
 
   # Exclude `Classes` and `Resources` folders
-  s.exclude_files = 'NewChatDemo2/Classes/**', 'NewChatDemo2/Resources/**'
+  s.exclude_files = 'Classes/**', 'Resources/**'
 
 s.frameworks = ['UIKit', 'Foundation', 'QuickLook', 'Photos', 'MobileCoreServices']
 
