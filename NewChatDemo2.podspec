@@ -41,7 +41,7 @@ s.swift_version = '5.0'
 
 # Specify the source files to include
   #s.source_files = 'Sources/**/*.{swift,h,m}'
-  s.source_files = 'Classes/**/*.{swift,h,m}'
+  #s.source_files = 'Classes/**/*.{swift,h,m}'
   s.resources = 'Resources/**/*.{storyboard,xib,xcassets,png,jpeg,jpg,gif}'
 
 
