@@ -305,10 +305,26 @@
 		041CF6EF2C634EA4008ACFD2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				041CF7AA2C64A0DF008ACFD2 /* Public */,
+				041CF7AB2C64A0F8008ACFD2 /* Private */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		041CF7AA2C64A0DF008ACFD2 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				041CF7002C634EA4008ACFD2 /* ChatModule.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		041CF7AB2C64A0F8008ACFD2 /* Private */ = {
+			isa = PBXGroup;
+			children = (
 				041CF6F02C634EA4008ACFD2 /* TopicDataModel.swift */,
 				041CF6F12C634EA4008ACFD2 /* Constants.swift */,
 				041CF6F22C634EA4008ACFD2 /* ImageCache.swift */,
-				041CF7002C634EA4008ACFD2 /* ChatModule.swift */,
 				041CF6F32C634EA4008ACFD2 /* QueriesChat.swift */,
 				041CF6F42C634EA4008ACFD2 /* ChatViewController.swift */,
 				041CF6F52C634EA4008ACFD2 /* UtilsClassChat.swift */,
@@ -394,10 +410,10 @@
 				041CF7462C634EA5008ACFD2 /* CustomLabel.swift */,
 				041CF7472C634EA5008ACFD2 /* RecieveMessage.swift */,
 			);
-			path = Classes;
+			path = Private;
 			sourceTree = "<group>";
 		};
-		04B156B02C3D2C0300E0D8D3 /* Resources */ = {
+		041CF7AC2C64A42C008ACFD2 /* Public */ = {
 			isa = PBXGroup;
 			children = (
 				04DC368C2C522B35003B0EE4 /* ActivityLoaderCell.xib */,
@@ -414,6 +430,14 @@
 				04DC36812C522B35003B0EE4 /* MultiPDFCVCell.xib */,
 				04DC368B2C522B35003B0EE4 /* SystemsTVCell.xib */,
 				04DC36842C522B35003B0EE4 /* TopicsCollectionViewCell.xib */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		04B156B02C3D2C0300E0D8D3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				041CF7AC2C64A42C008ACFD2 /* Public */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

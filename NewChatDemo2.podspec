@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'NewChatDemo2'
-s.version          = '0.2.6'
+s.version          = '0.2.8'
 s.summary          = 'A ChatTestDemo App That is Demo. that is enough for now'
 
 # This description is used to generate tags and improve search results.
@@ -46,7 +46,7 @@ s.swift_version = '5.0'
 
 
   # Exclude `Classes` and `Resources` folders
-  #s.exclude_files = 'Classes/**'
+  s.exclude_files = 'Classes/Private/**', 'Resources/Private/**'
 
 s.frameworks = ['UIKit', 'Foundation', 'QuickLook', 'Photos', 'MobileCoreServices']
 
