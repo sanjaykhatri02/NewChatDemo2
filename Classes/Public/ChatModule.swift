@@ -11,6 +11,8 @@ import FMDB
 
 public struct O2ChatWidget {
     
+    public init() {}
+    
     public static func createChatViewController(from viewController: UIViewController) {
         // Load the storyboard and instantiate the ChatViewController
         let bundle = Bundle(for: ChatViewController.self)
