@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'NewChatDemo2'
-s.version          = '0.2.9'
+s.version          = '0.3.0'
 s.summary          = 'A ChatTestDemo App That is Demo. that is enough for now'
 
 # This description is used to generate tags and improve search results.
@@ -41,12 +41,15 @@ s.swift_version = '5.0'
 
 # Specify the source files to include
   #s.source_files = 'Sources/**/*.{swift,h,m}'
-  s.source_files = 'Classes/**/*.{swift,h,m}'
-  s.resources = 'Resources/**/*.{storyboard,xib,xcassets,png,jpeg,jpg,gif}'
+  #Working
+  #s.source_files = 'Classes/**/*.{swift,h,m}'
+  #s.resources = 'Resources/**/*.{storyboard,xib,xcassets,png,jpeg,jpg,gif}'
 
+    s.source = { :http => 'https://drive.google.com/uc?export=download&id=16eIgZoOgeE139g6DIxJBCrkTA1qhiaMN'}
+    #s.vendored_frameworks = 'NewChatDemo2.framework'
 
   # Exclude `Classes` and `Resources` folders
-  s.exclude_files = 'Classes/Private/**', 'Resources/Private/**'
+  #s.exclude_files = 'Classes/Private/**', 'Resources/Private/**'
 
 s.frameworks = ['UIKit', 'Foundation', 'QuickLook', 'Photos', 'MobileCoreServices']
 
