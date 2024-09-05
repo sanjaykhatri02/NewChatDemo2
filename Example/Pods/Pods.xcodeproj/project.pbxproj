@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -95,6 +95,7 @@
 		041CF79D2C634EA5008ACFD2 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7452C634EA5008ACFD2 /* Toast.swift */; };
 		041CF79E2C634EA5008ACFD2 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7462C634EA5008ACFD2 /* CustomLabel.swift */; };
 		041CF79F2C634EA5008ACFD2 /* RecieveMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7472C634EA5008ACFD2 /* RecieveMessage.swift */; };
+		04B25A1E2C8844AE00781FCF /* NewChatDemo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B25A1D2C8844AE00781FCF /* NewChatDemo2.framework */; platformFilter = ios; };
 		04DC368F2C522B36003B0EE4 /* MultiPDFCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36812C522B35003B0EE4 /* MultiPDFCVCell.xib */; };
 		04DC36902C522B36003B0EE4 /* ConversationCellFIleForLoginUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36822C522B35003B0EE4 /* ConversationCellFIleForLoginUser.xib */; };
 		04DC36912C522B36003B0EE4 /* ConversationTableViewCellNoLoginUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36832C522B35003B0EE4 /* ConversationTableViewCellNoLoginUser.xib */; };
@@ -227,6 +228,7 @@
 		041CF7452C634EA5008ACFD2 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		041CF7462C634EA5008ACFD2 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		041CF7472C634EA5008ACFD2 /* RecieveMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecieveMessage.swift; sourceTree = "<group>"; };
+		04B25A1D2C8844AE00781FCF /* NewChatDemo2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NewChatDemo2.framework; sourceTree = "<group>"; };
 		04DC36812C522B35003B0EE4 /* MultiPDFCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiPDFCVCell.xib; sourceTree = "<group>"; };
 		04DC36822C522B35003B0EE4 /* ConversationCellFIleForLoginUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationCellFIleForLoginUser.xib; sourceTree = "<group>"; };
 		04DC36832C522B35003B0EE4 /* ConversationTableViewCellNoLoginUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationTableViewCellNoLoginUser.xib; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA83C570A2C2D9F45CA0190FECC69A8 /* Foundation.framework in Frameworks */,
+				04B25A1E2C8844AE00781FCF /* NewChatDemo2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +484,7 @@
 			children = (
 				041CF6EF2C634EA4008ACFD2 /* Classes */,
 				04B156B02C3D2C0300E0D8D3 /* Resources */,
+				04B25A1D2C8844AE00781FCF /* NewChatDemo2.framework */,
 				6F44B79FB5C1BE4050D577F2B9DAF10A /* Pod */,
 				5CD6CE02F0D35989E275E4D5E7CC4BF2 /* Support Files */,
 			);
@@ -849,7 +853,11 @@
 				INFOPLIST_FILE = "Target Support Files/NewChatDemo2/NewChatDemo2-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/NewChatDemo2/NewChatDemo2.modulemap";
 				PRODUCT_MODULE_NAME = NewChatDemo2;
 				PRODUCT_NAME = NewChatDemo2;
@@ -881,7 +889,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-NewChatDemo2_Example/Pods-NewChatDemo2_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-NewChatDemo2_Example/Pods-NewChatDemo2_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -915,7 +927,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-NewChatDemo2_Tests/Pods-NewChatDemo2_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-NewChatDemo2_Tests/Pods-NewChatDemo2_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -948,7 +964,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-NewChatDemo2_Tests/Pods-NewChatDemo2_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-NewChatDemo2_Tests/Pods-NewChatDemo2_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1020,7 +1040,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1044,7 +1065,11 @@
 				INFOPLIST_FILE = "Target Support Files/NewChatDemo2/NewChatDemo2-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/NewChatDemo2/NewChatDemo2.modulemap";
 				PRODUCT_MODULE_NAME = NewChatDemo2;
 				PRODUCT_NAME = NewChatDemo2;
@@ -1076,7 +1101,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-NewChatDemo2_Example/Pods-NewChatDemo2_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-NewChatDemo2_Example/Pods-NewChatDemo2_Example.modulemap";
 				OTHER_LDFLAGS = "";
