@@ -47,7 +47,13 @@ s.swift_version = '5.0'
 
    # s.source = { :http => 'https://drive.google.com/file/d/16eIgZoOgeE139g6DIxJBCrkTA1qhiaMN/view?usp=drive_link'}
     #s.source = { :http => 'https://drive.google.com/uc?export=download&id=16eIgZoOgeE139g6DIxJBCrkTA1qhiaMN'}
-    s.vendored_frameworks = 'https://drive.google.com/uc?export=download&id=16eIgZoOgeE139g6DIxJBCrkTA1qhiaMN'
+    # Download the framework and unzip it
+    s.prepare_command = <<-CMD
+    curl -L -o NewChatDemo2.zip https://drive.google.com/uc?export=download&id=16eIgZoOgeE139g6DIxJBCrkTA1qhiaMN
+    unzip NewChatDemo2.zip -d Frameworks/
+  CMD
+    
+    #s.vendored_frameworks = 'NewChatDemo2.framework'
 
   # Exclude `Classes` and `Resources` folders
   #s.exclude_files = 'Classes/Private/**', 'Resources/Private/**'
