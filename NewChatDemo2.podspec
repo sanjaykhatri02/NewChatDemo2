@@ -46,8 +46,9 @@ s.swift_version = '5.0'
   #s.resources = 'Resources/**/*.{storyboard,xib,xcassets,png,jpeg,jpg,gif}'
 
    # s.source = { :http => 'https://drive.google.com/file/d/16eIgZoOgeE139g6DIxJBCrkTA1qhiaMN/view?usp=drive_link'}
-    s.source = 'https://drive.google.com/uc?export=download&id=16eIgZoOgeE139g6DIxJBCrkTA1qhiaMN'
-    
+    s.source = { :http => 'https://drive.google.com/uc?export=download&id=16eIgZoOgeE139g6DIxJBCrkTA1qhiaMN'}
+    s.vendored_frameworks = "**/NewChatDemo2.framework"
+    s.frameworks = "NewChatDemo2"
    
     #s.vendored_frameworks = 'NewChatDemo2.framework'
 
