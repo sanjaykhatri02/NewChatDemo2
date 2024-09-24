@@ -95,6 +95,8 @@
 		041CF79D2C634EA5008ACFD2 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7452C634EA5008ACFD2 /* Toast.swift */; };
 		041CF79E2C634EA5008ACFD2 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7462C634EA5008ACFD2 /* CustomLabel.swift */; };
 		041CF79F2C634EA5008ACFD2 /* RecieveMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7472C634EA5008ACFD2 /* RecieveMessage.swift */; };
+		042AA55E2CA2A35E00A48549 /* TestChatNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AA55D2CA2A35E00A48549 /* TestChatNew.framework */; platformFilter = ios; };
+		04926CEA2C9C0F470014055C /* HiddenFramework.framework.zip in Resources */ = {isa = PBXBuildFile; fileRef = 04926CE92C9C0F470014055C /* HiddenFramework.framework.zip */; };
 		04B25A1E2C8844AE00781FCF /* NewChatDemo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B25A1D2C8844AE00781FCF /* NewChatDemo2.framework */; platformFilter = ios; };
 		04DC368F2C522B36003B0EE4 /* MultiPDFCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36812C522B35003B0EE4 /* MultiPDFCVCell.xib */; };
 		04DC36902C522B36003B0EE4 /* ConversationCellFIleForLoginUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36822C522B35003B0EE4 /* ConversationCellFIleForLoginUser.xib */; };
@@ -228,6 +230,8 @@
 		041CF7452C634EA5008ACFD2 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		041CF7462C634EA5008ACFD2 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		041CF7472C634EA5008ACFD2 /* RecieveMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecieveMessage.swift; sourceTree = "<group>"; };
+		042AA55D2CA2A35E00A48549 /* TestChatNew.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TestChatNew.framework; sourceTree = "<group>"; };
+		04926CE92C9C0F470014055C /* HiddenFramework.framework.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = HiddenFramework.framework.zip; path = ../../Framework/HiddenFramework.framework.zip; sourceTree = "<group>"; };
 		04B25A1D2C8844AE00781FCF /* NewChatDemo2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NewChatDemo2.framework; sourceTree = "<group>"; };
 		04DC36812C522B35003B0EE4 /* MultiPDFCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiPDFCVCell.xib; sourceTree = "<group>"; };
 		04DC36822C522B35003B0EE4 /* ConversationCellFIleForLoginUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationCellFIleForLoginUser.xib; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA83C570A2C2D9F45CA0190FECC69A8 /* Foundation.framework in Frameworks */,
+				042AA55E2CA2A35E00A48549 /* TestChatNew.framework in Frameworks */,
 				04B25A1E2C8844AE00781FCF /* NewChatDemo2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +408,7 @@
 		04B156B02C3D2C0300E0D8D3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04926CE92C9C0F470014055C /* HiddenFramework.framework.zip */,
 				04DC368C2C522B35003B0EE4 /* ActivityLoaderCell.xib */,
 				04DC368A2C522B35003B0EE4 /* Assets.xcassets */,
 				04DC36822C522B35003B0EE4 /* ConversationCellFIleForLoginUser.xib */,
@@ -484,6 +490,7 @@
 			children = (
 				041CF6EF2C634EA4008ACFD2 /* Classes */,
 				04B156B02C3D2C0300E0D8D3 /* Resources */,
+				042AA55D2CA2A35E00A48549 /* TestChatNew.framework */,
 				04B25A1D2C8844AE00781FCF /* NewChatDemo2.framework */,
 				6F44B79FB5C1BE4050D577F2B9DAF10A /* Pod */,
 				5CD6CE02F0D35989E275E4D5E7CC4BF2 /* Support Files */,
@@ -690,6 +697,7 @@
 				04DC36952C522B36003B0EE4 /* ConversationCellFileNonLoginUser.xib in Resources */,
 				04DC369A2C522B36003B0EE4 /* ActivityLoaderCell.xib in Resources */,
 				04DC36972C522B36003B0EE4 /* ConversationCellImageLoginUser.xib in Resources */,
+				04926CEA2C9C0F470014055C /* HiddenFramework.framework.zip in Resources */,
 				04DC36982C522B36003B0EE4 /* Assets.xcassets in Resources */,
 				04DC369B2C522B36003B0EE4 /* MainChat.storyboard in Resources */,
 				04DC36992C522B36003B0EE4 /* SystemsTVCell.xib in Resources */,

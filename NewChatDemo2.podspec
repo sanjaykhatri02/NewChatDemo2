@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'NewChatDemo2'
-s.version          = '0.3.0'
+s.version          = '0.3.1'
 s.summary          = 'A ChatTestDemo App That is Demo. that is enough for now'
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ s.homepage         = 'https://github.com/sanjaykhatri02/NewChatDemo2'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'sanjay.khatri02@outlook.com' => 'sanjay.khatri02@outlook.com' }
 s.source           = { :git => 'https://github.com/sanjaykhatri02/NewChatDemo2.git', :tag => s.version.to_s }
-# s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+
 
 
 
@@ -46,11 +46,17 @@ s.swift_version = '5.0'
   #s.resources = 'Resources/**/*.{storyboard,xib,xcassets,png,jpeg,jpg,gif}'
 
    # s.source = { :http => 'https://drive.google.com/file/d/16eIgZoOgeE139g6DIxJBCrkTA1qhiaMN/view?usp=drive_link'}
-    s.source = { :http => 'https://drive.google.com/uc?export=download&id=16eIgZoOgeE139g6DIxJBCrkTA1qhiaMN'}
-    s.vendored_frameworks = "**/NewChatDemo2.framework"
-    s.frameworks = "NewChatDemo2"
+    #s.source = { :http => 'https://github.com/sanjaykhatri02/02Hat/blob/f25c57d1bfb4880b6de0210569bc93a766a4c4fb/NewChatDemo2.zip'}
+    #s.vendored_frameworks = "**/NewChatDemo2.framework"
+   # s.frameworks = "NewChatDemo2"
    
     #s.vendored_frameworks = 'NewChatDemo2.framework'
+    
+     # Source points to the release zip on GitHub
+  s.source       = { :http => 'https://github.com/sanjaykhatri02/TestFrame/raw/main/TestChatNew.zip' }
+
+  s.vendored_frameworks = 'TestChatNew.framework'
+    
 
   # Exclude `Classes` and `Resources` folders
   #s.exclude_files = 'Classes/Private/**', 'Resources/Private/**'
@@ -66,6 +72,9 @@ s.dependency 'Firebase/Core'
 s.dependency 'Firebase/Messaging'
 s.dependency 'Kingfisher'
 s.dependency 'Cosmos'
+
+#s.vendored_frameworks = 'HiddenFramework.framework'
+
 
 #, '~> 5.9.0'
 # s.resource_bundles = {
