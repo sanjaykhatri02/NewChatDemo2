@@ -1,0 +1,11 @@
+framework module TestChatNew {
+  umbrella header "TestChatNew.h"
+  export *
+
+  module * { export * }
+}
+
+module TestChatNew.Swift {
+  header "TestChatNew-Swift.h"
+  requires objc
+}
