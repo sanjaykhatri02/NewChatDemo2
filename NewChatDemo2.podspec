@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'NewChatDemo2'
-s.version          = '0.3.4'
+s.version          = '0.3.5'
 s.summary          = 'A ChatTestDemo App That is Demo. that is enough for now'
 
 # This description is used to generate tags and improve search results.
@@ -53,9 +53,11 @@ s.swift_version = '5.0'
     #s.vendored_frameworks = 'NewChatDemo2.framework'
     
      # Source points to the release zip on GitHub
-  s.source       = { :http => 'https://github.com/sanjaykhatri02/TestFrame/raw/main/TestChatNew.zip' }
+  #s.source       = { :http => 'https://github.com/sanjaykhatri02/TestFrame/raw/main/TestChatNew.zip' }
+  s.source       = { :http => 'https://github.com/sanjaykhatri02/TestFrame/raw/main/O2Chat.zip' }
 
-  s.vendored_frameworks = 'TestChatNew.framework'
+  #s.vendored_frameworks = 'TestChatNew.framework'
+  s.vendored_frameworks = 'O2Chat.framework'
     
 
   # Exclude `Classes` and `Resources` folders
@@ -70,6 +72,7 @@ s.dependency 'SwiftSignalRClient'
 s.dependency 'IQKeyboardManager'
 s.dependency 'Firebase/Core'
 s.dependency 'Firebase/Messaging'
+
 s.dependency 'Kingfisher'
 s.dependency 'Cosmos'
 
