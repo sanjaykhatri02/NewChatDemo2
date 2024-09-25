@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		9ClYQS/Ij6nziW1GZyzqVloSGVA=
+		</data>
 		<key>ActivityLoaderCell.nib</key>
 		<data>
 		LxUz3H+X/EzOIXvWmzR5+a/X3dY=
@@ -90,7 +94,7 @@
 		</data>
 		<key>Modules/TestChatNew.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		UL1UNrgBGYJs8R3FN/Ix9iMgAd0=
+		vtwJJrOMDhhk9Zk3C/ElzSZ2qkI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -263,7 +267,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4ykwbcjUDGC1wRDyKOYobaVgqlCDVLDwvFtKHTfRGNI=
+			nxKUqtD1eNgvBf6XTsKD1aS+5Uz496CPc1fJjUD9VaM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
