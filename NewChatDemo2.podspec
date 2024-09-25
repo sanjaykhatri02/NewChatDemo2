@@ -54,10 +54,10 @@ s.swift_version = '5.0'
     
      # Source points to the release zip on GitHub
   #s.source       = { :http => 'https://github.com/sanjaykhatri02/TestFrame/raw/main/TestChatNew.zip' }
-  s.source       = { :http => 'https://github.com/sanjaykhatri02/TestFrame/raw/main/O2Chat.zip' }
+  s.source       = { :http => 'https://github.com/sanjaykhatri02/TestFrame/raw/main/ChatDummy.zip' }
 
   #s.vendored_frameworks = 'TestChatNew.framework'
-  s.vendored_frameworks = 'O2Chat.framework'
+  s.vendored_frameworks = 'ChatDummy.framework'
     
 
   # Exclude `Classes` and `Resources` folders
