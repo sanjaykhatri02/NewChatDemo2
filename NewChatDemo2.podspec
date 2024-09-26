@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'NewChatDemo2'
-s.version          = '0.3.6'
+s.version          = '0.3.7'
 s.summary          = 'A ChatTestDemo App That is Demo. that is enough for now'
 
 # This description is used to generate tags and improve search results.
@@ -26,8 +26,6 @@ s.homepage         = 'https://github.com/sanjaykhatri02/NewChatDemo2'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'sanjay.khatri02@outlook.com' => 'sanjay.khatri02@outlook.com' }
 s.source           = { :git => 'https://github.com/sanjaykhatri02/NewChatDemo2.git', :tag => s.version.to_s }
-
-
 
 
 # s.source_files = 'NewChatDemo2/Classes/**/*'
@@ -50,7 +48,7 @@ s.swift_version = '5.0'
     #s.vendored_frameworks = "**/NewChatDemo2.framework"
    # s.frameworks = "NewChatDemo2"
    
-    #s.vendored_frameworks = 'NewChatDemo2.framework'
+    #s.vendored_frameworks = 'NewChatDemo2.xcframework'
     
      # Source points to the release zip on GitHub
   #s.source       = { :http => 'https://github.com/sanjaykhatri02/TestFrame/raw/main/TestChatNew.zip' }

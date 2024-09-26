@@ -111,9 +111,9 @@
 		04DC369A2C522B36003B0EE4 /* ActivityLoaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC368C2C522B35003B0EE4 /* ActivityLoaderCell.xib */; };
 		04DC369B2C522B36003B0EE4 /* MainChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DC368D2C522B35003B0EE4 /* MainChat.storyboard */; };
 		04DC369C2C522B36003B0EE4 /* MultiImageCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC368E2C522B35003B0EE4 /* MultiImageCVCell.xib */; };
+		04ECACF52CA533150096CCA7 /* ChatDummy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECACF42CA533150096CCA7 /* ChatDummy.xcframework */; };
 		04F525782CA3DFDB009DD47B /* TestChatNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F525772CA3DFDB009DD47B /* TestChatNew.framework */; platformFilter = ios; };
 		04F525C42CA434C5009DD47B /* O2Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F525C32CA434C4009DD47B /* O2Chat.framework */; };
-		04F526BD2CA439B0009DD47B /* ChatDummy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F526BC2CA439B0009DD47B /* ChatDummy.framework */; platformFilter = ios; };
 		122141F7A470B783A4999824A30D4EBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		1AA83C570A2C2D9F45CA0190FECC69A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		28AEE144C350A3F0B2CC6C0F125C7C9A /* NewChatDemo2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5F12C0AF8C0646A0F0F7ED42FDFE5C /* NewChatDemo2-dummy.m */; };
@@ -248,9 +248,9 @@
 		04DC368C2C522B35003B0EE4 /* ActivityLoaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityLoaderCell.xib; sourceTree = "<group>"; };
 		04DC368D2C522B35003B0EE4 /* MainChat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainChat.storyboard; sourceTree = "<group>"; };
 		04DC368E2C522B35003B0EE4 /* MultiImageCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiImageCVCell.xib; sourceTree = "<group>"; };
+		04ECACF42CA533150096CCA7 /* ChatDummy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ChatDummy.xcframework; sourceTree = "<group>"; };
 		04F525772CA3DFDB009DD47B /* TestChatNew.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TestChatNew.framework; sourceTree = "<group>"; };
 		04F525C32CA434C4009DD47B /* O2Chat.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = O2Chat.framework; sourceTree = "<group>"; };
-		04F526BC2CA439B0009DD47B /* ChatDummy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ChatDummy.framework; sourceTree = "<group>"; };
 		0503C5CF97E5F53A60DD8E8D3AAEB25D /* Pods-NewChatDemo2_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NewChatDemo2_Tests.modulemap"; sourceTree = "<group>"; };
 		1227EEEEC97E2369E8735DE4309B3C4F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		146B88CE4F2FF624DE5B4BE8536CCE25 /* Pods-NewChatDemo2_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewChatDemo2_Example-Info.plist"; sourceTree = "<group>"; };
@@ -301,7 +301,7 @@
 				04F525C42CA434C5009DD47B /* O2Chat.framework in Frameworks */,
 				04F525782CA3DFDB009DD47B /* TestChatNew.framework in Frameworks */,
 				04B25A1E2C8844AE00781FCF /* NewChatDemo2.framework in Frameworks */,
-				04F526BD2CA439B0009DD47B /* ChatDummy.framework in Frameworks */,
+				04ECACF52CA533150096CCA7 /* ChatDummy.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +414,7 @@
 		04B156B02C3D2C0300E0D8D3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04ECACF42CA533150096CCA7 /* ChatDummy.xcframework */,
 				04926CE92C9C0F470014055C /* HiddenFramework.framework.zip */,
 				04DC368C2C522B35003B0EE4 /* ActivityLoaderCell.xib */,
 				04DC368A2C522B35003B0EE4 /* Assets.xcassets */,
@@ -496,7 +497,6 @@
 			children = (
 				041CF6EF2C634EA4008ACFD2 /* Classes */,
 				04B156B02C3D2C0300E0D8D3 /* Resources */,
-				04F526BC2CA439B0009DD47B /* ChatDummy.framework */,
 				04F525772CA3DFDB009DD47B /* TestChatNew.framework */,
 				04B25A1D2C8844AE00781FCF /* NewChatDemo2.framework */,
 				04F525C32CA434C4009DD47B /* O2Chat.framework */,

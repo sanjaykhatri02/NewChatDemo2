@@ -1,0 +1,11 @@
+framework module ChatDummy {
+  umbrella header "ChatDummy.h"
+  export *
+
+  module * { export * }
+}
+
+module ChatDummy.Swift {
+  header "ChatDummy-Swift.h"
+  requires objc
+}
