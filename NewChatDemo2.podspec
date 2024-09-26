@@ -18,7 +18,7 @@ s.summary          = 'A ChatTestDemo App That is Demo. that is enough for now'
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
 s.description      = <<-DESC
-'A ChatTestDemo App That is Demo. Once Intalled and the use it.'
+'A ChatTestDemo App That is Demo. Once Intalled and the use it Easily.'
 DESC
 
 s.homepage         = 'https://github.com/sanjaykhatri02/NewChatDemo2'
@@ -55,7 +55,7 @@ s.swift_version = '5.0'
   s.source       = { :http => 'https://github.com/sanjaykhatri02/TestFrame/raw/main/ChatDummy.zip' }
 
   #s.vendored_frameworks = 'TestChatNew.framework'
-  s.vendored_frameworks = 'ChatDummy.framework'
+  s.vendored_frameworks = 'ChatDummy.xcframework'
     
 
   # Exclude `Classes` and `Resources` folders
