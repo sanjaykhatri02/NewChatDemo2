@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'NewChatDemo2'
-s.version          = '0.3.7'
+s.version          = '0.3.8'
 s.summary          = 'A ChatTestDemo App That is Demo. that is enough for now'
 
 # This description is used to generate tags and improve search results.
@@ -55,11 +55,16 @@ s.swift_version = '5.0'
   s.source       = { :http => 'https://github.com/sanjaykhatri02/TestFrame/raw/main/ChatDummy.zip' }
 
   #s.vendored_frameworks = 'TestChatNew.framework'
-  s.vendored_frameworks = 'ChatDummy.xcframework'
-    
+  #s.vendored_frameworks = 'ChatDummy.xcframework'
+    s.preserve_paths      = "ChatDummy.xcframework"
+  s.vendored_frameworks = "ChatDummy.xcframework"
 
   # Exclude `Classes` and `Resources` folders
   #s.exclude_files = 'Classes/Private/**', 'Resources/Private/**'
+  
+  s.pod_target_xcconfig = {
+  'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+}
 
 s.frameworks = ['UIKit', 'Foundation', 'QuickLook', 'Photos', 'MobileCoreServices']
 
