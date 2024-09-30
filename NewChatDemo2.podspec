@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'NewChatDemo2'
-s.version          = '0.4.7'
+s.version          = '0.4.8'
 s.summary          = 'A ChatTestDemo App That is Demo. that is enough for now'
 
 # This description is used to generate tags and improve search results.
@@ -79,6 +79,8 @@ s.dependency 'Firebase/Messaging'
 
 s.dependency 'Kingfisher'
 s.dependency 'Cosmos'
+s.static_framework = true
+
 
 #s.vendored_frameworks = 'HiddenFramework.framework'
 
