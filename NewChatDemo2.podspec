@@ -33,6 +33,9 @@ s.source           = { :git => 'https://github.com/sanjaykhatri02/NewChatDemo2.g
 s.ios.deployment_target = '11.0'
 s.swift_version = '5.0'
 
+  s.pod_target_xcconfig = {
+  'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+}
 
 #s.source_files = 'Classes/**/*.{swift,h,m}'
 #s.resources = 'Resources/**/*.{storyboard,xib,xcassets,png,jpeg,jpg,gif}'
