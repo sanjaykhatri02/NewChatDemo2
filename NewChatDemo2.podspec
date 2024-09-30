@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'NewChatDemo2'
-s.version          = '0.4.5'
+s.version          = '0.4.6'
 s.summary          = 'A ChatTestDemo App That is Demo. that is enough for now'
 
 # This description is used to generate tags and improve search results.
@@ -69,16 +69,16 @@ s.swift_version = '5.0'
 
 s.frameworks = ['UIKit', 'Foundation', 'QuickLook', 'Photos', 'MobileCoreServices']
 
-#s.dependency 'Alamofire', '>= 5.8.1', '< 6.0'
-#s.dependency 'SwiftyJSON'
-#s.dependency 'FMDB'
-#s.dependency 'SwiftSignalRClient'
-#s.dependency 'IQKeyboardManager'
-#s.dependency 'Firebase/Core'
-#s.dependency 'Firebase/Messaging'
+s.dependency 'Alamofire', '>= 5.8.1', '< 6.0'
+s.dependency 'SwiftyJSON'
+s.dependency 'FMDB'
+s.dependency 'SwiftSignalRClient'
+s.dependency 'IQKeyboardManager'
+s.dependency 'Firebase/Core'
+s.dependency 'Firebase/Messaging'
 
-#s.dependency 'Kingfisher'
-#s.dependency 'Cosmos'
+s.dependency 'Kingfisher'
+s.dependency 'Cosmos'
 
 #s.vendored_frameworks = 'HiddenFramework.framework'
 
