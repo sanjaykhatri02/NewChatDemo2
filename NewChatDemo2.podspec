@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'NewChatDemo2'
-s.version          = '0.5.1'
+s.version          = '0.5.2'
 s.summary          = 'A ChatTestDemo App That is Demo. that is enough for now'
 
 # This description is used to generate tags and improve search results.
@@ -55,11 +55,12 @@ s.swift_version = '5.0'
     
      # Source points to the release zip on GitHub
   #s.source       = { :http => 'https://github.com/sanjaykhatri02/TestFrame/raw/main/TestChatNew.zip' }
-  s.source       = { :http => 'https://github.com/sanjaykhatri02/TestFrame/raw/main/ChatDummy.zip' }
+  #s.source       = { :http => 'https://github.com/sanjaykhatri02/TestFrame/raw/main/ChatDummy.zip' }
 
   #s.vendored_frameworks = 'TestChatNew.framework'
   #s.vendored_frameworks = 'ChatDummy.xcframework'
-    s.preserve_paths      = "ChatDummy.xcframework"
+  
+  #s.preserve_paths      = "ChatDummy.xcframework"
   s.vendored_frameworks = "ChatDummy.xcframework"
 
   # Exclude `Classes` and `Resources` folders
@@ -71,7 +72,7 @@ s.frameworks = ['UIKit', 'Foundation', 'QuickLook', 'Photos', 'MobileCoreService
 
 #s.dependency 'Alamofire', '>= 5.8.1', '< 6.0'
 
-s.dependency 'Alamofire'
+s.dependency 'Alamofire', '>= 5.8.1', '< 6.0'
 s.static_framework = true
 s.dependency 'SwiftyJSON'
 s.dependency 'FMDB'
