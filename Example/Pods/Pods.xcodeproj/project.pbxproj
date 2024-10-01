@@ -3,139 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041CF7482C634EA5008ACFD2 /* TopicDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F02C634EA4008ACFD2 /* TopicDataModel.swift */; };
-		041CF7492C634EA5008ACFD2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F12C634EA4008ACFD2 /* Constants.swift */; };
-		041CF74A2C634EA5008ACFD2 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F22C634EA4008ACFD2 /* ImageCache.swift */; };
-		041CF74B2C634EA5008ACFD2 /* QueriesChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F32C634EA4008ACFD2 /* QueriesChat.swift */; };
-		041CF74C2C634EA5008ACFD2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F42C634EA4008ACFD2 /* ChatViewController.swift */; };
-		041CF74D2C634EA5008ACFD2 /* UtilsClassChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F52C634EA4008ACFD2 /* UtilsClassChat.swift */; };
-		041CF74E2C634EA5008ACFD2 /* ActivityLoaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F62C634EA4008ACFD2 /* ActivityLoaderCell.swift */; };
-		041CF74F2C634EA5008ACFD2 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F72C634EA4008ACFD2 /* SwitchButton.swift */; };
-		041CF7502C634EA5008ACFD2 /* ConversationStatusListenerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F82C634EA4008ACFD2 /* ConversationStatusListenerDataModel.swift */; };
-		041CF7512C634EA5008ACFD2 /* WebResonseUploadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6F92C634EA4008ACFD2 /* WebResonseUploadFile.swift */; };
-		041CF7522C634EA5008ACFD2 /* TopicDataModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6FA2C634EA4008ACFD2 /* TopicDataModelClass.swift */; };
-		041CF7532C634EA5008ACFD2 /* UploadFilesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6FB2C634EA4008ACFD2 /* UploadFilesRequest.swift */; };
-		041CF7542C634EA5008ACFD2 /* WebResponseBusinessHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6FC2C634EA4008ACFD2 /* WebResponseBusinessHours.swift */; };
-		041CF7552C634EA5008ACFD2 /* SelectedFilePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6FD2C634EA4008ACFD2 /* SelectedFilePreview.swift */; };
-		041CF7562C634EA5008ACFD2 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6FE2C634EA4008ACFD2 /* DatePicker.swift */; };
-		041CF7572C634EA5008ACFD2 /* FileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF6FF2C634EA4008ACFD2 /* FileDataModel.swift */; };
-		041CF7582C634EA5008ACFD2 /* ChatModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7002C634EA4008ACFD2 /* ChatModule.swift */; };
-		041CF7592C634EA5008ACFD2 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7012C634EA4008ACFD2 /* PickerView.swift */; };
-		041CF75A2C634EA5008ACFD2 /* TypingIndicatorListenerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7022C634EA4008ACFD2 /* TypingIndicatorListenerModel.swift */; };
-		041CF75B2C634EA5008ACFD2 /* RefreshTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7032C634EA4008ACFD2 /* RefreshTokenResponse.swift */; };
-		041CF75C2C634EA5008ACFD2 /* UserChatSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7042C634EA4008ACFD2 /* UserChatSettingModel.swift */; };
-		041CF75D2C634EA5008ACFD2 /* WebResponseConversationByUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7052C634EA4008ACFD2 /* WebResponseConversationByUUID.swift */; };
-		041CF75E2C634EA5008ACFD2 /* SystemsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7062C634EA4008ACFD2 /* SystemsTVCell.swift */; };
-		041CF75F2C634EA5008ACFD2 /* MultiPDFCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7072C634EA4008ACFD2 /* MultiPDFCVCell.swift */; };
-		041CF7602C634EA5008ACFD2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7082C634EA4008ACFD2 /* Singleton.swift */; };
-		041CF7612C634EA5008ACFD2 /* CustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7092C634EA5008ACFD2 /* CustomClass.swift */; };
-		041CF7622C634EA5008ACFD2 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF70A2C634EA5008ACFD2 /* ApiClient.swift */; };
-		041CF7632C634EA5008ACFD2 /* JsonSerializingChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF70B2C634EA5008ACFD2 /* JsonSerializingChat.swift */; };
-		041CF7642C634EA5008ACFD2 /* ConversationCellFileNonLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF70C2C634EA5008ACFD2 /* ConversationCellFileNonLoginUser.swift */; };
-		041CF7652C634EA5008ACFD2 /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF70D2C634EA5008ACFD2 /* Conversations.swift */; };
-		041CF7662C634EA5008ACFD2 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF70E2C634EA5008ACFD2 /* Validator.swift */; };
-		041CF7672C634EA5008ACFD2 /* SwiftEEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF70F2C634EA5008ACFD2 /* SwiftEEventBus.swift */; };
-		041CF7682C634EA5008ACFD2 /* WebResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7102C634EA5008ACFD2 /* WebResponse.swift */; };
-		041CF7692C634EA5008ACFD2 /* PageControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7112C634EA5008ACFD2 /* PageControllerVC.swift */; };
-		041CF76A2C634EA5008ACFD2 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7122C634EA5008ACFD2 /* NotificationManager.swift */; };
-		041CF76B2C634EA5008ACFD2 /* MultiImageCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7132C634EA5008ACFD2 /* MultiImageCVCell.swift */; };
-		041CF76C2C634EA5008ACFD2 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7142C634EA5008ACFD2 /* PageControl.swift */; };
-		041CF76D2C634EA5008ACFD2 /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7152C634EA5008ACFD2 /* FileDownloader.swift */; };
-		041CF76E2C634EA5008ACFD2 /* SampleNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7162C634EA5008ACFD2 /* SampleNotificationDelegate.swift */; };
-		041CF76F2C634EA5008ACFD2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7172C634EA5008ACFD2 /* Network.swift */; };
-		041CF7702C634EA5008ACFD2 /* ResolveFeedBackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7182C634EA5008ACFD2 /* ResolveFeedBackRequest.swift */; };
-		041CF7712C634EA5008ACFD2 /* SwiftGifOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7192C634EA5008ACFD2 /* SwiftGifOrigin.swift */; };
-		041CF7722C634EA5008ACFD2 /* SendMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF71A2C634EA5008ACFD2 /* SendMessageModel.swift */; };
-		041CF7732C634EA5008ACFD2 /* NewChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF71B2C634EA5008ACFD2 /* NewChatMessage.swift */; };
-		041CF7742C634EA5008ACFD2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF71C2C634EA5008ACFD2 /* Common.swift */; };
-		041CF7752C634EA5008ACFD2 /* TaxFormConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF71D2C634EA5008ACFD2 /* TaxFormConstant.swift */; };
-		041CF7762C634EA5008ACFD2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF71E2C634EA5008ACFD2 /* ImagePicker.swift */; };
-		041CF7772C634EA5008ACFD2 /* RateUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF71F2C634EA5008ACFD2 /* RateUsVC.swift */; };
-		041CF7782C634EA5008ACFD2 /* UiViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7202C634EA5008ACFD2 /* UiViewExtension.swift */; };
-		041CF7792C634EA5008ACFD2 /* WebResponseChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7212C634EA5008ACFD2 /* WebResponseChat.swift */; };
-		041CF77A2C634EA5008ACFD2 /* ConversationCellFIleForLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7222C634EA5008ACFD2 /* ConversationCellFIleForLoginUser.swift */; };
-		041CF77B2C634EA5008ACFD2 /* ConversationCellImageNoLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7232C634EA5008ACFD2 /* ConversationCellImageNoLoginUser.swift */; };
-		041CF77C2C634EA5008ACFD2 /* BusinessHourModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7242C634EA5008ACFD2 /* BusinessHourModel.swift */; };
-		041CF77D2C634EA5008ACFD2 /* UICollectionViewLeftAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7252C634EA5008ACFD2 /* UICollectionViewLeftAlignedLayout.swift */; };
-		041CF77E2C634EA5008ACFD2 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7262C634EA5008ACFD2 /* BasicCell.swift */; };
-		041CF77F2C634EA5008ACFD2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7272C634EA5008ACFD2 /* Reachability.swift */; };
-		041CF7802C634EA5008ACFD2 /* ConversationLoginUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7282C634EA5008ACFD2 /* ConversationLoginUserTableViewCell.swift */; };
-		041CF7812C634EA5008ACFD2 /* ConversationTableViewCellNoLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7292C634EA5008ACFD2 /* ConversationTableViewCellNoLoginUser.swift */; };
-		041CF7822C634EA5008ACFD2 /* JsonSerializing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF72A2C634EA5008ACFD2 /* JsonSerializing.swift */; };
-		041CF7832C634EA5008ACFD2 /* UploadFilesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF72B2C634EA5008ACFD2 /* UploadFilesDataModel.swift */; };
-		041CF7842C634EA5008ACFD2 /* UploadFilesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF72C2C634EA5008ACFD2 /* UploadFilesData.swift */; };
-		041CF7852C634EA5008ACFD2 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF72D2C634EA5008ACFD2 /* Fonts.swift */; };
-		041CF7862C634EA5008ACFD2 /* UNNotificationAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF72E2C634EA5008ACFD2 /* UNNotificationAttachment.swift */; };
-		041CF7872C634EA5008ACFD2 /* OrganizationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF72F2C634EA5008ACFD2 /* OrganizationData.swift */; };
-		041CF7882C634EA5008ACFD2 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7302C634EA5008ACFD2 /* BubbleView.swift */; };
-		041CF7892C634EA5008ACFD2 /* ReadReceiptRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7312C634EA5008ACFD2 /* ReadReceiptRequest.swift */; };
-		041CF78A2C634EA5008ACFD2 /* MultiFilesCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7322C634EA5008ACFD2 /* MultiFilesCVCell.swift */; };
-		041CF78B2C634EA5008ACFD2 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7332C634EA5008ACFD2 /* Notification.swift */; };
-		041CF78C2C634EA5008ACFD2 /* CustomUserDefaultChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7342C634EA5008ACFD2 /* CustomUserDefaultChat.swift */; };
-		041CF78D2C634EA5008ACFD2 /* ConversationCellImageLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7352C634EA5008ACFD2 /* ConversationCellImageLoginUser.swift */; };
-		041CF78E2C634EA5008ACFD2 /* TestChat1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7362C634EA5008ACFD2 /* TestChat1.swift */; };
-		041CF78F2C634EA5008ACFD2 /* FileDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7372C634EA5008ACFD2 /* FileDataClass.swift */; };
-		041CF7902C634EA5008ACFD2 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7382C634EA5008ACFD2 /* UIImage.swift */; };
-		041CF7912C634EA5008ACFD2 /* MenuTabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7392C634EA5008ACFD2 /* MenuTabViews.swift */; };
-		041CF7922C634EA5008ACFD2 /* UserChatSettingWebresponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF73A2C634EA5008ACFD2 /* UserChatSettingWebresponse.swift */; };
-		041CF7932C634EA5008ACFD2 /* WebResponseForTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF73B2C634EA5008ACFD2 /* WebResponseForTopics.swift */; };
-		041CF7942C634EA5008ACFD2 /* AuthSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF73C2C634EA5008ACFD2 /* AuthSessionManager.swift */; };
-		041CF7952C634EA5008ACFD2 /* FileUploadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF73D2C634EA5008ACFD2 /* FileUploadData.swift */; };
-		041CF7962C634EA5008ACFD2 /* ConversationsByUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF73E2C634EA5008ACFD2 /* ConversationsByUUID.swift */; };
-		041CF7972C634EA5008ACFD2 /* DatabaseChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF73F2C634EA5008ACFD2 /* DatabaseChat.swift */; };
-		041CF7982C634EA5008ACFD2 /* CustomOutlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7402C634EA5008ACFD2 /* CustomOutlineTextField.swift */; };
-		041CF7992C634EA5008ACFD2 /* CommaNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7412C634EA5008ACFD2 /* CommaNumber.swift */; };
-		041CF79A2C634EA5008ACFD2 /* WebResponseForOrganization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7422C634EA5008ACFD2 /* WebResponseForOrganization.swift */; };
-		041CF79B2C634EA5008ACFD2 /* TopicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7432C634EA5008ACFD2 /* TopicsCollectionViewCell.swift */; };
-		041CF79C2C634EA5008ACFD2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7442C634EA5008ACFD2 /* Color.swift */; };
-		041CF79D2C634EA5008ACFD2 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7452C634EA5008ACFD2 /* Toast.swift */; };
-		041CF79E2C634EA5008ACFD2 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7462C634EA5008ACFD2 /* CustomLabel.swift */; };
-		041CF79F2C634EA5008ACFD2 /* RecieveMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CF7472C634EA5008ACFD2 /* RecieveMessage.swift */; };
-		04926CEA2C9C0F470014055C /* HiddenFramework.framework.zip in Resources */ = {isa = PBXBuildFile; fileRef = 04926CE92C9C0F470014055C /* HiddenFramework.framework.zip */; };
-		04B25A1E2C8844AE00781FCF /* NewChatDemo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B25A1D2C8844AE00781FCF /* NewChatDemo2.framework */; platformFilter = ios; };
-		04DC368F2C522B36003B0EE4 /* MultiPDFCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36812C522B35003B0EE4 /* MultiPDFCVCell.xib */; };
-		04DC36902C522B36003B0EE4 /* ConversationCellFIleForLoginUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36822C522B35003B0EE4 /* ConversationCellFIleForLoginUser.xib */; };
-		04DC36912C522B36003B0EE4 /* ConversationTableViewCellNoLoginUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36832C522B35003B0EE4 /* ConversationTableViewCellNoLoginUser.xib */; };
-		04DC36922C522B36003B0EE4 /* TopicsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36842C522B35003B0EE4 /* TopicsCollectionViewCell.xib */; };
-		04DC36932C522B36003B0EE4 /* ConversationLoginUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36852C522B35003B0EE4 /* ConversationLoginUserTableViewCell.xib */; };
-		04DC36942C522B36003B0EE4 /* MultiFilesCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36862C522B35003B0EE4 /* MultiFilesCVCell.xib */; };
-		04DC36952C522B36003B0EE4 /* ConversationCellFileNonLoginUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36872C522B35003B0EE4 /* ConversationCellFileNonLoginUser.xib */; };
-		04DC36962C522B36003B0EE4 /* ConversationCellImageNoLoginUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36882C522B35003B0EE4 /* ConversationCellImageNoLoginUser.xib */; };
-		04DC36972C522B36003B0EE4 /* ConversationCellImageLoginUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC36892C522B35003B0EE4 /* ConversationCellImageLoginUser.xib */; };
-		04DC36982C522B36003B0EE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DC368A2C522B35003B0EE4 /* Assets.xcassets */; };
-		04DC36992C522B36003B0EE4 /* SystemsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC368B2C522B35003B0EE4 /* SystemsTVCell.xib */; };
-		04DC369A2C522B36003B0EE4 /* ActivityLoaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC368C2C522B35003B0EE4 /* ActivityLoaderCell.xib */; };
-		04DC369B2C522B36003B0EE4 /* MainChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DC368D2C522B35003B0EE4 /* MainChat.storyboard */; };
-		04DC369C2C522B36003B0EE4 /* MultiImageCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC368E2C522B35003B0EE4 /* MultiImageCVCell.xib */; };
-		04ECACF52CA533150096CCA7 /* ChatDummy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECACF42CA533150096CCA7 /* ChatDummy.xcframework */; };
-		04ECAD0F2CABDC580096CCA7 /* ChatDummy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECAD0E2CABDC570096CCA7 /* ChatDummy.xcframework */; };
-		04ECAF8A2CAC24AC0096CCA7 /* ChatDummyNewy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECAF892CAC24AB0096CCA7 /* ChatDummyNewy.xcframework */; };
-		04F525782CA3DFDB009DD47B /* TestChatNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F525772CA3DFDB009DD47B /* TestChatNew.framework */; platformFilter = ios; };
-		04F525C42CA434C5009DD47B /* O2Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F525C32CA434C4009DD47B /* O2Chat.framework */; };
 		122141F7A470B783A4999824A30D4EBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		1AA83C570A2C2D9F45CA0190FECC69A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		28AEE144C350A3F0B2CC6C0F125C7C9A /* NewChatDemo2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5F12C0AF8C0646A0F0F7ED42FDFE5C /* NewChatDemo2-dummy.m */; };
-		5192B862D4CE05AFF6948C89AB43B9EF /* Pods-NewChatDemo2_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39AF0DDC577A98CF17E1D47D1D8E8B8C /* Pods-NewChatDemo2_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9DCA19035D188E3BFA8DD3A90E4F2978 /* Pods-NewChatDemo2_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A94C76F01A58FAD83E97EFF2B192FE /* Pods-NewChatDemo2_Tests-dummy.m */; };
-		AF76A713114F42D070DE53205F38E58F /* Pods-NewChatDemo2_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14A820B0408484EE5B1715C21E068EE7 /* Pods-NewChatDemo2_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEF95463AC08977425EFAF36BA64BCC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		F98FF3E8DCF9A3A907DFBE76A0C7E966 /* NewChatDemo2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 899E1B47D98E595D07E638AB74477341 /* NewChatDemo2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC74BA0502D75423FEF7CBF8F3F410D1 /* Pods-NewChatDemo2_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7CCAEDAD20881C3BE6FAAD8F106235 /* Pods-NewChatDemo2_Example-dummy.m */; };
+		2842FEBBBDAF2CF7A3C8CAE509E6EC52 /* Pods-NewChatDemo2_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 165A3372C438B1CBD772EEE512175E19 /* Pods-NewChatDemo2_Example-dummy.m */; };
+		7F7DA38DA6DE4A737C8AF7C4BEB924D7 /* Pods-NewChatDemo2_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4A35DDD2B63043F7CF9287BE787ACEC /* Pods-NewChatDemo2_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FB01A14AF938E8C8B75084F47D6CF85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		9DCA19035D188E3BFA8DD3A90E4F2978 /* Pods-NewChatDemo2_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE5B1653AB7DA8516281653C5777A6E /* Pods-NewChatDemo2_Tests-dummy.m */; };
+		AF76A713114F42D070DE53205F38E58F /* Pods-NewChatDemo2_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 196626300D2E280CAF61AF6646D4B091 /* Pods-NewChatDemo2_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3F26004916831CB4162EA788DD0AC702 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 365A4BB2D49C84817F595B8C7F6F800B;
-			remoteInfo = NewChatDemo2;
-		};
-		C8B0745A5077B5DBA4259C4568FF7FAB /* PBXContainerItemProxy */ = {
+		37A7CE7C8C3D6F850FED02299D16970B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -145,147 +26,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02EBA778E6A6919B86101C0FDFB9F9B2 /* Pods-NewChatDemo2_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NewChatDemo2_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		041CF6F02C634EA4008ACFD2 /* TopicDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDataModel.swift; sourceTree = "<group>"; };
-		041CF6F12C634EA4008ACFD2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		041CF6F22C634EA4008ACFD2 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		041CF6F32C634EA4008ACFD2 /* QueriesChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueriesChat.swift; sourceTree = "<group>"; };
-		041CF6F42C634EA4008ACFD2 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		041CF6F52C634EA4008ACFD2 /* UtilsClassChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilsClassChat.swift; sourceTree = "<group>"; };
-		041CF6F62C634EA4008ACFD2 /* ActivityLoaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityLoaderCell.swift; sourceTree = "<group>"; };
-		041CF6F72C634EA4008ACFD2 /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
-		041CF6F82C634EA4008ACFD2 /* ConversationStatusListenerDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationStatusListenerDataModel.swift; sourceTree = "<group>"; };
-		041CF6F92C634EA4008ACFD2 /* WebResonseUploadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResonseUploadFile.swift; sourceTree = "<group>"; };
-		041CF6FA2C634EA4008ACFD2 /* TopicDataModelClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDataModelClass.swift; sourceTree = "<group>"; };
-		041CF6FB2C634EA4008ACFD2 /* UploadFilesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadFilesRequest.swift; sourceTree = "<group>"; };
-		041CF6FC2C634EA4008ACFD2 /* WebResponseBusinessHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseBusinessHours.swift; sourceTree = "<group>"; };
-		041CF6FD2C634EA4008ACFD2 /* SelectedFilePreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedFilePreview.swift; sourceTree = "<group>"; };
-		041CF6FE2C634EA4008ACFD2 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
-		041CF6FF2C634EA4008ACFD2 /* FileDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDataModel.swift; sourceTree = "<group>"; };
-		041CF7002C634EA4008ACFD2 /* ChatModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatModule.swift; sourceTree = "<group>"; };
-		041CF7012C634EA4008ACFD2 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
-		041CF7022C634EA4008ACFD2 /* TypingIndicatorListenerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypingIndicatorListenerModel.swift; sourceTree = "<group>"; };
-		041CF7032C634EA4008ACFD2 /* RefreshTokenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTokenResponse.swift; sourceTree = "<group>"; };
-		041CF7042C634EA4008ACFD2 /* UserChatSettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChatSettingModel.swift; sourceTree = "<group>"; };
-		041CF7052C634EA4008ACFD2 /* WebResponseConversationByUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseConversationByUUID.swift; sourceTree = "<group>"; };
-		041CF7062C634EA4008ACFD2 /* SystemsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemsTVCell.swift; sourceTree = "<group>"; };
-		041CF7072C634EA4008ACFD2 /* MultiPDFCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPDFCVCell.swift; sourceTree = "<group>"; };
-		041CF7082C634EA4008ACFD2 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
-		041CF7092C634EA5008ACFD2 /* CustomClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomClass.swift; sourceTree = "<group>"; };
-		041CF70A2C634EA5008ACFD2 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
-		041CF70B2C634EA5008ACFD2 /* JsonSerializingChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonSerializingChat.swift; sourceTree = "<group>"; };
-		041CF70C2C634EA5008ACFD2 /* ConversationCellFileNonLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellFileNonLoginUser.swift; sourceTree = "<group>"; };
-		041CF70D2C634EA5008ACFD2 /* Conversations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversations.swift; sourceTree = "<group>"; };
-		041CF70E2C634EA5008ACFD2 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		041CF70F2C634EA5008ACFD2 /* SwiftEEventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftEEventBus.swift; sourceTree = "<group>"; };
-		041CF7102C634EA5008ACFD2 /* WebResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponse.swift; sourceTree = "<group>"; };
-		041CF7112C634EA5008ACFD2 /* PageControllerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControllerVC.swift; sourceTree = "<group>"; };
-		041CF7122C634EA5008ACFD2 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		041CF7132C634EA5008ACFD2 /* MultiImageCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiImageCVCell.swift; sourceTree = "<group>"; };
-		041CF7142C634EA5008ACFD2 /* PageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
-		041CF7152C634EA5008ACFD2 /* FileDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
-		041CF7162C634EA5008ACFD2 /* SampleNotificationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleNotificationDelegate.swift; sourceTree = "<group>"; };
-		041CF7172C634EA5008ACFD2 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		041CF7182C634EA5008ACFD2 /* ResolveFeedBackRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolveFeedBackRequest.swift; sourceTree = "<group>"; };
-		041CF7192C634EA5008ACFD2 /* SwiftGifOrigin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGifOrigin.swift; sourceTree = "<group>"; };
-		041CF71A2C634EA5008ACFD2 /* SendMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageModel.swift; sourceTree = "<group>"; };
-		041CF71B2C634EA5008ACFD2 /* NewChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatMessage.swift; sourceTree = "<group>"; };
-		041CF71C2C634EA5008ACFD2 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		041CF71D2C634EA5008ACFD2 /* TaxFormConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxFormConstant.swift; sourceTree = "<group>"; };
-		041CF71E2C634EA5008ACFD2 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		041CF71F2C634EA5008ACFD2 /* RateUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateUsVC.swift; sourceTree = "<group>"; };
-		041CF7202C634EA5008ACFD2 /* UiViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UiViewExtension.swift; sourceTree = "<group>"; };
-		041CF7212C634EA5008ACFD2 /* WebResponseChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseChat.swift; sourceTree = "<group>"; };
-		041CF7222C634EA5008ACFD2 /* ConversationCellFIleForLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellFIleForLoginUser.swift; sourceTree = "<group>"; };
-		041CF7232C634EA5008ACFD2 /* ConversationCellImageNoLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellImageNoLoginUser.swift; sourceTree = "<group>"; };
-		041CF7242C634EA5008ACFD2 /* BusinessHourModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessHourModel.swift; sourceTree = "<group>"; };
-		041CF7252C634EA5008ACFD2 /* UICollectionViewLeftAlignedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewLeftAlignedLayout.swift; sourceTree = "<group>"; };
-		041CF7262C634EA5008ACFD2 /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
-		041CF7272C634EA5008ACFD2 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		041CF7282C634EA5008ACFD2 /* ConversationLoginUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationLoginUserTableViewCell.swift; sourceTree = "<group>"; };
-		041CF7292C634EA5008ACFD2 /* ConversationTableViewCellNoLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCellNoLoginUser.swift; sourceTree = "<group>"; };
-		041CF72A2C634EA5008ACFD2 /* JsonSerializing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonSerializing.swift; sourceTree = "<group>"; };
-		041CF72B2C634EA5008ACFD2 /* UploadFilesDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadFilesDataModel.swift; sourceTree = "<group>"; };
-		041CF72C2C634EA5008ACFD2 /* UploadFilesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadFilesData.swift; sourceTree = "<group>"; };
-		041CF72D2C634EA5008ACFD2 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		041CF72E2C634EA5008ACFD2 /* UNNotificationAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNNotificationAttachment.swift; sourceTree = "<group>"; };
-		041CF72F2C634EA5008ACFD2 /* OrganizationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationData.swift; sourceTree = "<group>"; };
-		041CF7302C634EA5008ACFD2 /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
-		041CF7312C634EA5008ACFD2 /* ReadReceiptRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadReceiptRequest.swift; sourceTree = "<group>"; };
-		041CF7322C634EA5008ACFD2 /* MultiFilesCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiFilesCVCell.swift; sourceTree = "<group>"; };
-		041CF7332C634EA5008ACFD2 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		041CF7342C634EA5008ACFD2 /* CustomUserDefaultChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUserDefaultChat.swift; sourceTree = "<group>"; };
-		041CF7352C634EA5008ACFD2 /* ConversationCellImageLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellImageLoginUser.swift; sourceTree = "<group>"; };
-		041CF7362C634EA5008ACFD2 /* TestChat1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestChat1.swift; sourceTree = "<group>"; };
-		041CF7372C634EA5008ACFD2 /* FileDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDataClass.swift; sourceTree = "<group>"; };
-		041CF7382C634EA5008ACFD2 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		041CF7392C634EA5008ACFD2 /* MenuTabViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTabViews.swift; sourceTree = "<group>"; };
-		041CF73A2C634EA5008ACFD2 /* UserChatSettingWebresponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChatSettingWebresponse.swift; sourceTree = "<group>"; };
-		041CF73B2C634EA5008ACFD2 /* WebResponseForTopics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseForTopics.swift; sourceTree = "<group>"; };
-		041CF73C2C634EA5008ACFD2 /* AuthSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthSessionManager.swift; sourceTree = "<group>"; };
-		041CF73D2C634EA5008ACFD2 /* FileUploadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUploadData.swift; sourceTree = "<group>"; };
-		041CF73E2C634EA5008ACFD2 /* ConversationsByUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsByUUID.swift; sourceTree = "<group>"; };
-		041CF73F2C634EA5008ACFD2 /* DatabaseChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseChat.swift; sourceTree = "<group>"; };
-		041CF7402C634EA5008ACFD2 /* CustomOutlineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOutlineTextField.swift; sourceTree = "<group>"; };
-		041CF7412C634EA5008ACFD2 /* CommaNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommaNumber.swift; sourceTree = "<group>"; };
-		041CF7422C634EA5008ACFD2 /* WebResponseForOrganization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebResponseForOrganization.swift; sourceTree = "<group>"; };
-		041CF7432C634EA5008ACFD2 /* TopicsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsCollectionViewCell.swift; sourceTree = "<group>"; };
-		041CF7442C634EA5008ACFD2 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		041CF7452C634EA5008ACFD2 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
-		041CF7462C634EA5008ACFD2 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
-		041CF7472C634EA5008ACFD2 /* RecieveMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecieveMessage.swift; sourceTree = "<group>"; };
-		04926CE92C9C0F470014055C /* HiddenFramework.framework.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = HiddenFramework.framework.zip; path = ../../Framework/HiddenFramework.framework.zip; sourceTree = "<group>"; };
-		04B25A1D2C8844AE00781FCF /* NewChatDemo2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NewChatDemo2.framework; sourceTree = "<group>"; };
-		04DC36812C522B35003B0EE4 /* MultiPDFCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiPDFCVCell.xib; sourceTree = "<group>"; };
-		04DC36822C522B35003B0EE4 /* ConversationCellFIleForLoginUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationCellFIleForLoginUser.xib; sourceTree = "<group>"; };
-		04DC36832C522B35003B0EE4 /* ConversationTableViewCellNoLoginUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationTableViewCellNoLoginUser.xib; sourceTree = "<group>"; };
-		04DC36842C522B35003B0EE4 /* TopicsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicsCollectionViewCell.xib; sourceTree = "<group>"; };
-		04DC36852C522B35003B0EE4 /* ConversationLoginUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationLoginUserTableViewCell.xib; sourceTree = "<group>"; };
-		04DC36862C522B35003B0EE4 /* MultiFilesCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiFilesCVCell.xib; sourceTree = "<group>"; };
-		04DC36872C522B35003B0EE4 /* ConversationCellFileNonLoginUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationCellFileNonLoginUser.xib; sourceTree = "<group>"; };
-		04DC36882C522B35003B0EE4 /* ConversationCellImageNoLoginUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationCellImageNoLoginUser.xib; sourceTree = "<group>"; };
-		04DC36892C522B35003B0EE4 /* ConversationCellImageLoginUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConversationCellImageLoginUser.xib; sourceTree = "<group>"; };
-		04DC368A2C522B35003B0EE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04DC368B2C522B35003B0EE4 /* SystemsTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemsTVCell.xib; sourceTree = "<group>"; };
-		04DC368C2C522B35003B0EE4 /* ActivityLoaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityLoaderCell.xib; sourceTree = "<group>"; };
-		04DC368D2C522B35003B0EE4 /* MainChat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainChat.storyboard; sourceTree = "<group>"; };
-		04DC368E2C522B35003B0EE4 /* MultiImageCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiImageCVCell.xib; sourceTree = "<group>"; };
-		04ECACF42CA533150096CCA7 /* ChatDummy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ChatDummy.xcframework; sourceTree = "<group>"; };
-		04ECAD0E2CABDC570096CCA7 /* ChatDummy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ChatDummy.xcframework; sourceTree = "<group>"; };
-		04ECAF892CAC24AB0096CCA7 /* ChatDummyNewy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ChatDummyNewy.xcframework; sourceTree = "<group>"; };
-		04F525772CA3DFDB009DD47B /* TestChatNew.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TestChatNew.framework; sourceTree = "<group>"; };
-		04F525C32CA434C4009DD47B /* O2Chat.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = O2Chat.framework; sourceTree = "<group>"; };
-		0503C5CF97E5F53A60DD8E8D3AAEB25D /* Pods-NewChatDemo2_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NewChatDemo2_Tests.modulemap"; sourceTree = "<group>"; };
-		1227EEEEC97E2369E8735DE4309B3C4F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		146B88CE4F2FF624DE5B4BE8536CCE25 /* Pods-NewChatDemo2_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewChatDemo2_Example-Info.plist"; sourceTree = "<group>"; };
-		14A820B0408484EE5B1715C21E068EE7 /* Pods-NewChatDemo2_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NewChatDemo2_Tests-umbrella.h"; sourceTree = "<group>"; };
+		05F0E96D966746ED7C767F154F791D8F /* Pods-NewChatDemo2_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NewChatDemo2_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		07BBCCA2F477E7AE90A93D96933FB886 /* Pods-NewChatDemo2_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NewChatDemo2_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		0B6AE530BC0084018794CC0570A6AEDA /* Pods-NewChatDemo2_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewChatDemo2_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		165A3372C438B1CBD772EEE512175E19 /* Pods-NewChatDemo2_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NewChatDemo2_Example-dummy.m"; sourceTree = "<group>"; };
 		179C485AE3D7FA5C72999D83152ED018 /* Pods-NewChatDemo2_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-NewChatDemo2_Tests"; path = Pods_NewChatDemo2_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		22A561B7FE5D28D57077B00DF3ABF305 /* Pods-NewChatDemo2_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NewChatDemo2_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		2585A81BBF266469AECFE8EB35E96E94 /* NewChatDemo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NewChatDemo2.debug.xcconfig; sourceTree = "<group>"; };
-		28BF5BA08923C9E431CE7CCDBA0AA06A /* Pods-NewChatDemo2_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewChatDemo2_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		29366B99D1013771D55D4B97776F3468 /* NewChatDemo2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NewChatDemo2.modulemap; sourceTree = "<group>"; };
-		2A62A06F45DCA6D71A0737B86DDF7565 /* Pods-NewChatDemo2_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NewChatDemo2_Example.release.xcconfig"; sourceTree = "<group>"; };
-		336C8627A9CE99DE9B7B3E8352C373CD /* NewChatDemo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NewChatDemo2.release.xcconfig; sourceTree = "<group>"; };
-		39AF0DDC577A98CF17E1D47D1D8E8B8C /* Pods-NewChatDemo2_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NewChatDemo2_Example-umbrella.h"; sourceTree = "<group>"; };
-		47A94C76F01A58FAD83E97EFF2B192FE /* Pods-NewChatDemo2_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NewChatDemo2_Tests-dummy.m"; sourceTree = "<group>"; };
-		4DD7F874ACE9C42C29917322279F4756 /* Pods-NewChatDemo2_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NewChatDemo2_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5D7CCAEDAD20881C3BE6FAAD8F106235 /* Pods-NewChatDemo2_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NewChatDemo2_Example-dummy.m"; sourceTree = "<group>"; };
+		196626300D2E280CAF61AF6646D4B091 /* Pods-NewChatDemo2_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NewChatDemo2_Tests-umbrella.h"; sourceTree = "<group>"; };
+		3A2F4BD6BC877527E78DBF090425A337 /* Pods-NewChatDemo2_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NewChatDemo2_Example.release.xcconfig"; sourceTree = "<group>"; };
+		4A5D0C2344A0A1731EEF7F1E3C3E64E9 /* Pods-NewChatDemo2_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NewChatDemo2_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		616BA0D8D34F3B05F9C645F41AABDC30 /* Pods-NewChatDemo2_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewChatDemo2_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		631B2CC48009141FDBB02504A199DE27 /* Pods-NewChatDemo2_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-NewChatDemo2_Example"; path = Pods_NewChatDemo2_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		679E24CD2C92212E4D146BBD08390EFB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		72A0AD26891F592952EEA02C4AF1623D /* Pods-NewChatDemo2_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NewChatDemo2_Tests.modulemap"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		899E1B47D98E595D07E638AB74477341 /* NewChatDemo2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NewChatDemo2-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EBEACED51C37B0114F3E5EBA33966E7 /* Pods-NewChatDemo2_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewChatDemo2_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		B33C6389AB92641848A4A99773D351C7 /* Pods-NewChatDemo2_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NewChatDemo2_Example.modulemap"; sourceTree = "<group>"; };
-		B67D6BCF34AD2C95CD688AE26145EEE7 /* Pods-NewChatDemo2_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NewChatDemo2_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BA4A8DE8965E91F7F3828A492C0EA1E3 /* NewChatDemo2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NewChatDemo2-prefix.pch"; sourceTree = "<group>"; };
-		C1DC9592E30D826D1547CF96326E1642 /* Pods-NewChatDemo2_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NewChatDemo2_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C8CCFC157C49E63EB23C90D62E12981F /* Pods-NewChatDemo2_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewChatDemo2_Tests-Info.plist"; sourceTree = "<group>"; };
-		DF33BE2640C3637C0603D3C985BC8D05 /* NewChatDemo2-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NewChatDemo2-Info.plist"; sourceTree = "<group>"; };
-		E198D4490061062BBF7553D4A4CAAACD /* NewChatDemo2.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = NewChatDemo2.podspec; sourceTree = "<group>"; tabWidth = 2; };
-		EB16A124AF6BCE57E98006FCF62DE985 /* NewChatDemo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewChatDemo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC5F12C0AF8C0646A0F0F7ED42FDFE5C /* NewChatDemo2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NewChatDemo2-dummy.m"; sourceTree = "<group>"; };
-		F145D45975E908FD60AE63476E8829C3 /* Pods-NewChatDemo2_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NewChatDemo2_Example-frameworks.sh"; sourceTree = "<group>"; };
+		78E7434F506A2B00A3CDF420DE46BBC0 /* Pods-NewChatDemo2_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NewChatDemo2_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9104A19F182D80A3EA520BE1ED794AA5 /* Pods-NewChatDemo2_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewChatDemo2_Tests-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ABE5B1653AB7DA8516281653C5777A6E /* Pods-NewChatDemo2_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NewChatDemo2_Tests-dummy.m"; sourceTree = "<group>"; };
+		CF6CAEE25C8DC126CEF109847216AFD3 /* Pods-NewChatDemo2_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NewChatDemo2_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E3BED5EA72144EAF2045E29DB661C8F9 /* Pods-NewChatDemo2_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NewChatDemo2_Example.modulemap"; sourceTree = "<group>"; };
+		E7CC9FFED94EEA966E3A9B2832124839 /* Pods-NewChatDemo2_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewChatDemo2_Example-Info.plist"; sourceTree = "<group>"; };
+		F4A35DDD2B63043F7CF9287BE787ACEC /* Pods-NewChatDemo2_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NewChatDemo2_Example-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,156 +57,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0E8CE3ED6CD000368B66165391B6A59 /* Frameworks */ = {
+		C9AAA0C3B1E880149E0C5F377C50E791 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04ECAD0F2CABDC580096CCA7 /* ChatDummy.xcframework in Frameworks */,
-				04ECAF8A2CAC24AC0096CCA7 /* ChatDummyNewy.xcframework in Frameworks */,
-				1AA83C570A2C2D9F45CA0190FECC69A8 /* Foundation.framework in Frameworks */,
-				04F525C42CA434C5009DD47B /* O2Chat.framework in Frameworks */,
-				04F525782CA3DFDB009DD47B /* TestChatNew.framework in Frameworks */,
-				04B25A1E2C8844AE00781FCF /* NewChatDemo2.framework in Frameworks */,
-				04ECACF52CA533150096CCA7 /* ChatDummy.xcframework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4DE154F5CA60EC66C391C67FA21229A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EEF95463AC08977425EFAF36BA64BCC0 /* Foundation.framework in Frameworks */,
+				8FB01A14AF938E8C8B75084F47D6CF85 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		041CF6EF2C634EA4008ACFD2 /* Classes */ = {
+		184A426B82584162F47D0A6B13F74752 /* Pods-NewChatDemo2_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				041CF6F02C634EA4008ACFD2 /* TopicDataModel.swift */,
-				041CF6F12C634EA4008ACFD2 /* Constants.swift */,
-				041CF6F22C634EA4008ACFD2 /* ImageCache.swift */,
-				041CF6F32C634EA4008ACFD2 /* QueriesChat.swift */,
-				041CF6F42C634EA4008ACFD2 /* ChatViewController.swift */,
-				041CF6F52C634EA4008ACFD2 /* UtilsClassChat.swift */,
-				041CF6F62C634EA4008ACFD2 /* ActivityLoaderCell.swift */,
-				041CF6F72C634EA4008ACFD2 /* SwitchButton.swift */,
-				041CF6F82C634EA4008ACFD2 /* ConversationStatusListenerDataModel.swift */,
-				041CF6F92C634EA4008ACFD2 /* WebResonseUploadFile.swift */,
-				041CF6FA2C634EA4008ACFD2 /* TopicDataModelClass.swift */,
-				041CF6FB2C634EA4008ACFD2 /* UploadFilesRequest.swift */,
-				041CF6FC2C634EA4008ACFD2 /* WebResponseBusinessHours.swift */,
-				041CF6FD2C634EA4008ACFD2 /* SelectedFilePreview.swift */,
-				041CF6FE2C634EA4008ACFD2 /* DatePicker.swift */,
-				041CF6FF2C634EA4008ACFD2 /* FileDataModel.swift */,
-				041CF7012C634EA4008ACFD2 /* PickerView.swift */,
-				041CF7022C634EA4008ACFD2 /* TypingIndicatorListenerModel.swift */,
-				041CF7032C634EA4008ACFD2 /* RefreshTokenResponse.swift */,
-				041CF7042C634EA4008ACFD2 /* UserChatSettingModel.swift */,
-				041CF7052C634EA4008ACFD2 /* WebResponseConversationByUUID.swift */,
-				041CF7062C634EA4008ACFD2 /* SystemsTVCell.swift */,
-				041CF7072C634EA4008ACFD2 /* MultiPDFCVCell.swift */,
-				041CF7082C634EA4008ACFD2 /* Singleton.swift */,
-				041CF7092C634EA5008ACFD2 /* CustomClass.swift */,
-				041CF70A2C634EA5008ACFD2 /* ApiClient.swift */,
-				041CF70B2C634EA5008ACFD2 /* JsonSerializingChat.swift */,
-				041CF70C2C634EA5008ACFD2 /* ConversationCellFileNonLoginUser.swift */,
-				041CF70D2C634EA5008ACFD2 /* Conversations.swift */,
-				041CF70E2C634EA5008ACFD2 /* Validator.swift */,
-				041CF70F2C634EA5008ACFD2 /* SwiftEEventBus.swift */,
-				041CF7102C634EA5008ACFD2 /* WebResponse.swift */,
-				041CF7112C634EA5008ACFD2 /* PageControllerVC.swift */,
-				041CF7122C634EA5008ACFD2 /* NotificationManager.swift */,
-				041CF7132C634EA5008ACFD2 /* MultiImageCVCell.swift */,
-				041CF7142C634EA5008ACFD2 /* PageControl.swift */,
-				041CF7152C634EA5008ACFD2 /* FileDownloader.swift */,
-				041CF7162C634EA5008ACFD2 /* SampleNotificationDelegate.swift */,
-				041CF7172C634EA5008ACFD2 /* Network.swift */,
-				041CF7182C634EA5008ACFD2 /* ResolveFeedBackRequest.swift */,
-				041CF7192C634EA5008ACFD2 /* SwiftGifOrigin.swift */,
-				041CF71A2C634EA5008ACFD2 /* SendMessageModel.swift */,
-				041CF71B2C634EA5008ACFD2 /* NewChatMessage.swift */,
-				041CF71C2C634EA5008ACFD2 /* Common.swift */,
-				041CF71D2C634EA5008ACFD2 /* TaxFormConstant.swift */,
-				041CF71E2C634EA5008ACFD2 /* ImagePicker.swift */,
-				041CF71F2C634EA5008ACFD2 /* RateUsVC.swift */,
-				041CF7202C634EA5008ACFD2 /* UiViewExtension.swift */,
-				041CF7212C634EA5008ACFD2 /* WebResponseChat.swift */,
-				041CF7222C634EA5008ACFD2 /* ConversationCellFIleForLoginUser.swift */,
-				041CF7232C634EA5008ACFD2 /* ConversationCellImageNoLoginUser.swift */,
-				041CF7242C634EA5008ACFD2 /* BusinessHourModel.swift */,
-				041CF7252C634EA5008ACFD2 /* UICollectionViewLeftAlignedLayout.swift */,
-				041CF7262C634EA5008ACFD2 /* BasicCell.swift */,
-				041CF7272C634EA5008ACFD2 /* Reachability.swift */,
-				041CF7282C634EA5008ACFD2 /* ConversationLoginUserTableViewCell.swift */,
-				041CF7292C634EA5008ACFD2 /* ConversationTableViewCellNoLoginUser.swift */,
-				041CF72A2C634EA5008ACFD2 /* JsonSerializing.swift */,
-				041CF72B2C634EA5008ACFD2 /* UploadFilesDataModel.swift */,
-				041CF72C2C634EA5008ACFD2 /* UploadFilesData.swift */,
-				041CF72D2C634EA5008ACFD2 /* Fonts.swift */,
-				041CF72E2C634EA5008ACFD2 /* UNNotificationAttachment.swift */,
-				041CF72F2C634EA5008ACFD2 /* OrganizationData.swift */,
-				041CF7302C634EA5008ACFD2 /* BubbleView.swift */,
-				041CF7312C634EA5008ACFD2 /* ReadReceiptRequest.swift */,
-				041CF7322C634EA5008ACFD2 /* MultiFilesCVCell.swift */,
-				041CF7332C634EA5008ACFD2 /* Notification.swift */,
-				041CF7342C634EA5008ACFD2 /* CustomUserDefaultChat.swift */,
-				041CF7352C634EA5008ACFD2 /* ConversationCellImageLoginUser.swift */,
-				041CF7362C634EA5008ACFD2 /* TestChat1.swift */,
-				041CF7372C634EA5008ACFD2 /* FileDataClass.swift */,
-				041CF7382C634EA5008ACFD2 /* UIImage.swift */,
-				041CF7392C634EA5008ACFD2 /* MenuTabViews.swift */,
-				041CF73A2C634EA5008ACFD2 /* UserChatSettingWebresponse.swift */,
-				041CF73B2C634EA5008ACFD2 /* WebResponseForTopics.swift */,
-				041CF73C2C634EA5008ACFD2 /* AuthSessionManager.swift */,
-				041CF73D2C634EA5008ACFD2 /* FileUploadData.swift */,
-				041CF73E2C634EA5008ACFD2 /* ConversationsByUUID.swift */,
-				041CF73F2C634EA5008ACFD2 /* DatabaseChat.swift */,
-				041CF7402C634EA5008ACFD2 /* CustomOutlineTextField.swift */,
-				041CF7412C634EA5008ACFD2 /* CommaNumber.swift */,
-				041CF7422C634EA5008ACFD2 /* WebResponseForOrganization.swift */,
-				041CF7432C634EA5008ACFD2 /* TopicsCollectionViewCell.swift */,
-				041CF7442C634EA5008ACFD2 /* Color.swift */,
-				041CF7452C634EA5008ACFD2 /* Toast.swift */,
-				041CF7462C634EA5008ACFD2 /* CustomLabel.swift */,
-				041CF7002C634EA4008ACFD2 /* ChatModule.swift */,
-				041CF7472C634EA5008ACFD2 /* RecieveMessage.swift */,
+				72A0AD26891F592952EEA02C4AF1623D /* Pods-NewChatDemo2_Tests.modulemap */,
+				78E7434F506A2B00A3CDF420DE46BBC0 /* Pods-NewChatDemo2_Tests-acknowledgements.markdown */,
+				0B6AE530BC0084018794CC0570A6AEDA /* Pods-NewChatDemo2_Tests-acknowledgements.plist */,
+				ABE5B1653AB7DA8516281653C5777A6E /* Pods-NewChatDemo2_Tests-dummy.m */,
+				9104A19F182D80A3EA520BE1ED794AA5 /* Pods-NewChatDemo2_Tests-Info.plist */,
+				196626300D2E280CAF61AF6646D4B091 /* Pods-NewChatDemo2_Tests-umbrella.h */,
+				4A5D0C2344A0A1731EEF7F1E3C3E64E9 /* Pods-NewChatDemo2_Tests.debug.xcconfig */,
+				07BBCCA2F477E7AE90A93D96933FB886 /* Pods-NewChatDemo2_Tests.release.xcconfig */,
 			);
-			path = Classes;
+			name = "Pods-NewChatDemo2_Tests";
+			path = "Target Support Files/Pods-NewChatDemo2_Tests";
 			sourceTree = "<group>";
 		};
-		04B156B02C3D2C0300E0D8D3 /* Resources */ = {
+		4914A43C40CD3AA4F4284CCDAF876B36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04ECACF42CA533150096CCA7 /* ChatDummy.xcframework */,
-				04926CE92C9C0F470014055C /* HiddenFramework.framework.zip */,
-				04DC368C2C522B35003B0EE4 /* ActivityLoaderCell.xib */,
-				04DC368A2C522B35003B0EE4 /* Assets.xcassets */,
-				04DC36822C522B35003B0EE4 /* ConversationCellFIleForLoginUser.xib */,
-				04DC36872C522B35003B0EE4 /* ConversationCellFileNonLoginUser.xib */,
-				04DC36892C522B35003B0EE4 /* ConversationCellImageLoginUser.xib */,
-				04DC36882C522B35003B0EE4 /* ConversationCellImageNoLoginUser.xib */,
-				04DC36852C522B35003B0EE4 /* ConversationLoginUserTableViewCell.xib */,
-				04DC36832C522B35003B0EE4 /* ConversationTableViewCellNoLoginUser.xib */,
-				04DC368D2C522B35003B0EE4 /* MainChat.storyboard */,
-				04DC36862C522B35003B0EE4 /* MultiFilesCVCell.xib */,
-				04DC368E2C522B35003B0EE4 /* MultiImageCVCell.xib */,
-				04DC36812C522B35003B0EE4 /* MultiPDFCVCell.xib */,
-				04DC368B2C522B35003B0EE4 /* SystemsTVCell.xib */,
-				04DC36842C522B35003B0EE4 /* TopicsCollectionViewCell.xib */,
+				631B2CC48009141FDBB02504A199DE27 /* Pods-NewChatDemo2_Example */,
+				179C485AE3D7FA5C72999D83152ED018 /* Pods-NewChatDemo2_Tests */,
 			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		0B3416BB0E18ECA8B67863AA59FF1129 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B614987B0D94125BB36363888C8043DE /* Pods-NewChatDemo2_Example */,
-				82F1CC11A2CDC45802A127A0B692051A /* Pods-NewChatDemo2_Tests */,
-			);
-			name = "Targets Support Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -457,99 +101,38 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5CD6CE02F0D35989E275E4D5E7CC4BF2 /* Support Files */ = {
+		A85AA125DA8B20B0C68D6237D56869AA /* Pods-NewChatDemo2_Example */ = {
 			isa = PBXGroup;
 			children = (
-				29366B99D1013771D55D4B97776F3468 /* NewChatDemo2.modulemap */,
-				EC5F12C0AF8C0646A0F0F7ED42FDFE5C /* NewChatDemo2-dummy.m */,
-				DF33BE2640C3637C0603D3C985BC8D05 /* NewChatDemo2-Info.plist */,
-				BA4A8DE8965E91F7F3828A492C0EA1E3 /* NewChatDemo2-prefix.pch */,
-				899E1B47D98E595D07E638AB74477341 /* NewChatDemo2-umbrella.h */,
-				2585A81BBF266469AECFE8EB35E96E94 /* NewChatDemo2.debug.xcconfig */,
-				336C8627A9CE99DE9B7B3E8352C373CD /* NewChatDemo2.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/NewChatDemo2";
-			sourceTree = "<group>";
-		};
-		6F44B79FB5C1BE4050D577F2B9DAF10A /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				679E24CD2C92212E4D146BBD08390EFB /* LICENSE */,
-				E198D4490061062BBF7553D4A4CAAACD /* NewChatDemo2.podspec */,
-				1227EEEEC97E2369E8735DE4309B3C4F /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		82F1CC11A2CDC45802A127A0B692051A /* Pods-NewChatDemo2_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				0503C5CF97E5F53A60DD8E8D3AAEB25D /* Pods-NewChatDemo2_Tests.modulemap */,
-				B67D6BCF34AD2C95CD688AE26145EEE7 /* Pods-NewChatDemo2_Tests-acknowledgements.markdown */,
-				28BF5BA08923C9E431CE7CCDBA0AA06A /* Pods-NewChatDemo2_Tests-acknowledgements.plist */,
-				47A94C76F01A58FAD83E97EFF2B192FE /* Pods-NewChatDemo2_Tests-dummy.m */,
-				C8CCFC157C49E63EB23C90D62E12981F /* Pods-NewChatDemo2_Tests-Info.plist */,
-				14A820B0408484EE5B1715C21E068EE7 /* Pods-NewChatDemo2_Tests-umbrella.h */,
-				C1DC9592E30D826D1547CF96326E1642 /* Pods-NewChatDemo2_Tests.debug.xcconfig */,
-				22A561B7FE5D28D57077B00DF3ABF305 /* Pods-NewChatDemo2_Tests.release.xcconfig */,
-			);
-			name = "Pods-NewChatDemo2_Tests";
-			path = "Target Support Files/Pods-NewChatDemo2_Tests";
-			sourceTree = "<group>";
-		};
-		8BA6EFA6083A787E1A242DCB9197B6DA /* NewChatDemo2 */ = {
-			isa = PBXGroup;
-			children = (
-				041CF6EF2C634EA4008ACFD2 /* Classes */,
-				04B156B02C3D2C0300E0D8D3 /* Resources */,
-				04F525772CA3DFDB009DD47B /* TestChatNew.framework */,
-				04B25A1D2C8844AE00781FCF /* NewChatDemo2.framework */,
-				04ECAF892CAC24AB0096CCA7 /* ChatDummyNewy.xcframework */,
-				04ECAD0E2CABDC570096CCA7 /* ChatDummy.xcframework */,
-				04F525C32CA434C4009DD47B /* O2Chat.framework */,
-				6F44B79FB5C1BE4050D577F2B9DAF10A /* Pod */,
-				5CD6CE02F0D35989E275E4D5E7CC4BF2 /* Support Files */,
-			);
-			name = NewChatDemo2;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		9FC3F72EF85F32B11EBFA613A77BB391 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EB16A124AF6BCE57E98006FCF62DE985 /* NewChatDemo2.framework */,
-				631B2CC48009141FDBB02504A199DE27 /* Pods-NewChatDemo2_Example */,
-				179C485AE3D7FA5C72999D83152ED018 /* Pods-NewChatDemo2_Tests */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B614987B0D94125BB36363888C8043DE /* Pods-NewChatDemo2_Example */ = {
-			isa = PBXGroup;
-			children = (
-				B33C6389AB92641848A4A99773D351C7 /* Pods-NewChatDemo2_Example.modulemap */,
-				02EBA778E6A6919B86101C0FDFB9F9B2 /* Pods-NewChatDemo2_Example-acknowledgements.markdown */,
-				9EBEACED51C37B0114F3E5EBA33966E7 /* Pods-NewChatDemo2_Example-acknowledgements.plist */,
-				5D7CCAEDAD20881C3BE6FAAD8F106235 /* Pods-NewChatDemo2_Example-dummy.m */,
-				F145D45975E908FD60AE63476E8829C3 /* Pods-NewChatDemo2_Example-frameworks.sh */,
-				146B88CE4F2FF624DE5B4BE8536CCE25 /* Pods-NewChatDemo2_Example-Info.plist */,
-				39AF0DDC577A98CF17E1D47D1D8E8B8C /* Pods-NewChatDemo2_Example-umbrella.h */,
-				4DD7F874ACE9C42C29917322279F4756 /* Pods-NewChatDemo2_Example.debug.xcconfig */,
-				2A62A06F45DCA6D71A0737B86DDF7565 /* Pods-NewChatDemo2_Example.release.xcconfig */,
+				E3BED5EA72144EAF2045E29DB661C8F9 /* Pods-NewChatDemo2_Example.modulemap */,
+				05F0E96D966746ED7C767F154F791D8F /* Pods-NewChatDemo2_Example-acknowledgements.markdown */,
+				616BA0D8D34F3B05F9C645F41AABDC30 /* Pods-NewChatDemo2_Example-acknowledgements.plist */,
+				165A3372C438B1CBD772EEE512175E19 /* Pods-NewChatDemo2_Example-dummy.m */,
+				E7CC9FFED94EEA966E3A9B2832124839 /* Pods-NewChatDemo2_Example-Info.plist */,
+				F4A35DDD2B63043F7CF9287BE787ACEC /* Pods-NewChatDemo2_Example-umbrella.h */,
+				CF6CAEE25C8DC126CEF109847216AFD3 /* Pods-NewChatDemo2_Example.debug.xcconfig */,
+				3A2F4BD6BC877527E78DBF090425A337 /* Pods-NewChatDemo2_Example.release.xcconfig */,
 			);
 			name = "Pods-NewChatDemo2_Example";
 			path = "Target Support Files/Pods-NewChatDemo2_Example";
+			sourceTree = "<group>";
+		};
+		C77EAF11964AA94D8A554BE8C88AB882 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A85AA125DA8B20B0C68D6237D56869AA /* Pods-NewChatDemo2_Example */,
+				184A426B82584162F47D0A6B13F74752 /* Pods-NewChatDemo2_Tests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				EBC39BD6D9BA2AD056C8EDD53AAF9158 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				9FC3F72EF85F32B11EBFA613A77BB391 /* Products */,
-				0B3416BB0E18ECA8B67863AA59FF1129 /* Targets Support Files */,
+				4914A43C40CD3AA4F4284CCDAF876B36 /* Products */,
+				C77EAF11964AA94D8A554BE8C88AB882 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -561,22 +144,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EBC39BD6D9BA2AD056C8EDD53AAF9158 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8BA6EFA6083A787E1A242DCB9197B6DA /* NewChatDemo2 */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		364E6B8749EBE651C7FA081DEBC5719E /* Headers */ = {
+		08FC4DACC910CFFAD4DA6BDD030137A8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5192B862D4CE05AFF6948C89AB43B9EF /* Pods-NewChatDemo2_Example-umbrella.h in Headers */,
+				7F7DA38DA6DE4A737C8AF7C4BEB924D7 /* Pods-NewChatDemo2_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,14 +160,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF76A713114F42D070DE53205F38E58F /* Pods-NewChatDemo2_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		591F6A4140A83DBA5B69669CFE79983C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F98FF3E8DCF9A3A907DFBE76A0C7E966 /* NewChatDemo2-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,44 +178,25 @@
 			buildRules = (
 			);
 			dependencies = (
-				734C39F81E2BDBD5C483A134E2DE0481 /* PBXTargetDependency */,
+				787D977D213DF4BE7157B3FFADCA003C /* PBXTargetDependency */,
 			);
 			name = "Pods-NewChatDemo2_Tests";
 			productName = Pods_NewChatDemo2_Tests;
 			productReference = 179C485AE3D7FA5C72999D83152ED018 /* Pods-NewChatDemo2_Tests */;
 			productType = "com.apple.product-type.framework";
 		};
-		365A4BB2D49C84817F595B8C7F6F800B /* NewChatDemo2 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7043EFB4807498EA4F8D70553944C22F /* Build configuration list for PBXNativeTarget "NewChatDemo2" */;
-			buildPhases = (
-				591F6A4140A83DBA5B69669CFE79983C /* Headers */,
-				453C86B43DD5BAE65C7289445B18DDD6 /* Sources */,
-				D0E8CE3ED6CD000368B66165391B6A59 /* Frameworks */,
-				BC211638466EB7774D55DD2B87E6909B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = NewChatDemo2;
-			productName = NewChatDemo2;
-			productReference = EB16A124AF6BCE57E98006FCF62DE985 /* NewChatDemo2.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		D09BF9A69C9B447342DB9F03C745E47C /* Pods-NewChatDemo2_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B50006E41FCAF9BB486E35AD4D68D944 /* Build configuration list for PBXNativeTarget "Pods-NewChatDemo2_Example" */;
+			buildConfigurationList = 8D400AC341364C95D0024EF527FDBA5D /* Build configuration list for PBXNativeTarget "Pods-NewChatDemo2_Example" */;
 			buildPhases = (
-				364E6B8749EBE651C7FA081DEBC5719E /* Headers */,
-				0099C7D8CC35DB885325BBC7A086F886 /* Sources */,
-				D4DE154F5CA60EC66C391C67FA21229A /* Frameworks */,
-				A95B2B95E9EA162E473A55C5554F1BC3 /* Resources */,
+				08FC4DACC910CFFAD4DA6BDD030137A8 /* Headers */,
+				C8BA66C2560DBE735FFCB818DC360430 /* Sources */,
+				C9AAA0C3B1E880149E0C5F377C50E791 /* Frameworks */,
+				51CB7D6B2A7EF2433B247D5C8F3D8943 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3446B052CBF3B899C6B29B31F08C24E4 /* PBXTargetDependency */,
 			);
 			name = "Pods-NewChatDemo2_Example";
 			productName = Pods_NewChatDemo2_Example;
@@ -663,11 +211,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
-				TargetAttributes = {
-					365A4BB2D49C84817F595B8C7F6F800B = {
-						LastSwiftMigration = 1510;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -678,11 +221,10 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 9FC3F72EF85F32B11EBFA613A77BB391 /* Products */;
+			productRefGroup = 4914A43C40CD3AA4F4284CCDAF876B36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				365A4BB2D49C84817F595B8C7F6F800B /* NewChatDemo2 */,
 				D09BF9A69C9B447342DB9F03C745E47C /* Pods-NewChatDemo2_Example */,
 				17A4F2D05F454CD9AF4E0C01652DCFC3 /* Pods-NewChatDemo2_Tests */,
 			);
@@ -697,46 +239,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A95B2B95E9EA162E473A55C5554F1BC3 /* Resources */ = {
+		51CB7D6B2A7EF2433B247D5C8F3D8943 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC211638466EB7774D55DD2B87E6909B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04DC36962C522B36003B0EE4 /* ConversationCellImageNoLoginUser.xib in Resources */,
-				04DC36942C522B36003B0EE4 /* MultiFilesCVCell.xib in Resources */,
-				04DC36952C522B36003B0EE4 /* ConversationCellFileNonLoginUser.xib in Resources */,
-				04DC369A2C522B36003B0EE4 /* ActivityLoaderCell.xib in Resources */,
-				04DC36972C522B36003B0EE4 /* ConversationCellImageLoginUser.xib in Resources */,
-				04926CEA2C9C0F470014055C /* HiddenFramework.framework.zip in Resources */,
-				04DC36982C522B36003B0EE4 /* Assets.xcassets in Resources */,
-				04DC369B2C522B36003B0EE4 /* MainChat.storyboard in Resources */,
-				04DC36992C522B36003B0EE4 /* SystemsTVCell.xib in Resources */,
-				04DC36912C522B36003B0EE4 /* ConversationTableViewCellNoLoginUser.xib in Resources */,
-				04DC368F2C522B36003B0EE4 /* MultiPDFCVCell.xib in Resources */,
-				04DC36932C522B36003B0EE4 /* ConversationLoginUserTableViewCell.xib in Resources */,
-				04DC36922C522B36003B0EE4 /* TopicsCollectionViewCell.xib in Resources */,
-				04DC369C2C522B36003B0EE4 /* MultiImageCVCell.xib in Resources */,
-				04DC36902C522B36003B0EE4 /* ConversationCellFIleForLoginUser.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0099C7D8CC35DB885325BBC7A086F886 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FC74BA0502D75423FEF7CBF8F3F410D1 /* Pods-NewChatDemo2_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0F3270A4A062EB5CBADC2EEE96DEA2A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -745,160 +257,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		453C86B43DD5BAE65C7289445B18DDD6 /* Sources */ = {
+		C8BA66C2560DBE735FFCB818DC360430 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				041CF7632C634EA5008ACFD2 /* JsonSerializingChat.swift in Sources */,
-				041CF7522C634EA5008ACFD2 /* TopicDataModelClass.swift in Sources */,
-				041CF77F2C634EA5008ACFD2 /* Reachability.swift in Sources */,
-				28AEE144C350A3F0B2CC6C0F125C7C9A /* NewChatDemo2-dummy.m in Sources */,
-				041CF7842C634EA5008ACFD2 /* UploadFilesData.swift in Sources */,
-				041CF7642C634EA5008ACFD2 /* ConversationCellFileNonLoginUser.swift in Sources */,
-				041CF79B2C634EA5008ACFD2 /* TopicsCollectionViewCell.swift in Sources */,
-				041CF75F2C634EA5008ACFD2 /* MultiPDFCVCell.swift in Sources */,
-				041CF78D2C634EA5008ACFD2 /* ConversationCellImageLoginUser.swift in Sources */,
-				041CF7852C634EA5008ACFD2 /* Fonts.swift in Sources */,
-				041CF74F2C634EA5008ACFD2 /* SwitchButton.swift in Sources */,
-				041CF76D2C634EA5008ACFD2 /* FileDownloader.swift in Sources */,
-				041CF7912C634EA5008ACFD2 /* MenuTabViews.swift in Sources */,
-				041CF7552C634EA5008ACFD2 /* SelectedFilePreview.swift in Sources */,
-				041CF7812C634EA5008ACFD2 /* ConversationTableViewCellNoLoginUser.swift in Sources */,
-				041CF7932C634EA5008ACFD2 /* WebResponseForTopics.swift in Sources */,
-				041CF79F2C634EA5008ACFD2 /* RecieveMessage.swift in Sources */,
-				041CF7862C634EA5008ACFD2 /* UNNotificationAttachment.swift in Sources */,
-				041CF78F2C634EA5008ACFD2 /* FileDataClass.swift in Sources */,
-				041CF7802C634EA5008ACFD2 /* ConversationLoginUserTableViewCell.swift in Sources */,
-				041CF7692C634EA5008ACFD2 /* PageControllerVC.swift in Sources */,
-				041CF7872C634EA5008ACFD2 /* OrganizationData.swift in Sources */,
-				041CF7602C634EA5008ACFD2 /* Singleton.swift in Sources */,
-				041CF79D2C634EA5008ACFD2 /* Toast.swift in Sources */,
-				041CF75A2C634EA5008ACFD2 /* TypingIndicatorListenerModel.swift in Sources */,
-				041CF7622C634EA5008ACFD2 /* ApiClient.swift in Sources */,
-				041CF7982C634EA5008ACFD2 /* CustomOutlineTextField.swift in Sources */,
-				041CF77E2C634EA5008ACFD2 /* BasicCell.swift in Sources */,
-				041CF7672C634EA5008ACFD2 /* SwiftEEventBus.swift in Sources */,
-				041CF79C2C634EA5008ACFD2 /* Color.swift in Sources */,
-				041CF7532C634EA5008ACFD2 /* UploadFilesRequest.swift in Sources */,
-				041CF7892C634EA5008ACFD2 /* ReadReceiptRequest.swift in Sources */,
-				041CF7772C634EA5008ACFD2 /* RateUsVC.swift in Sources */,
-				041CF75B2C634EA5008ACFD2 /* RefreshTokenResponse.swift in Sources */,
-				041CF7502C634EA5008ACFD2 /* ConversationStatusListenerDataModel.swift in Sources */,
-				041CF78B2C634EA5008ACFD2 /* Notification.swift in Sources */,
-				041CF7742C634EA5008ACFD2 /* Common.swift in Sources */,
-				041CF7512C634EA5008ACFD2 /* WebResonseUploadFile.swift in Sources */,
-				041CF7902C634EA5008ACFD2 /* UIImage.swift in Sources */,
-				041CF7562C634EA5008ACFD2 /* DatePicker.swift in Sources */,
-				041CF7732C634EA5008ACFD2 /* NewChatMessage.swift in Sources */,
-				041CF7962C634EA5008ACFD2 /* ConversationsByUUID.swift in Sources */,
-				041CF7612C634EA5008ACFD2 /* CustomClass.swift in Sources */,
-				041CF7882C634EA5008ACFD2 /* BubbleView.swift in Sources */,
-				041CF76C2C634EA5008ACFD2 /* PageControl.swift in Sources */,
-				041CF77C2C634EA5008ACFD2 /* BusinessHourModel.swift in Sources */,
-				041CF7662C634EA5008ACFD2 /* Validator.swift in Sources */,
-				041CF7992C634EA5008ACFD2 /* CommaNumber.swift in Sources */,
-				041CF7952C634EA5008ACFD2 /* FileUploadData.swift in Sources */,
-				041CF7482C634EA5008ACFD2 /* TopicDataModel.swift in Sources */,
-				041CF76E2C634EA5008ACFD2 /* SampleNotificationDelegate.swift in Sources */,
-				041CF74D2C634EA5008ACFD2 /* UtilsClassChat.swift in Sources */,
-				041CF7572C634EA5008ACFD2 /* FileDataModel.swift in Sources */,
-				041CF7592C634EA5008ACFD2 /* PickerView.swift in Sources */,
-				041CF74A2C634EA5008ACFD2 /* ImageCache.swift in Sources */,
-				041CF7822C634EA5008ACFD2 /* JsonSerializing.swift in Sources */,
-				041CF74B2C634EA5008ACFD2 /* QueriesChat.swift in Sources */,
-				041CF7712C634EA5008ACFD2 /* SwiftGifOrigin.swift in Sources */,
-				041CF78A2C634EA5008ACFD2 /* MultiFilesCVCell.swift in Sources */,
-				041CF7922C634EA5008ACFD2 /* UserChatSettingWebresponse.swift in Sources */,
-				041CF75E2C634EA5008ACFD2 /* SystemsTVCell.swift in Sources */,
-				041CF78C2C634EA5008ACFD2 /* CustomUserDefaultChat.swift in Sources */,
-				041CF76F2C634EA5008ACFD2 /* Network.swift in Sources */,
-				041CF7782C634EA5008ACFD2 /* UiViewExtension.swift in Sources */,
-				041CF78E2C634EA5008ACFD2 /* TestChat1.swift in Sources */,
-				041CF74C2C634EA5008ACFD2 /* ChatViewController.swift in Sources */,
-				041CF7542C634EA5008ACFD2 /* WebResponseBusinessHours.swift in Sources */,
-				041CF7492C634EA5008ACFD2 /* Constants.swift in Sources */,
-				041CF7792C634EA5008ACFD2 /* WebResponseChat.swift in Sources */,
-				041CF74E2C634EA5008ACFD2 /* ActivityLoaderCell.swift in Sources */,
-				041CF7832C634EA5008ACFD2 /* UploadFilesDataModel.swift in Sources */,
-				041CF7972C634EA5008ACFD2 /* DatabaseChat.swift in Sources */,
-				041CF76A2C634EA5008ACFD2 /* NotificationManager.swift in Sources */,
-				041CF77D2C634EA5008ACFD2 /* UICollectionViewLeftAlignedLayout.swift in Sources */,
-				041CF75D2C634EA5008ACFD2 /* WebResponseConversationByUUID.swift in Sources */,
-				041CF7722C634EA5008ACFD2 /* SendMessageModel.swift in Sources */,
-				041CF77A2C634EA5008ACFD2 /* ConversationCellFIleForLoginUser.swift in Sources */,
-				041CF7752C634EA5008ACFD2 /* TaxFormConstant.swift in Sources */,
-				041CF7652C634EA5008ACFD2 /* Conversations.swift in Sources */,
-				041CF7682C634EA5008ACFD2 /* WebResponse.swift in Sources */,
-				041CF79E2C634EA5008ACFD2 /* CustomLabel.swift in Sources */,
-				041CF79A2C634EA5008ACFD2 /* WebResponseForOrganization.swift in Sources */,
-				041CF7582C634EA5008ACFD2 /* ChatModule.swift in Sources */,
-				041CF77B2C634EA5008ACFD2 /* ConversationCellImageNoLoginUser.swift in Sources */,
-				041CF7702C634EA5008ACFD2 /* ResolveFeedBackRequest.swift in Sources */,
-				041CF7942C634EA5008ACFD2 /* AuthSessionManager.swift in Sources */,
-				041CF7762C634EA5008ACFD2 /* ImagePicker.swift in Sources */,
-				041CF76B2C634EA5008ACFD2 /* MultiImageCVCell.swift in Sources */,
-				041CF75C2C634EA5008ACFD2 /* UserChatSettingModel.swift in Sources */,
+				2842FEBBBDAF2CF7A3C8CAE509E6EC52 /* Pods-NewChatDemo2_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3446B052CBF3B899C6B29B31F08C24E4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NewChatDemo2;
-			target = 365A4BB2D49C84817F595B8C7F6F800B /* NewChatDemo2 */;
-			targetProxy = 3F26004916831CB4162EA788DD0AC702 /* PBXContainerItemProxy */;
-		};
-		734C39F81E2BDBD5C483A134E2DE0481 /* PBXTargetDependency */ = {
+		787D977D213DF4BE7157B3FFADCA003C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-NewChatDemo2_Example";
 			target = D09BF9A69C9B447342DB9F03C745E47C /* Pods-NewChatDemo2_Example */;
-			targetProxy = C8B0745A5077B5DBA4259C4568FF7FAB /* PBXContainerItemProxy */;
+			targetProxy = 37A7CE7C8C3D6F850FED02299D16970B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2AD37B915CED948B4EC03CE07265F4EF /* Release */ = {
+		037E958FC288F730D354BE0F66801E33 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 336C8627A9CE99DE9B7B3E8352C373CD /* NewChatDemo2.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NewChatDemo2/NewChatDemo2-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NewChatDemo2/NewChatDemo2-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/NewChatDemo2/NewChatDemo2.modulemap";
-				PRODUCT_MODULE_NAME = NewChatDemo2;
-				PRODUCT_NAME = NewChatDemo2;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2E73F58B2A0117FA9339F0424E4B4025 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A62A06F45DCA6D71A0737B86DDF7565 /* Pods-NewChatDemo2_Example.release.xcconfig */;
+			baseConfigurationReference = 3A2F4BD6BC877527E78DBF090425A337 /* Pods-NewChatDemo2_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -913,11 +294,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-NewChatDemo2_Example/Pods-NewChatDemo2_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-NewChatDemo2_Example/Pods-NewChatDemo2_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -936,7 +313,7 @@
 		};
 		5C8B820A18E917E8127718F8AEFF9244 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1DC9592E30D826D1547CF96326E1642 /* Pods-NewChatDemo2_Tests.debug.xcconfig */;
+			baseConfigurationReference = 4A5D0C2344A0A1731EEF7F1E3C3E64E9 /* Pods-NewChatDemo2_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -951,11 +328,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-NewChatDemo2_Tests/Pods-NewChatDemo2_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-NewChatDemo2_Tests/Pods-NewChatDemo2_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -973,7 +346,7 @@
 		};
 		697A45E1DD48F0398E98B98FD3077D54 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22A561B7FE5D28D57077B00DF3ABF305 /* Pods-NewChatDemo2_Tests.release.xcconfig */;
+			baseConfigurationReference = 07BBCCA2F477E7AE90A93D96933FB886 /* Pods-NewChatDemo2_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -988,11 +361,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-NewChatDemo2_Tests/Pods-NewChatDemo2_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-NewChatDemo2_Tests/Pods-NewChatDemo2_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1071,80 +440,6 @@
 			};
 			name = Release;
 		};
-		B0EA45ED8A3AF7517CCDC6B4DC5071E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2585A81BBF266469AECFE8EB35E96E94 /* NewChatDemo2.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NewChatDemo2/NewChatDemo2-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NewChatDemo2/NewChatDemo2-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/NewChatDemo2/NewChatDemo2.modulemap";
-				PRODUCT_MODULE_NAME = NewChatDemo2;
-				PRODUCT_NAME = NewChatDemo2;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B90D97C7D7722B99B867B69318631623 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DD7F874ACE9C42C29917322279F4756 /* Pods-NewChatDemo2_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NewChatDemo2_Example/Pods-NewChatDemo2_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NewChatDemo2_Example/Pods-NewChatDemo2_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1211,6 +506,39 @@
 			};
 			name = Debug;
 		};
+		EFA1FD1CBFEFA9D9D4BB52DBC314EECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF6CAEE25C8DC126CEF109847216AFD3 /* Pods-NewChatDemo2_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NewChatDemo2_Example/Pods-NewChatDemo2_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NewChatDemo2_Example/Pods-NewChatDemo2_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1232,20 +560,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7043EFB4807498EA4F8D70553944C22F /* Build configuration list for PBXNativeTarget "NewChatDemo2" */ = {
+		8D400AC341364C95D0024EF527FDBA5D /* Build configuration list for PBXNativeTarget "Pods-NewChatDemo2_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B0EA45ED8A3AF7517CCDC6B4DC5071E1 /* Debug */,
-				2AD37B915CED948B4EC03CE07265F4EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B50006E41FCAF9BB486E35AD4D68D944 /* Build configuration list for PBXNativeTarget "Pods-NewChatDemo2_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B90D97C7D7722B99B867B69318631623 /* Debug */,
-				2E73F58B2A0117FA9339F0424E4B4025 /* Release */,
+				EFA1FD1CBFEFA9D9D4BB52DBC314EECA /* Debug */,
+				037E958FC288F730D354BE0F66801E33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
