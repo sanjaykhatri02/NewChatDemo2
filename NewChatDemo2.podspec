@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'NewChatDemo2'
-s.version          = '0.5.4'
+s.version          = '0.5.5'
 s.summary          = 'A ChatTestDemo App That is Demo. that is enough for now'
 
 # This description is used to generate tags and improve search results.
@@ -60,7 +60,7 @@ s.swift_version = '5.0'
   #s.vendored_frameworks = 'TestChatNew.framework'
   #s.vendored_frameworks = 'ChatDummy.xcframework'
   
-  #s.preserve_paths      = "ChatDummy.xcframework"
+  s.preserve_paths      = "ChatDummyNewy.xcframework"
   s.vendored_frameworks = "ChatDummyNewy.xcframework"
 
   # Exclude `Classes` and `Resources` folders
