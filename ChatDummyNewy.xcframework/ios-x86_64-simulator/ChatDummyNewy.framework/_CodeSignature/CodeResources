@@ -4,9 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		zjlmuZDZuYiBo08ArFkJiFuJv5I=
+		</data>
 		<key>ActivityLoaderCell.nib</key>
 		<data>
 		UvH2XjqSlaG7FEGq5IylGgu1dcA=
+		</data>
+		<key>Alamofire.bundle/Info.plist</key>
+		<data>
+		fPe3yRLU5ZoxrxlTXGJc/sXRw3E=
+		</data>
+		<key>Alamofire.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		ovFJMFOLMjzh8DLJKmXncj8JIgU=
 		</data>
 		<key>Assets.car</key>
 		<data>
@@ -44,6 +56,78 @@
 		<data>
 		/Sb06B4jNlooWaiVWQXepE37v1g=
 		</data>
+		<key>Cosmos.bundle/Info.plist</key>
+		<data>
+		aP2iPI5cImYNGZCfWM30HLnV7SY=
+		</data>
+		<key>Cosmos.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		i3YpomTpJHpRGpdt+oGaesmknBg=
+		</data>
+		<key>FBLPromises_Privacy.bundle/Info.plist</key>
+		<data>
+		vBKw7vbQ8ERLdwOXs2n7qtuMZkU=
+		</data>
+		<key>FBLPromises_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		ZajnvEs/MYRS3X4TPLAhBWi8mc4=
+		</data>
+		<key>FMDB_Privacy.bundle/Info.plist</key>
+		<data>
+		9Zymh+eJ1DLJIT90xZjq02uloxo=
+		</data>
+		<key>FMDB_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		ucg9pita0v8d353x3NuGfxweQYU=
+		</data>
+		<key>FirebaseCoreInternal_Privacy.bundle/Info.plist</key>
+		<data>
+		WeYnL99xRLqMG11sTdBJI39q3eg=
+		</data>
+		<key>FirebaseCoreInternal_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		ifoThrqbbqoLG4yjAruMQRaf0Dw=
+		</data>
+		<key>FirebaseCore_Privacy.bundle/Info.plist</key>
+		<data>
+		v8KV7N5helDyn7ldbF/lARgnjfU=
+		</data>
+		<key>FirebaseCore_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		sa2OhFlqdCIyz9oV7fUdDKWzFL0=
+		</data>
+		<key>FirebaseInstallations_Privacy.bundle/Info.plist</key>
+		<data>
+		Sc8J8+KeLQ8ZQ4yJKo9GA2ZNVVs=
+		</data>
+		<key>FirebaseInstallations_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		WXQUJr75eMRgiVnLGyf8Gr3uLUU=
+		</data>
+		<key>FirebaseMessaging_Privacy.bundle/Info.plist</key>
+		<data>
+		Lv6OhQcMHBPpWl7amxDwjjWDfwI=
+		</data>
+		<key>FirebaseMessaging_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		gwv2NsO/6s7ik6Px6eTTTvacWN4=
+		</data>
+		<key>GoogleDataTransport_Privacy.bundle/Info.plist</key>
+		<data>
+		8/e0pF5tAY3GXgYUEWoTFEhuUt8=
+		</data>
+		<key>GoogleDataTransport_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		WXQUJr75eMRgiVnLGyf8Gr3uLUU=
+		</data>
+		<key>GoogleUtilities_Privacy.bundle/Info.plist</key>
+		<data>
+		CPAFEe4UdK20kF9GMJRzykBH57U=
+		</data>
+		<key>GoogleUtilities_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		9Dge7JFNlx7Vk430tsjNsK3d0Ng=
+		</data>
 		<key>Headers/ChatDummyNewy-Swift.h</key>
 		<data>
 		PU7Qd5tcb+Hag9Q/ql0AErv3JOw=
@@ -52,9 +136,25 @@
 		<data>
 		GNuODKxK8Vg6Q8ifnavyaEq8oxc=
 		</data>
+		<key>IQKeyboardManager.bundle/Info.plist</key>
+		<data>
+		nO3tdGkqL9YG+yD5bvGq9jQv9fw=
+		</data>
+		<key>IQKeyboardManager.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		BgUYYYYE9Hbd9WnbrgXuEmCN7F0=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		IfTUKQ0MMlsw376ABc9O+0JTN9M=
+		</data>
+		<key>Kingfisher.bundle/Info.plist</key>
+		<data>
+		7MuovyqWnOTuBMwnL70EZj60e54=
+		</data>
+		<key>Kingfisher.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		hGVuuzmjt5sKGjVNh+ZspIKBF7c=
 		</data>
 		<key>MainChat.storyboardc/2bZ-Fh-QGx-view-3Y0-9T-DtI.nib/objects-14.0+.nib</key>
 		<data>
@@ -108,6 +208,14 @@
 		<data>
 		beREsZiQGlAIaY91JlqvJ36AlNc=
 		</data>
+		<key>Modules/.DS_Store</key>
+		<data>
+		Jq7CFGzR7tcP29nQXRORunCq+6s=
+		</data>
+		<key>Modules/ChatDummyNewy.swiftmodule/.DS_Store</key>
+		<data>
+		0K4oOgKV1uzzC0USXoZvgEF61s4=
+		</data>
 		<key>Modules/ChatDummyNewy.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
 		SVfIlUly3LUhHPdH5W9xu+yfv7g=
@@ -148,6 +256,14 @@
 		<data>
 		LdZS0lsn00nRA85xUa1GG4zfmBk=
 		</data>
+		<key>SwiftyJSON.bundle/Info.plist</key>
+		<data>
+		ZKmGC+Jv142yJkkASzinRx60yHY=
+		</data>
+		<key>SwiftyJSON.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		AL1dh5ctObXBjoBiabSJ86M3HQs=
+		</data>
 		<key>SystemsTVCell.nib</key>
 		<data>
 		GB+QcBoN6ZnUvPajmSQ5P2I+Ens=
@@ -155,6 +271,14 @@
 		<key>TopicsCollectionViewCell.nib</key>
 		<data>
 		QArdFhTMueorzPdkGaZ+ag0jJk0=
+		</data>
+		<key>nanopb_Privacy.bundle/Info.plist</key>
+		<data>
+		TWkbrRbQ/lYBQXVUukdcPlq5gtQ=
+		</data>
+		<key>nanopb_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		KY5lfwC2TvsgFj4wt7hkMmainbs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -164,6 +288,20 @@
 			<key>hash2</key>
 			<data>
 			PUz8NnA1JHaSzHH3NneVzbOP3yJyxsqxNq6bNUenyAE=
+			</data>
+		</dict>
+		<key>Alamofire.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FfIX7kpqJTJ/4beYSCdo5pY7Iezrkx8KDvphmwoYARU=
+			</data>
+		</dict>
+		<key>Alamofire.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CNkOaUbb/qDQtbF/tlnXfu0j5EO3Rdjntbn6N4y3RHc=
 			</data>
 		</dict>
 		<key>Assets.car</key>
@@ -229,6 +367,132 @@
 			ULFGW6l7VOPWAaN//Wgt5Oy5fu7l5PhavOTIU0Vfdag=
 			</data>
 		</dict>
+		<key>Cosmos.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BLsAKZ468SfvVLm+QmEZGpx57tXAzH+fTevjskhUIdQ=
+			</data>
+		</dict>
+		<key>Cosmos.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jWXQtDoSYs/inoM5bACz25T7Eg1E0RiNknNB8UpsIjw=
+			</data>
+		</dict>
+		<key>FBLPromises_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hyfUMh4e4Pm5YHHxZvbZo+Gg1+KvUBTwFnERIn8O0Yc=
+			</data>
+		</dict>
+		<key>FBLPromises_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dLDNcvwjwe8wLyLuJ1P2GBfNxa8P96fy0GMrUk+4rOo=
+			</data>
+		</dict>
+		<key>FMDB_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HrV+sBiFIqHvuBSzx2WBh/K3SHdRcgwh4/awnONlo94=
+			</data>
+		</dict>
+		<key>FMDB_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Uh6274Qwdz5cAQ4YOP6d2PpdYre3bRzqjX2NqtyxROI=
+			</data>
+		</dict>
+		<key>FirebaseCoreInternal_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			elJELA9fNUr8eKnz2lSpZ0+S/bQhAQOY/twtDgfGhTc=
+			</data>
+		</dict>
+		<key>FirebaseCoreInternal_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			W3/peUI97ePgivwppC8A9ghiddxUioTCl3QjWGPu0+8=
+			</data>
+		</dict>
+		<key>FirebaseCore_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+Ufavt4pyTK01QUzHAlXt5OreCe1/h4bycpw7xJynvQ=
+			</data>
+		</dict>
+		<key>FirebaseCore_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EeMfX2tg6A69WQFUn85QQ/mvPmg/h0AilFAAtAUwbD8=
+			</data>
+		</dict>
+		<key>FirebaseInstallations_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0lU6LcXR1sTPdP3bu/L0+FKoNQdELk8p8RyzfPjjEcc=
+			</data>
+		</dict>
+		<key>FirebaseInstallations_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			z7s8T3ambVNpi66R9xEMAPIUjm5vE619MlkpCbwBDlE=
+			</data>
+		</dict>
+		<key>FirebaseMessaging_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KcbdrohbSRkubEfGhLUzohLMG7CHoJEcH+d7FzfP+fc=
+			</data>
+		</dict>
+		<key>FirebaseMessaging_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mHYgljcqwn9eiIxzctUS8NP1zzKDxkAGBw9M3hpyoHE=
+			</data>
+		</dict>
+		<key>GoogleDataTransport_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			f4gH0vO8b/RFIuYVuebN5JrEUGucyFwTigBB2cQTCps=
+			</data>
+		</dict>
+		<key>GoogleDataTransport_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			z7s8T3ambVNpi66R9xEMAPIUjm5vE619MlkpCbwBDlE=
+			</data>
+		</dict>
+		<key>GoogleUtilities_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vJ7WjisDfX7pUuVjQ2q0txEpN+CC4P2eQaxLUJhGNgw=
+			</data>
+		</dict>
+		<key>GoogleUtilities_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+Btc+PBDZicS7KnpeFdnJkzxkAJf5720l3cpbAaN5Tw=
+			</data>
+		</dict>
 		<key>Headers/ChatDummyNewy-Swift.h</key>
 		<dict>
 			<key>hash2</key>
@@ -241,6 +505,34 @@
 			<key>hash2</key>
 			<data>
 			tWxQP3DmLt/11p2SlGj24NhNfpK+cTJSBx8aQi80r7E=
+			</data>
+		</dict>
+		<key>IQKeyboardManager.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KPvZpv80I/ySQ8nlVXYriWb+xw1Bew0MxFo9eSxV9e8=
+			</data>
+		</dict>
+		<key>IQKeyboardManager.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NzH9eSR3GTVLxN2mojV2HnD7wXmlHbbqaFGLIoT7WQg=
+			</data>
+		</dict>
+		<key>Kingfisher.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7EM3pMcvAKocXwCNgf5GpJXGmYxve2bMv1C9qGTWY1I=
+			</data>
+		</dict>
+		<key>Kingfisher.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yFi3Q8Y5579kQ1TeQdEowO5K8T00j1zU5gSSpLKH2/k=
 			</data>
 		</dict>
 		<key>MainChat.storyboardc/2bZ-Fh-QGx-view-3Y0-9T-DtI.nib/objects-14.0+.nib</key>
@@ -404,6 +696,20 @@
 			+k4DGAvuA0gX4l53QCKlMoUMbjTK5ZeGZ86+CzMqzdk=
 			</data>
 		</dict>
+		<key>SwiftyJSON.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BJMXPWfGLJGfk4F31q4LLTStjvG3B64D+lru/uU6RHo=
+			</data>
+		</dict>
+		<key>SwiftyJSON.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WpuPwM3bECAbtHzCgEs/AExyUUdmItJb/E61TtRuEIQ=
+			</data>
+		</dict>
 		<key>SystemsTVCell.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -416,6 +722,20 @@
 			<key>hash2</key>
 			<data>
 			0WhDPSOnM1SJ19+gezs56tz75SQhQEYxjBuVRky3iwE=
+			</data>
+		</dict>
+		<key>nanopb_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			z0vxMTlGNBQU1v9ZfzwJ5riOed60AcVHcB5iC458hTo=
+			</data>
+		</dict>
+		<key>nanopb_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cpujy9D0WMeM1h7fFzUO2v4ONMqG4xTsZMjLIszSG1Q=
 			</data>
 		</dict>
 	</dict>
